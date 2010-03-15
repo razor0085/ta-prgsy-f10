@@ -51,4 +51,7 @@
   <ItemGroup>
     <None Include="Properties\Settings.settings" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
 </Project>
