@@ -39,11 +39,26 @@
   </Target>
   -->
   <ItemGroup>
+    <Compile Include="..\Test_Drive_CE\Form1.cs">
+      <Link>Form1.cs</Link>
+    </Compile>
+    <Compile Include="..\Test_Drive_CE\Form1.designer.cs">
+      <Link>Form1.designer.cs</Link>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Test_Drive_CE\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs" />
     <Compile Include="Properties\Settings.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\Test_Drive_CE\Form1.resx">
+      <Link>Form1.resx</Link>
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
