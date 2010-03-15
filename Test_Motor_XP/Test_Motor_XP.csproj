@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="..\Test_Motor_CE\Form1.cs">
       <Link>Form1.cs</Link>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="..\Test_Motor_CE\Form1.designer.cs">
       <Link>Form1.designer.cs</Link>
@@ -68,5 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">
+      <Project>{5D6B41F6-5826-4971-B2A4-BD55E1C7943D}</Project>
+      <Name>RobotCtrl</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
