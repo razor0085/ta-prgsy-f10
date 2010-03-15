@@ -63,6 +63,12 @@
     <Compile Include="ConsoleView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="DriveView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DriveView.designer.cs">
+      <DependentUpon>DriveView.cs</DependentUpon>
+    </Compile>
     <Compile Include="LampView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +83,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DriveView.resx">
+      <DependentUpon>DriveView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="LampView.resx">
       <DependentUpon>LampView.cs</DependentUpon>
       <SubType>Designer</SubType>

@@ -1,21 +1,22 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5D6B41F6-5826-4971-B2A4-BD55E1C7943D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{4BFD24F8-9484-4AEC-9953-6DE3850B58F8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RobotCtrl</RootNamespace>
-    <AssemblyName>RobotCtrl</AssemblyName>
+    <RootNamespace>Test_Motor_CE</RootNamespace>
+    <AssemblyName>Test_Motor_CE</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
-    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
-    <OSVersion>5.0</OSVersion>
-    <DeployDirSuffix>RobotCtrl</DeployDirSuffix>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>Test_Motor_CE</DeployDirSuffix>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <NativePlatformName>Windows CE</NativePlatformName>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
     <FormFactorID>
     </FormFactorID>
   </PropertyGroup>
@@ -25,11 +26,11 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
-    <NoStdLib>true</NoStdLib>
-    <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <FileAlignment>512</FileAlignment>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,43 +38,20 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
-    <NoStdLib>true</NoStdLib>
-    <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <FileAlignment>512</FileAlignment>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <DocumentationFile>bin\Release\XmlDocumentation.XML</DocumentationFile>
   </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ItemGroup>
+    <Reference Include="Microsoft.Windowsce.Forms" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="Console.cs" />
-    <Compile Include="DigitalIn.cs" />
-    <Compile Include="DigitalIn_HW.cs" />
-    <Compile Include="DigitalOut.cs" />
-    <Compile Include="DigitalOut_HW.cs" />
-    <Compile Include="Drive.cs" />
-    <Compile Include="DriveCtrl.cs" />
-    <Compile Include="DriveCtrl_HW.cs" />
-    <Compile Include="DriveInfo.cs" />
-    <Compile Include="IOPort.cs" />
-    <Compile Include="MotorCtrl.cs" />
-    <Compile Include="MotorCtrl_HW.cs" />
-    <Compile Include="PositionInfo.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Robot.cs" />
-    <Compile Include="Track.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
@@ -88,4 +66,30 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">
+      <Project>{5D6B41F6-5826-4971-B2A4-BD55E1C7943D}</Project>
+      <Name>RobotCtrl</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
