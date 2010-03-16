@@ -1,0 +1,8 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{DriveTest.Form1\n|- robot\l- drive\l- components\l- linStartButton\l- label8\l- label9\l- label10\l- label11\l- linLengthUpDown\l- linSpeedUpDown\l- linAccelerationUpDown\l- stopButton\l- runPanel\l- arcPanel\l- label1\l- arcAccelerationUpDown\l- arcStartButton\l- arcSpeedUpDown\l- arcAngleUpDown\l- label2\l- label3\l- label4\l- arcRadiusUpDown\l- label5\l- turnPanel\l- label6\l- turnAccelerationUpDown\l- turnStartButton\l- turnSpeedUpDown\l- turnAngleUpDown\l- label12\l- label13\l- label14\l- label15\l- label7\l- arcRightRadioButton\l- arcLeftRadioButton\l|+ Form1()\l# Dispose()\l- timer_Tick()\l- Form1_Closing()\l- stopButton_Click()\l- linStartButton_Click()\l- arcStartButton_Click()\l- turnStartButton_Click()\l- InitializeComponent()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="arcRightRadioButton\nturnAccelerationUpDown\nlabel1\nstopButton\nlabel2\narcStartButton\nturnAngleUpDown\nlabel3\nrunPanel\nlabel4\n...",arrowtail="open"];
+  Node2 [label="{System\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,1531 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.26.3 (20100126.1600)
+%%Title: G
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 720 1244
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 684 1208 boxprim clip newpath
+1 1 set_scale 0 rotate 40 41 translate
+% Node1
+gsave
+0 0 0.74902 nodecolor
+newpath 456 647 moveto
+456 775 lineto
+542 775 lineto
+542 647 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 456 647 moveto
+456 775 lineto
+542 775 lineto
+542 647 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+464 762 moveto 70 (RobotCtrl.Robot) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 456 754 moveto
+542 754 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+464 741 moveto 45 (+ Console) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+464 728 moveto 31 (+ Drive) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+464 715 moveto 35 (+ Radar) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+464 702 moveto 40 (- console) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+464 689 moveto 26 (- drive) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+464 676 moveto 28 (- radar) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 456 668 moveto
+542 668 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+464 655 moveto 41 (+ Robot\(\)) alignedtext
+grestore
+% Node2
+gsave
+[ /Rect [ 501 169 587 285 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_radar.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 501 169.5 moveto
+501 284.5 lineto
+587 284.5 lineto
+587 169.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 501 169.5 moveto
+501 284.5 lineto
+587 284.5 lineto
+587 169.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+509 271.5 moveto 70 (RobotCtrl.Radar) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 501 263.5 moveto
+587 263.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+509 250.5 moveto 48 (+ Distance) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+509 237.5 moveto 36 (- sensor) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+509 224.5 moveto 28 (- robot) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+509 211.5 moveto 44 (- runMode) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+509 198.5 moveto 43 (- distance) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 501 190.5 moveto
+587 190.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+509 177.5 moveto 41 (+ Radar\(\)) alignedtext
+grestore
+% Node1->Node2
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 507.53 636.58 moveto
+512.09 595.7 517.64 544.08 522 498 curveto
+528.95 424.45 535.63 339.55 539.76 284.66 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 506.39 646.73 moveto
+503.03 636.29 lineto
+506.95 641.76 lineto
+507.5 636.79 lineto
+507.5 636.79 lineto
+507.5 636.79 lineto
+506.95 641.76 lineto
+511.97 637.29 lineto
+506.39 646.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 506.39 646.73 moveto
+503.03 636.29 lineto
+506.95 641.76 lineto
+507.5 636.79 lineto
+507.5 636.79 lineto
+507.5 636.79 lineto
+506.95 641.76 lineto
+511.97 637.29 lineto
+506.39 646.73 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+524 482.5 moveto 22 (robot) alignedtext
+grestore
+% Node4
+gsave
+[ /Rect [ 252 0 350 454 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_drive.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 252 .5 moveto
+252 453.5 lineto
+350 453.5 lineto
+350 .5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 252 .5 moveto
+252 453.5 lineto
+350 453.5 lineto
+350 .5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+268.5 440.5 moveto 65 (RobotCtrl.Drive) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 252 432.5 moveto
+350 432.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 419.5 moveto 45 (+ Position) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 406.5 moveto 37 (+ Power) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 393.5 moveto 25 (+ Info) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 380.5 moveto 32 (+ Done) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 367.5 moveto 28 (- track) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 354.5 moveto 43 (- oldTrack) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 341.5 moveto 20 (- ctrl) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 328.5 moveto 19 (- left) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 315.5 moveto 25 (- right) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 302.5 moveto 22 (- info) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 289.5 moveto 34 (- oldInfo) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 276.5 moveto 25 (- stop) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 263.5 moveto 22 (- halt) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 250.5 moveto 43 (- infoLock) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 237.5 moveto 49 (- trackLock) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 224.5 moveto 79 (- runTracksThread) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 211.5 moveto 28 (- robot) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 198.5 moveto 52 (- drivesLock) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 252 190.5 moveto
+350 190.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 177.5 moveto 37 (+ Drive\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 164.5 moveto 41 (+ Reset\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 151.5 moveto 40 (+ Close\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 138.5 moveto 36 (+ Stop\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 125.5 moveto 33 (+ Halt\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 112.5 moveto 58 (+ WaitDone\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 99.5 moveto 61 (+ RunPause\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 86.5 moveto 51 (+ RunLine\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 73.5 moveto 64 (+ RunArcLeft\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 60.5 moveto 70 (+ RunArcRight\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 47.5 moveto 52 (+ RunTurn\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 34.5 moveto 82 (+ RunContourLeft\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 21.5 moveto 59 (- RunTracks\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+260 8.5 moveto 57 (- updateInfo\(\)) alignedtext
+grestore
+% Node1->Node4
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 494.71 636.89 moveto
+488.9 597.02 475.85 549.34 447 516 curveto
+433.71 500.64 419.08 512.63 405 498 curveto
+382.11 474.22 364.13 444.86 350.04 414.34 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 496.04 646.84 moveto
+490.26 637.52 lineto
+495.38 641.88 lineto
+494.72 636.93 lineto
+494.72 636.93 lineto
+494.72 636.93 lineto
+495.38 641.88 lineto
+499.18 636.33 lineto
+496.04 646.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 496.04 646.84 moveto
+490.26 637.52 lineto
+495.38 641.88 lineto
+494.72 636.93 lineto
+494.72 636.93 lineto
+494.72 636.93 lineto
+495.38 641.88 lineto
+499.18 636.33 lineto
+496.04 646.84 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+405 482.5 moveto 22 (robot) alignedtext
+grestore
+% Node2->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 528.65 294.37 moveto
+518.28 343.35 505.53 411.4 500 472 curveto
+494.61 531.09 494.93 598.74 496.26 646.95 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 530.75 284.53 moveto
+533.06 295.25 lineto
+529.7 289.42 lineto
+528.66 294.31 lineto
+528.66 294.31 lineto
+528.66 294.31 lineto
+529.7 289.42 lineto
+524.26 293.37 lineto
+530.75 284.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 530.75 284.53 moveto
+533.06 295.25 lineto
+529.7 289.42 lineto
+528.66 294.31 lineto
+528.66 294.31 lineto
+528.66 294.31 lineto
+529.7 289.42 lineto
+524.26 293.37 lineto
+530.75 284.53 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+500 482.5 moveto 22 (radar) alignedtext
+grestore
+% Node3
+gsave
+[ /Rect [ 560 679 676 743 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_radar_sensor.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 560 679.5 moveto
+560 742.5 lineto
+676 742.5 lineto
+676 679.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 560 679.5 moveto
+560 742.5 lineto
+676 742.5 lineto
+676 679.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+568 729.5 moveto 100 (RobotCtrl.RadarSensor) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 560 721.5 moveto
+676 721.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+568 708.5 moveto 48 (+ Distance) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 560 700.5 moveto
+676 700.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+616 687.5 moveto 4 ( ) alignedtext
+grestore
+% Node3->Node2
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 611.62 669.25 moveto
+598.37 582.63 567.89 383.25 552.8 284.53 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 613.14 679.24 moveto
+607.18 670.04 lineto
+612.39 674.3 lineto
+611.63 669.36 lineto
+611.63 669.36 lineto
+611.63 669.36 lineto
+612.39 674.3 lineto
+616.08 668.68 lineto
+613.14 679.24 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 613.14 679.24 moveto
+607.18 670.04 lineto
+612.39 674.3 lineto
+611.63 669.36 lineto
+611.63 669.36 lineto
+611.63 669.36 lineto
+612.39 674.3 lineto
+616.08 668.68 lineto
+613.14 679.24 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+585 482.5 moveto 30 (sensor) alignedtext
+grestore
+% Node4->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 355.13 321.5 moveto
+385.21 376.87 421.58 448.9 447 516 curveto
+463.14 558.59 476.29 608.21 485.34 646.74 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 350.17 312.41 moveto
+358.91 319.03 lineto
+352.57 316.8 lineto
+354.96 321.19 lineto
+354.96 321.19 lineto
+354.96 321.19 lineto
+352.57 316.8 lineto
+351.01 323.34 lineto
+350.17 312.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 350.17 312.41 moveto
+358.91 319.03 lineto
+352.57 316.8 lineto
+354.96 321.19 lineto
+354.96 321.19 lineto
+354.96 321.19 lineto
+352.57 316.8 lineto
+351.01 323.34 lineto
+350.17 312.41 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+437 482.5 moveto 20 (drive) alignedtext
+grestore
+% Node5
+gsave
+[ /Rect [ 232 633.5 328 788.5 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_drive_ctrl.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 232 634 moveto
+232 788 lineto
+328 788 lineto
+328 634 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 232 634 moveto
+232 788 lineto
+328 788 lineto
+328 634 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 775 moveto 80 (RobotCtrl.DriveCtrl) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 232 767 moveto
+328 767 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 754 moveto 37 (+ Power) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 741 moveto 59 (+ PowerRight) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 728 moveto 52 (+ PowerLeft) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 715 moveto 38 (+ Status) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 702 moveto 54 (+ Command) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 689 moveto 34 (- status) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 232 681 moveto
+328 681 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 668 moveto 52 (+ DriveCtrl\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 655 moveto 41 (+ Reset\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+240 642 moveto 34 (- reset\(\)) alignedtext
+grestore
+% Node5->Node4
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 281.44 623.67 moveto
+282.37 578.4 283.83 522.21 286 472 curveto
+286.26 465.93 286.54 459.78 286.83 453.58 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 281.23 633.75 moveto
+276.94 623.66 lineto
+281.33 628.75 lineto
+281.44 623.75 lineto
+281.44 623.75 lineto
+281.44 623.75 lineto
+281.33 628.75 lineto
+285.94 623.84 lineto
+281.23 633.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 281.23 633.75 moveto
+276.94 623.66 lineto
+281.33 628.75 lineto
+281.44 623.75 lineto
+281.44 623.75 lineto
+281.44 623.75 lineto
+281.33 628.75 lineto
+285.94 623.84 lineto
+281.23 633.75 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+286 482.5 moveto 14 (ctrl) alignedtext
+grestore
+% Node6
+gsave
+[ /Rect [ 0 627 96 795 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($struct_robot_ctrl_1_1_drive_info.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 0 627.5 moveto
+0 794.5 lineto
+96 794.5 lineto
+96 627.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 0 627.5 moveto
+0 794.5 lineto
+96 794.5 lineto
+96 627.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 781.5 moveto 80 (RobotCtrl.DriveInfo) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 0 773.5 moveto
+96 773.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 760.5 moveto 45 (+ Position) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 747.5 moveto 46 (+ Runtime) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 734.5 moveto 43 (+ SpeedL) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 721.5 moveto 44 (+ SpeedR) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 708.5 moveto 53 (+ DistanceL) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 695.5 moveto 55 (+ DistanceR) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 682.5 moveto 59 (+ DriveStatus) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 669.5 moveto 68 (+ MotorStatusL) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 656.5 moveto 70 (+ MotorStatusR) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 0 648.5 moveto
+96 648.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+8 635.5 moveto 52 (+ DriveInfo\(\)) alignedtext
+grestore
+% Node6->Node4
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 69.05 617.26 moveto
+78.06 584.41 90.02 547.81 105 516 curveto
+144.91 431.26 208.04 343.54 251.82 287.31 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 66.34 627.32 moveto
+64.59 616.49 lineto
+67.64 622.49 lineto
+68.94 617.66 lineto
+68.94 617.66 lineto
+68.94 617.66 lineto
+67.64 622.49 lineto
+73.28 618.83 lineto
+66.34 627.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 66.34 627.32 moveto
+64.59 616.49 lineto
+67.64 622.49 lineto
+68.94 617.66 lineto
+68.94 617.66 lineto
+68.94 617.66 lineto
+67.64 622.49 lineto
+73.28 618.83 lineto
+66.34 627.32 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+127 489 moveto 28 (oldInfo) alignedtext
+0 0 0 edgecolor
+10 /FreeSans set_font
+133 476 moveto 16 (info) alignedtext
+grestore
+% Node7
+gsave
+[ /Rect [ 203 963 313 1053 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($struct_robot_ctrl_1_1_position_info.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 203 963.5 moveto
+203 1052.5 lineto
+313 1052.5 lineto
+313 963.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 203 963.5 moveto
+203 1052.5 lineto
+313 1052.5 lineto
+313 963.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+211 1039.5 moveto 94 (RobotCtrl.PositionInfo) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 203 1031.5 moveto
+313 1031.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+211 1018.5 moveto 15 (+ X) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+211 1005.5 moveto 16 (+ Y) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+211 992.5 moveto 34 (+ Angle) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 203 984.5 moveto
+313 984.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+211 971.5 moveto 66 (+ PositionInfo\(\)) alignedtext
+grestore
+% Node7->Node6
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 193.65 978.43 moveto
+162.8 961.27 127.71 936.91 105 906 curveto
+81.19 873.6 67.29 831.38 59.18 794.52 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 202.64 983.29 moveto
+191.71 982.49 lineto
+198.25 980.91 lineto
+193.85 978.53 lineto
+193.85 978.53 lineto
+193.85 978.53 lineto
+198.25 980.91 lineto
+195.99 974.58 lineto
+202.64 983.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 202.64 983.29 moveto
+191.71 982.49 lineto
+198.25 980.91 lineto
+193.85 978.53 lineto
+193.85 978.53 lineto
+193.85 978.53 lineto
+198.25 980.91 lineto
+195.99 974.58 lineto
+202.64 983.29 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+132 928.5 moveto 36 (Position) alignedtext
+grestore
+% Node8
+gsave
+[ /Rect [ 346 601 438 821 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_track.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 346 601.5 moveto
+346 820.5 lineto
+438 820.5 lineto
+438 601.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 346 601.5 moveto
+346 820.5 lineto
+438 820.5 lineto
+438 601.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+358 807.5 moveto 68 (RobotCtrl.Track) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 346 799.5 moveto
+438 799.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 786.5 moveto 71 (+ nominalSpeed) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 773.5 moveto 62 (+ acceleration) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 760.5 moveto 72 (+ coveredLength) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 747.5 moveto 64 (+ elapsedTime) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 734.5 moveto 32 (+ Done) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 721.5 moveto 76 (+ ResidualLength) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 708.5 moveto 40 (# reverse) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 695.5 moveto 35 (# length) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 682.5 moveto 56 (# pauseTime) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 669.5 moveto 67 (# currentSpeed) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 656.5 moveto 64 (# startPosition) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 346 648.5 moveto
+438 648.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 635.5 moveto 37 (+ Start\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 622.5 moveto 36 (+ Step\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+354 609.5 moveto 58 (+ SetSpeed\(\)) alignedtext
+grestore
+% Node7->Node8
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 305.09 955.14 moveto
+316.78 940.04 328.41 923.04 337 906 curveto
+350.38 879.46 360.92 849.19 369.04 820.55 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 298.61 963.32 moveto
+301.3 952.69 lineto
+301.72 959.4 lineto
+304.82 955.48 lineto
+304.82 955.48 lineto
+304.82 955.48 lineto
+301.72 959.4 lineto
+308.35 958.28 lineto
+298.61 963.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 298.61 963.32 moveto
+301.3 952.69 lineto
+301.72 959.4 lineto
+304.82 955.48 lineto
+304.82 955.48 lineto
+304.82 955.48 lineto
+301.72 959.4 lineto
+308.35 958.28 lineto
+298.61 963.32 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+327 928.5 moveto 55 (startPosition) alignedtext
+grestore
+% Node8->Node4
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 360.72 591.66 moveto
+353.34 561.24 345.91 528.52 340 498 curveto
+337.2 483.53 334.51 468.6 331.93 453.51 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 363.11 601.44 moveto
+356.36 592.8 lineto
+361.92 596.59 lineto
+360.73 591.73 lineto
+360.73 591.73 lineto
+360.73 591.73 lineto
+361.92 596.59 lineto
+365.11 590.66 lineto
+363.11 601.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 363.11 601.44 moveto
+356.36 592.8 lineto
+361.92 596.59 lineto
+360.73 591.73 lineto
+360.73 591.73 lineto
+360.73 591.73 lineto
+361.92 596.59 lineto
+365.11 590.66 lineto
+363.11 601.44 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+347.5 489 moveto 22 (track) alignedtext
+0 0 0 edgecolor
+10 /FreeSans set_font
+340 476 moveto 37 (oldTrack) alignedtext
+grestore
+% Node9
+gsave
+[ /Rect [ 114 516.5 214 905.5 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_motor_ctrl.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 114 517 moveto
+114 905 lineto
+214 905 lineto
+214 517 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 114 517 moveto
+114 905 lineto
+214 905 lineto
+214 517 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 892 moveto 84 (RobotCtrl.MotorCtrl) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 114 884 moveto
+214 884 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 871 moveto 38 (+ Status) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 858 moveto 37 (+ Ready) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 845 moveto 48 (+ Distance) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 832 moveto 37 (+ Speed) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 819 moveto 64 (+ Acceleration) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 806 moveto 46 (+ Stopped) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 793 moveto 33 (+ Ticks) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 780 moveto 70 (# nominalSpeed) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 767 moveto 43 (- distance) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 754 moveto 64 (- currentSpeed) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 741 moveto 59 (- acceleration) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 728 moveto 43 (- oldTicks) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 715 moveto 28 (- ticks) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 702 moveto 20 (- run) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 689 moveto 34 (- thread) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 676 moveto 34 (- status) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 114 668 moveto
+214 668 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 655 moveto 55 (+ MotorCtrl\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 642 moveto 41 (+ Reset\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 629 moveto 28 (+ Go\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 616 moveto 36 (+ Stop\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 603 moveto 40 (+ Close\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 590 moveto 46 (+ SetPID\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 577 moveto 34 (- reset\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 564 moveto 54 (- setSpeed\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 551 moveto 80 (- setAcceleration\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 538 moveto 64 (- getDistance\(\)) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+122 525 moveto 57 (- simulation\(\)) alignedtext
+grestore
+% Node9->Node4
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 216.8 524.45 moveto
+228.34 483.69 240.51 440.71 251.89 400.48 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 214.04 534.21 moveto
+212.44 523.36 lineto
+215.4 529.4 lineto
+216.77 524.59 lineto
+216.77 524.59 lineto
+216.77 524.59 lineto
+215.4 529.4 lineto
+221.1 525.81 lineto
+214.04 534.21 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 214.04 534.21 moveto
+212.44 523.36 lineto
+215.4 529.4 lineto
+216.77 524.59 lineto
+216.77 524.59 lineto
+216.77 524.59 lineto
+215.4 529.4 lineto
+221.1 525.81 lineto
+214.04 534.21 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+229 489 moveto 19 (right) alignedtext
+0 0 0 edgecolor
+10 /FreeSans set_font
+232 476 moveto 13 (left) alignedtext
+grestore
+% Node10
+gsave
+[ /Rect [ 452 956.5 546 1059.5 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_console.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 451.5 957 moveto
+451.5 1059 lineto
+546.5 1059 lineto
+546.5 957 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 451.5 957 moveto
+451.5 1059 lineto
+546.5 1059 lineto
+546.5 957 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+459.5 1046 moveto 79 (RobotCtrl.Console) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 451.5 1038 moveto
+546.5 1038 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+459.5 1025 moveto 49 (+ Switches) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+459.5 1012 moveto 39 (+ Lamps) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+459.5 999 moveto 45 (- switches) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+459.5 986 moveto 33 (- lamps) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 451.5 978 moveto
+546.5 978 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+459.5 965 moveto 51 (+ Console\(\)) alignedtext
+grestore
+% Node10->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 499 946.89 moveto
+499 896.77 499 826.02 499 775.1 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 499 956.94 moveto
+494.5 946.94 lineto
+499 951.94 lineto
+499 946.94 lineto
+499 946.94 lineto
+499 946.94 lineto
+499 951.94 lineto
+503.5 946.94 lineto
+499 956.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 499 956.94 moveto
+494.5 946.94 lineto
+499 951.94 lineto
+499 946.94 lineto
+499 946.94 lineto
+499 946.94 lineto
+499 951.94 lineto
+503.5 946.94 lineto
+499 956.94 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+499 928.5 moveto 34 (console) alignedtext
+grestore
+% Node11
+gsave
+[ /Rect [ 390 1110 492 1200 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_digital_out.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 389.5 1110.5 moveto
+389.5 1199.5 lineto
+492.5 1199.5 lineto
+492.5 1110.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 389.5 1110.5 moveto
+389.5 1199.5 lineto
+492.5 1199.5 lineto
+492.5 1110.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+397.5 1186.5 moveto 87 (RobotCtrl.DigitalOut) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 389.5 1178.5 moveto
+492.5 1178.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+397.5 1165.5 moveto 30 (+ Data) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+397.5 1152.5 moveto 25 (+ this) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+397.5 1139.5 moveto 28 (# data) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 389.5 1131.5 moveto
+492.5 1131.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+439 1118.5 moveto 4 ( ) alignedtext
+grestore
+% Node11->Node10
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 462.24 1101.16 moveto
+467.67 1087.41 473.49 1072.66 478.86 1059.05 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 458.56 1110.5 moveto
+458.04 1099.54 lineto
+460.39 1105.85 lineto
+462.23 1101.19 lineto
+462.23 1101.19 lineto
+462.23 1101.19 lineto
+460.39 1105.85 lineto
+466.42 1102.85 lineto
+458.56 1110.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 458.56 1110.5 moveto
+458.04 1099.54 lineto
+460.39 1105.85 lineto
+462.23 1101.19 lineto
+462.23 1101.19 lineto
+462.23 1101.19 lineto
+460.39 1105.85 lineto
+466.42 1102.85 lineto
+458.56 1110.5 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+470 1082.5 moveto 27 (lamps) alignedtext
+grestore
+% Node12
+gsave
+[ /Rect [ 510 1110 604 1200 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($class_robot_ctrl_1_1_digital_in.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 509.5 1110.5 moveto
+509.5 1199.5 lineto
+604.5 1199.5 lineto
+604.5 1110.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 509.5 1110.5 moveto
+509.5 1199.5 lineto
+604.5 1199.5 lineto
+604.5 1110.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+517.5 1186.5 moveto 79 (RobotCtrl.DigitalIn) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 509.5 1178.5 moveto
+604.5 1178.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+517.5 1165.5 moveto 30 (+ Data) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+517.5 1152.5 moveto 25 (+ this) alignedtext
+0 0 0 nodecolor
+10 /FreeSans set_font
+517.5 1139.5 moveto 25 (- data) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 509.5 1131.5 moveto
+604.5 1131.5 lineto
+stroke
+0 0 0 nodecolor
+10 /FreeSans set_font
+555 1118.5 moveto 4 ( ) alignedtext
+grestore
+% Node12->Node10
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 535.76 1101.16 moveto
+530.33 1087.41 524.51 1072.66 519.14 1059.05 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 539.44 1110.5 moveto
+531.58 1102.85 lineto
+537.61 1105.85 lineto
+535.77 1101.19 lineto
+535.77 1101.19 lineto
+535.77 1101.19 lineto
+537.61 1105.85 lineto
+539.96 1099.54 lineto
+539.44 1110.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 539.44 1110.5 moveto
+531.58 1102.85 lineto
+537.61 1105.85 lineto
+535.77 1101.19 lineto
+535.77 1101.19 lineto
+535.77 1101.19 lineto
+537.61 1105.85 lineto
+539.96 1099.54 lineto
+539.44 1110.5 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /FreeSans set_font
+531 1082.5 moveto 39 (switches) alignedtext
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 720 1244
+end
+restore
+%%EOF

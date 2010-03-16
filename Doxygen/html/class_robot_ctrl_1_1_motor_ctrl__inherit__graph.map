@@ -1,0 +1,3 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_motor_ctrl___h_w.html" title="{RobotCtrl.MotorCtrl_HW\n|+ Status\l+ Ready\l+ Acceleration\l+ Speed\l+ Ticks\l# samplePeriod\l# speedScale\l# accelerationScale\l&#45; io\l&#45; hwLock\l|+ MotorCtrl_HW()\l+ Close()\l+ Reset()\l+ Go()\l+ Stop()\l+ SetPID()\l&#45; reset()\l&#45; stop()\l&#45; getTicks()\l&#45; setSpeed()\l&#45; setAcceleration()\l&#45; waitReady()\l&#45; waitReady()\l&#45; writeCmd()\l&#45; writeShort()\l&#45; writeInt()\l&#45; readStatus()\l&#45; readShort()\l&#45; readInt()\l}" alt="" coords="5,574,168,1127"/>
+</map>
