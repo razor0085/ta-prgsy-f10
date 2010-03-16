@@ -5,21 +5,20 @@ using System.Text;
 
 namespace RobotCtrl
 {
-    public class World
+    public static class World
     {
         public static Robot Robot
         {
             get { return robot; }
+            set { robot = value; }
         }
 
-        public World(Robot robot, RunMode runMode)
+        public static double GetFreeSpace()
         {
-            //this.robot = robot;
-            this.runMode = runMode;
+            return 0;
         }
 
         static Robot robot;
-        RunMode runMode;
     }
 
 }
