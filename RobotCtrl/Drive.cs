@@ -177,19 +177,32 @@ namespace RobotCtrl
 						}
 						else
 						{
+                            // Restweg
+                            double restweg = track.ResidualLength;
+
 							// Beschleunigung
-							
+                            double beschleunigung = track.acceleration;
+
+
+                            double absoluteSpeed = deltaTime * track.acceleration;
+
 							// Begrenzung auf Reisegeschwindigkeit
+                            double bremsgeschwindigkeit = Math.Sqrt(2 * beschleunigung * restweg);
+                            
+                            double tmp = Math.Min(track.nominalSpeed, absoluteSpeed);
+                            velocity = Math.Min(tmp,bremsgeschwindigkeit);
+
 
 							// Verzögerung auf Zielposition hin
+
 							// Geschwindigkeit auf max. zulässige Bremsgeschwindigkeit limitieren
 
 
 							//??????????????????????????????????
-							throw new ApplicationException("Ihre Ergänzung in Drive.RunTracks fehlt.");
+							//throw new ApplicationException("Ihre Ergänzung in Drive.RunTracks fehlt.");
 							//??????????????????????????????????
 
-							//velocity = ??
+                            
 						}
 
 						// Neue Prozessparameter aktivieren
