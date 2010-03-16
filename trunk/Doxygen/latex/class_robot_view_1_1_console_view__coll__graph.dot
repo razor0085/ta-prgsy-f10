@@ -1,0 +1,12 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{RobotView.ConsoleView\n|+ RobotConsole\l- timer\l- robotConsole\l- lampView\l- switchView\l- label\l|+ ConsoleView()\l- SwitchChanged_Handler()\l- TickEvent_Handler()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="switchView",arrowtail="open"];
+  Node2 [label="{RobotView.SwitchView\n|+ State\l- pictureBox\l- state\l|+ SwitchView()\l- update()\l- InitializeComponent()\l- SwitchView_MouseDown()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_view_1_1_switch_view.html",tooltip="Klasse die einen einzelnen Switch darstellt. Wird Verwendet um einen Switch des HSLU..."];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="lampView",arrowtail="open"];
+  Node3 [label="{RobotView.LampView\n|+ State\l- pictureBox\l- state\l|+ LampView()\l- update()\l- InitializeComponent()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_view_1_1_lamp_view.html"];
+  Node4 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="robotConsole",arrowtail="open"];
+  Node4 [label="{RobotCtrl\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

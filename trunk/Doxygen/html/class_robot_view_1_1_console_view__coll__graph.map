@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_robot_view_1_1_switch_view.html" title="Klasse die einen einzelnen Switch darstellt. Wird Verwendet um einen Switch des HSLU..." alt="" coords="5,6,187,178"/>
+<area shape="rect" id="node4" href="$class_robot_view_1_1_lamp_view.html" title="{RobotView.LampView\n|+ State\l&#45; pictureBox\l&#45; state\l|+ LampView()\l&#45; update()\l&#45; InitializeComponent()\l}" alt="" coords="211,15,360,169"/>
+</map>

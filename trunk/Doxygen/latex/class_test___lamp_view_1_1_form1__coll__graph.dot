@@ -1,0 +1,10 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{Test_LampView.Form1\n|- digitalIn\l- digitalOut\l- lampView\l- switchView\l- label\l- robotConsole\l- running\l- components\l|+ Form1()\l+ Form_Closing()\l# Dispose()\l- checkDigitalIn()\l- checkDigitalOut()\l- DigitalOutChanged_Handler()\l- DigitalInChanged_Handler()\l- SwitchChanged_Handler()\l- InitializeComponent()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="components",arrowtail="open"];
+  Node2 [label="{System\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="robotConsole",arrowtail="open"];
+  Node3 [label="{RobotCtrl\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,8 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{RobotView.DriveView\n|- drive\l- components\l- label12\l- label3\l- label7\l- label6\l- label2\l- label5\l- label4\l- label13\l- label14\l- label1\l- positionRTextBox\l- angleTextBox\l- yTextBox\l- ctrlStatusTextBox\l- xTextBox\l- positionLTextBox\l- rightStatusTextBox\l- leftStatusTextBox\l- speedRTextBox\l- speedLTextBox\l- runtimeTextBox\l- label8\l- resetButton\l|+ DriveView()\l# Dispose()\l- DriveView()\l- timer_Tick()\l- resetButton_Click()\l- InitializeComponent()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="resetButton\nrightStatusTextBox\nspeedLTextBox\nxTextBox\nlabel1\nlabel2\nangleTextBox\nlabel3\nyTextBox\nlabel4\n...",arrowtail="open"];
+  Node2 [label="{System\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_robot_ctrl_1_1_digital_out.html" title="{RobotCtrl.DigitalOut\n|+ Data\l+ this\l# data\l|}" alt="" coords="5,5,141,125"/>
+<area shape="rect" id="node4" href="$class_robot_ctrl_1_1_digital_in.html" title="{RobotCtrl.DigitalIn\n|+ Data\l+ this\l&#45; data\l|}" alt="" coords="165,5,291,125"/>
+</map>

@@ -1,0 +1,3 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_robot_ctrl_1_1_track.html" title="{RobotCtrl.Track\n|+ nominalSpeed\l+ acceleration\l+ coveredLength\l+ elapsedTime\l+ Done\l+ ResidualLength\l# reverse\l# length\l# pauseTime\l# currentSpeed\l# startPosition\l|+ Start()\l+ Step()\l+ SetSpeed()\l}" alt="" coords="25,5,148,299"/>
+</map>
