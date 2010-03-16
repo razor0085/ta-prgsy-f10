@@ -183,19 +183,22 @@ namespace RobotCtrl
 							// Beschleunigung
                             double beschleunigung = track.acceleration;
 
+                            // aktuelle Geschwindigkeit
+                            double absoluteSpeed = track.nominalSpeed;
+                            absoluteSpeed += deltaTime * track.acceleration;
 
-                            double absoluteSpeed = deltaTime * track.acceleration;
-
-							// Begrenzung auf Reisegeschwindigkeit
+                            // Verzögerung auf Zielposition hin
                             double bremsgeschwindigkeit = Math.Sqrt(2 * beschleunigung * restweg);
-                            
+							
+                            // Begrenzung auf Reisegeschwindigkeit
                             double tmp = Math.Min(track.nominalSpeed, absoluteSpeed);
-                            velocity = Math.Min(tmp,bremsgeschwindigkeit);
+
+                            // Geschwindigkeit auf max. zulässige Bremsgeschwindigkeit limitieren
+                            velocity = Math.Min(tmp, bremsgeschwindigkeit);
 
 
-							// Verzögerung auf Zielposition hin
-
-							// Geschwindigkeit auf max. zulässige Bremsgeschwindigkeit limitieren
+							
+							
 
 
 							//??????????????????????????????????
