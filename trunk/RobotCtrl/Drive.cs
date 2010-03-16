@@ -184,8 +184,8 @@ namespace RobotCtrl
                             double beschleunigung = track.acceleration;
 
                             // aktuelle Geschwindigkeit
-                            double absoluteSpeed = track.nominalSpeed;
-                            absoluteSpeed += deltaTime * track.acceleration;
+                            double absoluteSpeed = track.nominalSpeed; /* aktuelle Geschwindigket */
+                            absoluteSpeed += deltaTime * track.acceleration; /* +Geschwindigkeitszuwachs */
 
                             // Verzögerung auf Zielposition hin
                             double bremsgeschwindigkeit = Math.Sqrt(2 * beschleunigung * restweg);
@@ -196,16 +196,9 @@ namespace RobotCtrl
                             // Geschwindigkeit auf max. zulässige Bremsgeschwindigkeit limitieren
                             velocity = Math.Min(tmp, bremsgeschwindigkeit);
 
-
-							
-							
-
-
 							//??????????????????????????????????
 							//throw new ApplicationException("Ihre Ergänzung in Drive.RunTracks fehlt.");
-							//??????????????????????????????????
-
-                            
+							//??????????????????????????????????                           
 						}
 
 						// Neue Prozessparameter aktivieren
