@@ -4,5 +4,5 @@ digraph G
   node [fontname="FreeSans",fontsize="10",shape=record];
   Node1 [label="{RobotCtrl.TrackContourLeft\n|- spacing\l|+ TrackContourLeft()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
   Node2 -> Node1 [dir=back,color="midnightblue",fontsize="10",style="solid",arrowtail="empty"];
-  Node2 [label="{RobotCtrl.Track\n|+ nominalSpeed\l+ acceleration\l+ coveredLength\l+ elapsedTime\l+ Done\l+ ResidualLength\l# reverse\l# length\l# pauseTime\l# currentSpeed\l# startPosition\l|+ Start()\l+ Step()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track.html"];
+  Node2 [label="{RobotCtrl.Track\n|+ nominalSpeed\l+ acceleration\l+ coveredLength\l+ elapsedTime\l+ Done\l+ ResidualLength\l# reverse\l# length\l# pauseTime\l# currentSpeed\l# startPosition\l|+ Start()\l+ Step()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track.html",tooltip="Klasse Track, dient als Basis f&uuml;r eine Strecke."];
 }

@@ -5,8 +5,14 @@ using System.Text;
 
 namespace RobotCtrl
 {
+    /**
+     * @brief DigitalIn, damit der Roboter Switches lesen kann
+     */
     public class DigitalIn
     {
+        /**
+         * Property Data Setzen und lesen von 4 Bit
+         */
         public virtual int Data
         {
             get { return data; }
@@ -15,6 +21,12 @@ namespace RobotCtrl
         
         int data;
 
+        /**
+         * Indexer Setzen und lesen eines bestimmten Bits
+         * 
+         * @param index int Indexnummer
+         * @return bool Ist Bit gesetzt [TRUE/FALSE]
+         */
         public virtual bool this[int index]
         {
             get

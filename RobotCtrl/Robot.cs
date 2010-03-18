@@ -38,20 +38,48 @@ using System.Text;
  * </pre>
  * 
  * <img src="../pictures/PrgSYS_Robot.jpg" alt="Roboter picture">
- *
  */
 
 namespace RobotCtrl
 {
-	public class Robot
+    /**
+     * Klasse Robot, dient als Basis f&uuml;r einen realen oder virtuellen Roboter
+     * @brief Basisklasse f&uuml;r einen Roboter
+     */
+
+    public class Robot
 	{
+        /**
+         * Property Console liefert eine Referenz auf die Console innerhalb des Robot Objektes
+         * @see Console
+         * 
+         * @return Robot Console
+         */ 
 		public Console Console { get { return console; }}
 
+        /**
+         * Property Drive liefert eine Referenz auf Drive innerhalb des Robot Objektes
+         * @see Drive
+         * 
+         * @return Drive f&uuml;r den Robot
+         */ 
         public Drive Drive { get { return drive; } }
 
+        /**
+         * Property Radar liefert eine Referenz auf Radar innerhalb des Robot Objektes
+         * @see Radar
+         * 
+         * @return Radar f&uuml;r den Robot
+         */ 
         public Radar Radar { get { return radar; } }
 
-		public Robot(RunMode runMode)
+        /**
+         * Konstruktor f&uuml;r die Klasse Robot
+         * @see #RunMode
+         * 
+         * @param runMode argument vom Typ enum #RunMode in Config.
+         */
+        public Robot(RunMode runMode)
 		{
 			if (!Config.IsWinCE)
 				runMode = RunMode.VIRTUAL;

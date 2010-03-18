@@ -2,13 +2,30 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+/**
+ * @file Config.cs
+ */
 namespace RobotCtrl
 {
+    /**
+     * @brief Diese Enumeration gibt an, ob der Roboter virtuell auf dem Windows Rechner läuft
+     * oder ob der Roboter real auf der Hardware läuft
+     * 
+     * @var VIRTUAL
+     * @var REAL
+     */
 	public enum RunMode { VIRTUAL, REAL };
 
+    /**
+     * @brief Diese Klasse beinhaltet alle Adressen f&uuml;r die Ansteuerung der Roboter Hardware
+     */
 	public sealed class Config
 	{
 		// WinCE-Plattform
+        /**
+         * Property IsWinCE sagt aus, ob der Code auf dem Roboter (Windows CE) oder auf dem
+         * normalen PC l&auml;uft
+         */
 		public static bool IsWinCE { get { return Environment.OSVersion.Platform == PlatformID.WinCE; } }
 
 		// Roboter-Kennzahlen

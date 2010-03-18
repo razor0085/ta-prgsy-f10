@@ -4,15 +4,15 @@ digraph G
   node [fontname="FreeSans",fontsize="10",shape=record];
   Node1 [label="{RobotCtrl.Track\n|+ nominalSpeed\l+ acceleration\l+ coveredLength\l+ elapsedTime\l+ Done\l+ ResidualLength\l# reverse\l# length\l# pauseTime\l# currentSpeed\l# startPosition\l|+ Start()\l+ Step()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
   Node1 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid",arrowtail="empty"];
-  Node2 [label="{RobotCtrl.TrackArcLeft\n|+ angle\l+ radius\l|+ TrackArcLeft()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_arc_left.html"];
+  Node2 [label="{RobotCtrl.TrackArcLeft\n|+ angle\l+ radius\l|+ TrackArcLeft()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_arc_left.html",tooltip="TrackArcLeft wird verwendet um einen Bogen nach links zu fahren."];
   Node1 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid",arrowtail="empty"];
-  Node3 [label="{RobotCtrl.TrackArcRight\n|+ angle\l+ radius\l|+ TrackArcRight()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_arc_right.html"];
+  Node3 [label="{RobotCtrl.TrackArcRight\n|+ angle\l+ radius\l|+ TrackArcRight()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_arc_right.html",tooltip="TrackArcRight wird verwendet um einen Bogen nach rechts zu fahren."];
   Node1 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid",arrowtail="empty"];
-  Node4 [label="{RobotCtrl.TrackContourLeft\n|- spacing\l|+ TrackContourLeft()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_contour_left.html"];
+  Node4 [label="{RobotCtrl.TrackContourLeft\n|- spacing\l|+ TrackContourLeft()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_contour_left.html",tooltip="TrackContourLeft wird verwendet um eine Kontur linksherum abzufahren."];
   Node1 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid",arrowtail="empty"];
-  Node5 [label="{RobotCtrl.TrackLine\n||+ TrackLine()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_line.html"];
+  Node5 [label="{RobotCtrl.TrackLine\n||+ TrackLine()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_line.html",tooltip="TrackLine wird verwendet um eine gerade Strecke abzufahren."];
   Node1 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid",arrowtail="empty"];
-  Node6 [label="{RobotCtrl.TrackPause\n||+ TrackPause()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_pause.html"];
+  Node6 [label="{RobotCtrl.TrackPause\n||+ TrackPause()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_pause.html",tooltip="TrackPause wird verwendet um einen eine vorgegebene Zeit zu warten."];
   Node1 -> Node7 [dir=back,color="midnightblue",fontsize="10",style="solid",arrowtail="empty"];
-  Node7 [label="{RobotCtrl.TrackTurn\n|+ angle\l|+ TrackTurn()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_turn.html"];
+  Node7 [label="{RobotCtrl.TrackTurn\n|+ angle\l|+ TrackTurn()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track_turn.html",tooltip="TrackTurn wird verwendet um sich um die eigene Achse zu drehen."];
 }

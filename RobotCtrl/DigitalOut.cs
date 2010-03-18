@@ -5,8 +5,14 @@ using System.Text;
 
 namespace RobotCtrl
 {
+    /**
+     * @brief DigitalOut, damit der Roboter LED's setzen kann
+     */
     public class DigitalOut
     {
+        /**
+         * Property Data Setzen und lesen von 4 Bit
+         */
         public virtual int Data
         {
             get { return data; }
@@ -15,6 +21,12 @@ namespace RobotCtrl
 
         protected int data;
 
+        /**
+         * Indexer Setzen und lesen eines bestimmten Bits
+         * 
+         * @param index int Indexnummer
+         * @return bool Ist Bit gesetzt [TRUE/FALSE]
+         */
         public virtual bool this[int index]
         {
             get

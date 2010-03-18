@@ -4,6 +4,11 @@
 }
 
 
+\hyperlink{class_robot_ctrl_1_1_track_turn}{TrackTurn} wird verwendet um sich um die eigene Achse zu drehen.  
+
+
+
+
 Klassendiagramm für RobotCtrl.TrackTurn:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -23,15 +28,9 @@ Zusammengehörigkeiten von RobotCtrl.TrackTurn:\nopagebreak
 \subsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_robot_ctrl_1_1_track_turn_a734b50f5f72a3521d15855b0f86d2c6c}{
-{\bfseries TrackTurn} (double angle, double speed, double acceleration)}
-\label{class_robot_ctrl_1_1_track_turn_a734b50f5f72a3521d15855b0f86d2c6c}
-
+\hyperlink{class_robot_ctrl_1_1_track_turn_a734b50f5f72a3521d15855b0f86d2c6c}{TrackTurn} (double angle, double speed, double acceleration)
 \item 
-\hypertarget{class_robot_ctrl_1_1_track_turn_a065e23cd313e746cb65496c9b9df0955}{
-override void {\bfseries SetSpeed} (double newSpeed, \hyperlink{class_robot_ctrl_1_1_motor_ctrl}{MotorCtrl} left, \hyperlink{class_robot_ctrl_1_1_motor_ctrl}{MotorCtrl} right)}
-\label{class_robot_ctrl_1_1_track_turn_a065e23cd313e746cb65496c9b9df0955}
-
+override void \hyperlink{class_robot_ctrl_1_1_track_turn_a065e23cd313e746cb65496c9b9df0955}{SetSpeed} (double newSpeed, \hyperlink{class_robot_ctrl_1_1_motor_ctrl}{MotorCtrl} left, \hyperlink{class_robot_ctrl_1_1_motor_ctrl}{MotorCtrl} right)
 \end{DoxyCompactItemize}
 \subsection*{Öffentliche Attribute}
 \begin{DoxyCompactItemize}
@@ -41,6 +40,39 @@ double {\bfseries angle}}
 \label{class_robot_ctrl_1_1_track_turn_a5ea004969a5701516952d1424dfa2be3}
 
 \end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+\hyperlink{class_robot_ctrl_1_1_track_turn}{TrackTurn} wird verwendet um sich um die eigene Achse zu drehen. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\hypertarget{class_robot_ctrl_1_1_track_turn_a734b50f5f72a3521d15855b0f86d2c6c}{
+\index{RobotCtrl::TrackTurn@{RobotCtrl::TrackTurn}!TrackTurn@{TrackTurn}}
+\index{TrackTurn@{TrackTurn}!RobotCtrl::TrackTurn@{RobotCtrl::TrackTurn}}
+\subsubsection[{TrackTurn}]{\setlength{\rightskip}{0pt plus 5cm}RobotCtrl.TrackTurn.TrackTurn (double {\em angle}, \/  double {\em speed}, \/  double {\em acceleration})}}
+\label{class_robot_ctrl_1_1_track_turn_a734b50f5f72a3521d15855b0f86d2c6c}
+Konstruktor \hyperlink{class_robot_ctrl_1_1_track_turn}{TrackTurn}
+
+angle Winkel um den gedreht werden soll 
+\begin{DoxyParams}{Parameter}
+\item[{\em speed}]Geschwindigkeit mit der der Roboter sich drehen soll \item[{\em acceleration}]Beschleunigung f\"{u}r die Drehung \end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\hypertarget{class_robot_ctrl_1_1_track_turn_a065e23cd313e746cb65496c9b9df0955}{
+\index{RobotCtrl::TrackTurn@{RobotCtrl::TrackTurn}!SetSpeed@{SetSpeed}}
+\index{SetSpeed@{SetSpeed}!RobotCtrl::TrackTurn@{RobotCtrl::TrackTurn}}
+\subsubsection[{SetSpeed}]{\setlength{\rightskip}{0pt plus 5cm}override void RobotCtrl.TrackTurn.SetSpeed (double {\em newSpeed}, \/  {\bf MotorCtrl} {\em left}, \/  {\bf MotorCtrl} {\em right})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_robot_ctrl_1_1_track_turn_a065e23cd313e746cb65496c9b9df0955}
+\"{U}berschreibt die SetSpeed Methode der Basisklasse \hyperlink{class_robot_ctrl_1_1_track}{Track}
+
+
+\begin{DoxyParams}{Parameter}
+\item[{\em newSpeed}]Setzt die neue Geschwindigkeit \item[{\em left}]Referenz auf den linken Motor \item[{\em right}]Referenz auf den rechten Motor \end{DoxyParams}
+
+
+Erneute Implementation von \hyperlink{class_robot_ctrl_1_1_track_a9abc3ccf4bf1d9db8d461f2cb4b4b0d3}{RobotCtrl.Track}.
+
 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\begin{DoxyCompactItemize}

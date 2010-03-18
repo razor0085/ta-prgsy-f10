@@ -10,12 +10,12 @@ digraph G
   Node4 -> Node3 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="Position",arrowtail="open"];
   Node4 [label="{RobotCtrl.PositionInfo\n|+ X\l+ Y\l+ Angle\l|+ PositionInfo()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_robot_ctrl_1_1_position_info.html"];
   Node5 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="track\noldTrack",arrowtail="open"];
-  Node5 [label="{RobotCtrl.Track\n|+ nominalSpeed\l+ acceleration\l+ coveredLength\l+ elapsedTime\l+ Done\l+ ResidualLength\l# reverse\l# length\l# pauseTime\l# currentSpeed\l# startPosition\l|+ Start()\l+ Step()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track.html"];
+  Node5 [label="{RobotCtrl.Track\n|+ nominalSpeed\l+ acceleration\l+ coveredLength\l+ elapsedTime\l+ Done\l+ ResidualLength\l# reverse\l# length\l# pauseTime\l# currentSpeed\l# startPosition\l|+ Start()\l+ Step()\l+ SetSpeed()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_track.html",tooltip="Klasse Track, dient als Basis f&uuml;r eine Strecke."];
   Node4 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="startPosition",arrowtail="open"];
   Node6 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="right\nleft",arrowtail="open"];
   Node6 [label="{RobotCtrl.MotorCtrl\n|+ Status\l+ Ready\l+ Distance\l+ Speed\l+ Acceleration\l+ Stopped\l+ Ticks\l# nominalSpeed\l- distance\l- currentSpeed\l- acceleration\l- oldTicks\l- ticks\l- run\l- thread\l- status\l|+ MotorCtrl()\l+ Reset()\l+ Go()\l+ Stop()\l+ Close()\l+ SetPID()\l- reset()\l- setSpeed()\l- setAcceleration()\l- getDistance()\l- simulation()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_motor_ctrl.html"];
   Node7 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="robot",arrowtail="open"];
-  Node7 [label="{RobotCtrl.Robot\n|+ Console\l+ Drive\l+ Radar\l- console\l- drive\l- radar\l|+ Robot()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_robot.html"];
+  Node7 [label="{RobotCtrl.Robot\n|+ Console\l+ Drive\l+ Radar\l- console\l- drive\l- radar\l|+ Robot()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_robot.html",tooltip="Basisklasse f&uuml;r einen Roboter."];
   Node8 -> Node7 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="radar",arrowtail="open"];
   Node8 [label="{RobotCtrl.Radar\n|+ Distance\l- sensor\l- robot\l- runMode\l- distance\l|+ Radar()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_radar.html"];
   Node9 -> Node8 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="sensor",arrowtail="open"];
@@ -23,9 +23,9 @@ digraph G
   Node7 -> Node8 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="robot",arrowtail="open"];
   Node1 -> Node7 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="drive",arrowtail="open"];
   Node10 -> Node7 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="console",arrowtail="open"];
-  Node10 [label="{RobotCtrl.Console\n|+ Switches\l+ Lamps\l- switches\l- lamps\l|+ Console()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_console.html"];
+  Node10 [label="{RobotCtrl.Console\n|+ Switches\l+ Lamps\l- switches\l- lamps\l|+ Console()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_console.html",tooltip="Console f&uuml;r den Roboter."];
   Node11 -> Node10 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="lamps",arrowtail="open"];
-  Node11 [label="{RobotCtrl.DigitalOut\n|+ Data\l+ this\l# data\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_digital_out.html"];
+  Node11 [label="{RobotCtrl.DigitalOut\n|+ Data\l+ this\l# data\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_digital_out.html",tooltip="DigitalOut, damit der Roboter LED&#39;s setzen kann."];
   Node12 -> Node10 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="switches",arrowtail="open"];
-  Node12 [label="{RobotCtrl.DigitalIn\n|+ Data\l+ this\l- data\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_digital_in.html"];
+  Node12 [label="{RobotCtrl.DigitalIn\n|+ Data\l+ this\l- data\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_digital_in.html",tooltip="DigitalIn, damit der Roboter Switches lesen kann."];
 }
