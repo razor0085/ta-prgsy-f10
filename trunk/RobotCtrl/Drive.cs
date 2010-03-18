@@ -5,16 +5,41 @@ using System.Threading;
 
 namespace RobotCtrl
 {
+    /**
+     * @brief Drive, damit der Roboter herumfahren kann
+     */
 	public class Drive
 	{
+        /**
+         * Property Position Abrage oder setzen der aktuellen Position
+         */
 		public PositionInfo Position {
 			get { lock (infoLock) { return info.Position; } }
 			set { lock (infoLock) { info.Position = value; } }
 		}
+
+        /**
+         * Property Power [TRUE/FALSE], damit kann man beide Motoren gleichzeitig einschalten oder ausschalten
+         */
 		public bool Power { set { ctrl.Power = value; } }
+
+        /**
+         * Property DriveInfo gibt ein DriveInfo zurück.
+         * @see DriveInfo
+         */
 		public DriveInfo Info { get { return info; } }
+
+        /**
+         * Property Done gibt Aufschluss dar&uuml;ber, ob eine zu fahrende Strecke absolviert ist.
+         */
 		public bool Done { get { return track == null; } }
 
+        /**
+         * Konstruktor f&uuml;r ein Drive Objekt.
+         * 
+         * @param robot Referenz auf einen Robot
+         * @param runMode enum RunMode
+         */
 		public Drive(Robot robot, RunMode runMode)
 		{
 			this.robot = robot;
@@ -43,11 +68,17 @@ namespace RobotCtrl
 			runTracksThread.Start();
 		}
 
+        /**
+         * Methode resetiert das referenzierte DriveCtrl
+         */
 		public void Reset()
 		{
 			ctrl.Reset();
 		}
 
+        /**
+         * Methode resetiert das referenzierte DriveCtrl und beendet die aktuelle Fahrt des Robot.
+         */
 		public void Close()
 		{
 			ctrl.Reset();
@@ -59,57 +90,112 @@ namespace RobotCtrl
 			runTracksThread.Abort();
 		}
 
+        /**
+         * Befehl zum Stoppen des Robot.
+         */
 		public void Stop()
 		{
 			stop = true;
 		}
 
+        /**
+         * Befehl zum Halten des Robot.
+         */
 		public void Halt()
 		{
 			halt = true;
 		}
 
+
+        /**
+         * Zyklisches warten auf beendigung der Fahrt.
+         */
 		public void WaitDone()
 		{
 			while (!Done) Thread.Sleep(100);
 		}
 
+        /**
+         * Methode setzt die zu fahrende Track. In diesem Fall ist es eine Pause.
+         * 
+         * @param pauseTimeSeconds Pause in Sekunden setzen
+         */
 		public void RunPause(double pauseTimeSeconds)
 		{
 			if (track == null)
 				track = new TrackPause(pauseTimeSeconds);
 		}
 
-		public void RunLine(double length, double speed, double acceleration)
+        /**
+         * Methode setzt die zu fahrende Track. In diesem Fall ist es eine gerade Strecke.
+         * 
+         * @param length die zu fahrende Strecke in Meter
+         * @param speed die Geschwindigket f&uuml;r die zu fahrende Strecke
+         * @param runAcceleration die Beschleunigung auf der Strecke
+         */
+        public void RunLine(double length, double speed, double runAcceleration)
 		{
 			if (track == null)
-				track = new TrackLine(length, speed, acceleration);
+				track = new TrackLine(length, speed, runAcceleration);
 		}
 
-		public void RunArcLeft(double radius, double angle, double speed, double acceleration)
+        /**
+         * Methode setzt die zu fahrende Track. In diesem Fall ist es einen Bogen nach links.
+         * 
+         * @param radius der Radius des zu fahrenden Bogens
+         * @param angle der Winkel des zu fahrenden Bogens
+         * @param speed die Geschwindigkeit f&uuml;r die zu fahrende Strecke
+         * @param runAcceleration die Beschleunigung auf der Strecke
+         */
+        public void RunArcLeft(double radius, double angle, double speed, double runAcceleration)
 		{
 			if (track== null)
-				track = new TrackArcLeft(radius, angle, speed, acceleration);
+				track = new TrackArcLeft(radius, angle, speed, runAcceleration);
 		}
 
-		public void RunArcRight(double runRadius, double runAngle, double runSpeed, double runAcceleration)
+        /**
+         * Methode setzt die zu fahrende Track. In diesem Fall ist es einen Bogen nach rechts.
+         * 
+         * @param radius der Radius des zu fahrenden Bogens
+         * @param angle der Winkel des zu fahrenden Bogens
+         * @param speed die Geschwindigkeit f&uuml;r die zu fahrende Strecke
+         * @param runAcceleration die Beschleunigung auf der Strecke
+         */
+        public void RunArcRight(double runRadius, double runAngle, double runSpeed, double runAcceleration)
 		{
 			if (track == null)
 				track = new TrackArcRight(runRadius, runAngle, runSpeed, runAcceleration);
 		}
 
+        /**
+         * Methode setzt die zu fahrende Track. In diesem Fall ist es eine Drehung um die eigene Achse.
+         * 
+         * @param runAngle der Winkel der Drehung
+         * @param runSpeed die Geschwindigkeit f&uuml;r die zu fahrende Strecke
+         * @param runAcceleration die Beschleunigung auf der Strecke
+         */
 		public void RunTurn(double runAngle, double runSpeed, double runAcceleration)
 		{
 			if (track == null)
 				track = new TrackTurn(runAngle, runSpeed, runAcceleration);
 		}
 
+        /**
+         * Methode setzt die zu fahrende Track. In diesem Fall ist es eine Fahrt um eine Kontur.
+         * 
+         * @param distance der Abstand zur Kontur
+         * @param runSpeed die Geschwindigkeit f&uuml;r die zu fahrende Strecke
+         * @param runAcceleration die Beschleunigung auf der Strecke
+         */
 		public void RunContourLeft(double distance, double runSpeed, double runAcceleration)
 		{
 			if (track == null)
 				track = new TrackContourLeft(distance, runSpeed, runAcceleration);
 		}
 
+        /**
+         * Befehl zum Fahren der gesetzten Strecke
+         */
 		void RunTracks()
 		{
 			double velocity = 0;
@@ -231,6 +317,11 @@ namespace RobotCtrl
 			}
 		}
 
+        /**
+         * Methode synchronisiert die lokale Information der Position mit der Hardware Information der Position
+         * 
+         * @param timeInterval der gew&uuml;nschte Zeitabschnitt
+         */
 		void updateInfo(double timeInterval)
 		{
 			// Motor-Status

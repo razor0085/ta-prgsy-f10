@@ -4,7 +4,7 @@ digraph G
   node [fontname="FreeSans",fontsize="10",shape=record];
   Node1 [label="{RobotCtrl.Console\n|+ Switches\l+ Lamps\l- switches\l- lamps\l|+ Console()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
   Node2 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="lamps",arrowtail="open"];
-  Node2 [label="{RobotCtrl.DigitalOut\n|+ Data\l+ this\l# data\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_digital_out.html"];
+  Node2 [label="{RobotCtrl.DigitalOut\n|+ Data\l+ this\l# data\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_digital_out.html",tooltip="DigitalOut, damit der Roboter LED&#39;s setzen kann."];
   Node3 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="switches",arrowtail="open"];
-  Node3 [label="{RobotCtrl.DigitalIn\n|+ Data\l+ this\l- data\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_digital_in.html"];
+  Node3 [label="{RobotCtrl.DigitalIn\n|+ Data\l+ this\l- data\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_digital_in.html",tooltip="DigitalIn, damit der Roboter Switches lesen kann."];
 }

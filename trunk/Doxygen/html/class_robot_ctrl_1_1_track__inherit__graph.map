@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_track_arc_left.html" title="{RobotCtrl.TrackArcLeft\n|+ angle\l+ radius\l|+ TrackArcLeft()\l+ SetSpeed()\l}" alt="" coords="5,347,157,467"/>
-<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_track_arc_right.html" title="{RobotCtrl.TrackArcRight\n|+ angle\l+ radius\l|+ TrackArcRight()\l+ SetSpeed()\l}" alt="" coords="181,347,344,467"/>
-<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_track_contour_left.html" title="{RobotCtrl.TrackContourLeft\n|&#45; spacing\l|+ TrackContourLeft()\l+ SetSpeed()\l}" alt="" coords="368,355,547,458"/>
-<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_track_line.html" title="{RobotCtrl.TrackLine\n||+ TrackLine()\l+ SetSpeed()\l}" alt="" coords="571,355,707,458"/>
-<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_track_pause.html" title="{RobotCtrl.TrackPause\n||+ TrackPause()\l+ SetSpeed()\l}" alt="" coords="731,355,880,458"/>
-<area shape="rect" id="node13" href="$class_robot_ctrl_1_1_track_turn.html" title="{RobotCtrl.TrackTurn\n|+ angle\l|+ TrackTurn()\l+ SetSpeed()\l}" alt="" coords="904,355,1040,458"/>
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_track_arc_left.html" title="TrackArcLeft wird verwendet um einen Bogen nach links zu fahren." alt="" coords="5,347,157,467"/>
+<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_track_arc_right.html" title="TrackArcRight wird verwendet um einen Bogen nach rechts zu fahren." alt="" coords="181,347,344,467"/>
+<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_track_contour_left.html" title="TrackContourLeft wird verwendet um eine Kontur linksherum abzufahren." alt="" coords="368,355,547,458"/>
+<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_track_line.html" title="TrackLine wird verwendet um eine gerade Strecke abzufahren." alt="" coords="571,355,707,458"/>
+<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_track_pause.html" title="TrackPause wird verwendet um einen eine vorgegebene Zeit zu warten." alt="" coords="731,355,880,458"/>
+<area shape="rect" id="node13" href="$class_robot_ctrl_1_1_track_turn.html" title="TrackTurn wird verwendet um sich um die eigene Achse zu drehen." alt="" coords="904,355,1040,458"/>
 </map>

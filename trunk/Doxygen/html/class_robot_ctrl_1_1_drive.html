@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
     <ul>
       <li><a href="index.html"><span>Hauptseite</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -45,51 +46,474 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
   </div>
 </div>
 <div class="contents">
-<h1>RobotCtrl.Drive Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Drive" --><div class="dynheader">
+<h1>RobotCtrl.Drive Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Drive" -->
+<p><a class="el" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann.">Drive</a>, damit der Roboter herumfahren kann.  
+<a href="#_details">Mehr ...</a></p>
+<div class="dynheader">
 Zusammengehörigkeiten von RobotCtrl.Drive:</div>
 <div class="dynsection">
 <div class="center"><img src="class_robot_ctrl_1_1_drive__coll__graph.png" border="0" usemap="#_robot_ctrl_8_drive_coll__map" alt="Collaboration graph"/></div>
 <map name="_robot_ctrl_8_drive_coll__map" id="_robot_ctrl_8_drive_coll__map">
-<area shape="rect" id="node13" href="class_robot_ctrl_1_1_robot.html" title="{RobotCtrl.Robot\n|+ Console\l+ Drive\l+ Radar\l&#45; console\l&#45; drive\l&#45; radar\l|+ Robot()\l}" alt="" coords="416,1467,531,1639"/><area shape="rect" id="node2" href="class_robot_ctrl_1_1_drive_ctrl.html" title="{RobotCtrl.DriveCtrl\n|+ Power\l+ PowerRight\l+ PowerLeft\l+ Status\l+ Command\l&#45; status\l|+ DriveCtrl()\l+ Reset()\l&#45; reset()\l}" alt="" coords="315,349,443,555"/><area shape="rect" id="node4" href="struct_robot_ctrl_1_1_drive_info.html" title="{RobotCtrl.DriveInfo\n|+ Position\l+ Runtime\l+ SpeedL\l+ SpeedR\l+ DistanceL\l+ DistanceR\l+ DriveStatus\l+ MotorStatusL\l+ MotorStatusR\l|+ DriveInfo()\l}" alt="" coords="467,340,595,564"/><area shape="rect" id="node6" href="struct_robot_ctrl_1_1_position_info.html" title="{RobotCtrl.PositionInfo\n|+ X\l+ Y\l+ Angle\l|+ PositionInfo()\l}" alt="" coords="540,5,687,125"/><area shape="rect" id="node8" href="class_robot_ctrl_1_1_track.html" title="{RobotCtrl.Track\n|+ nominalSpeed\l+ acceleration\l+ coveredLength\l+ elapsedTime\l+ Done\l+ ResidualLength\l# reverse\l# length\l# pauseTime\l# currentSpeed\l# startPosition\l|+ Start()\l+ Step()\l+ SetSpeed()\l}" alt="" coords="619,305,741,599"/><area shape="rect" id="node11" href="class_robot_ctrl_1_1_motor_ctrl.html" title="{RobotCtrl.MotorCtrl\n|+ Status\l+ Ready\l+ Distance\l+ Speed\l+ Acceleration\l+ Stopped\l+ Ticks\l# nominalSpeed\l&#45; distance\l&#45; currentSpeed\l&#45; acceleration\l&#45; oldTicks\l&#45; ticks\l&#45; run\l&#45; thread\l&#45; status\l|+ MotorCtrl()\l+ Reset()\l+ Go()\l+ Stop()\l+ Close()\l+ SetPID()\l&#45; reset()\l&#45; setSpeed()\l&#45; setAcceleration()\l&#45; getDistance()\l&#45; simulation()\l}" alt="" coords="765,193,899,711"/><area shape="rect" id="node15" href="class_robot_ctrl_1_1_radar.html" title="{RobotCtrl.Radar\n|+ Distance\l&#45; sensor\l&#45; robot\l&#45; runMode\l&#45; distance\l|+ Radar()\l}" alt="" coords="356,1707,471,1861"/><area shape="rect" id="node17" href="class_robot_ctrl_1_1_radar_sensor.html" title="{RobotCtrl.RadarSensor\n|+ Distance\l|}" alt="" coords="237,1511,392,1596"/><area shape="rect" id="node21" href="class_robot_ctrl_1_1_console.html" title="{RobotCtrl.Console\n|+ Switches\l+ Lamps\l&#45; switches\l&#45; lamps\l|+ Console()\l}" alt="" coords="165,1029,291,1166"/><area shape="rect" id="node23" href="class_robot_ctrl_1_1_digital_out.html" title="{RobotCtrl.DigitalOut\n|+ Data\l+ this\l# data\l|}" alt="" coords="5,392,141,512"/><area shape="rect" id="node25" href="class_robot_ctrl_1_1_digital_in.html" title="{RobotCtrl.DigitalIn\n|+ Data\l+ this\l&#45; data\l|}" alt="" coords="165,392,291,512"/></map>
+<area shape="rect" id="node13" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter." alt="" coords="416,1467,531,1639"/><area shape="rect" id="node2" href="class_robot_ctrl_1_1_drive_ctrl.html" title="{RobotCtrl.DriveCtrl\n|+ Power\l+ PowerRight\l+ PowerLeft\l+ Status\l+ Command\l&#45; status\l|+ DriveCtrl()\l+ Reset()\l&#45; reset()\l}" alt="" coords="315,349,443,555"/><area shape="rect" id="node4" href="struct_robot_ctrl_1_1_drive_info.html" title="{RobotCtrl.DriveInfo\n|+ Position\l+ Runtime\l+ SpeedL\l+ SpeedR\l+ DistanceL\l+ DistanceR\l+ DriveStatus\l+ MotorStatusL\l+ MotorStatusR\l|+ DriveInfo()\l}" alt="" coords="467,340,595,564"/><area shape="rect" id="node6" href="struct_robot_ctrl_1_1_position_info.html" title="{RobotCtrl.PositionInfo\n|+ X\l+ Y\l+ Angle\l|+ PositionInfo()\l}" alt="" coords="540,5,687,125"/><area shape="rect" id="node8" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke." alt="" coords="619,305,741,599"/><area shape="rect" id="node11" href="class_robot_ctrl_1_1_motor_ctrl.html" title="{RobotCtrl.MotorCtrl\n|+ Status\l+ Ready\l+ Distance\l+ Speed\l+ Acceleration\l+ Stopped\l+ Ticks\l# nominalSpeed\l&#45; distance\l&#45; currentSpeed\l&#45; acceleration\l&#45; oldTicks\l&#45; ticks\l&#45; run\l&#45; thread\l&#45; status\l|+ MotorCtrl()\l+ Reset()\l+ Go()\l+ Stop()\l+ Close()\l+ SetPID()\l&#45; reset()\l&#45; setSpeed()\l&#45; setAcceleration()\l&#45; getDistance()\l&#45; simulation()\l}" alt="" coords="765,193,899,711"/><area shape="rect" id="node15" href="class_robot_ctrl_1_1_radar.html" title="{RobotCtrl.Radar\n|+ Distance\l&#45; sensor\l&#45; robot\l&#45; runMode\l&#45; distance\l|+ Radar()\l}" alt="" coords="356,1707,471,1861"/><area shape="rect" id="node17" href="class_robot_ctrl_1_1_radar_sensor.html" title="{RobotCtrl.RadarSensor\n|+ Distance\l|}" alt="" coords="237,1511,392,1596"/><area shape="rect" id="node21" href="class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter." alt="" coords="165,1029,291,1166"/><area shape="rect" id="node23" href="class_robot_ctrl_1_1_digital_out.html" title="DigitalOut, damit der Roboter LED&#39;s setzen kann." alt="" coords="5,392,141,512"/><area shape="rect" id="node25" href="class_robot_ctrl_1_1_digital_in.html" title="DigitalIn, damit der Roboter Switches lesen kann." alt="" coords="165,392,291,512"/></map>
 <center><span class="legend">[<a href="graph_legend.html">Legende</a>]</span></center></div>
 
 <p><a href="class_robot_ctrl_1_1_drive-members.html">Aufstellung aller Elemente</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Öffentliche Methoden</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76fb877ffa6c136983d59ab7e8f2995b"></a><!-- doxytag: member="RobotCtrl::Drive::Drive" ref="a76fb877ffa6c136983d59ab7e8f2995b" args="(Robot robot, RunMode runMode)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>Drive</b> (<a class="el" href="class_robot_ctrl_1_1_robot.html">Robot</a> robot, RunMode runMode)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad79a30093b989b2b701e07d1caf7fecc"></a><!-- doxytag: member="RobotCtrl::Drive::Reset" ref="ad79a30093b989b2b701e07d1caf7fecc" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af902934c2a3f12ef34bc55bb1827cc13"></a><!-- doxytag: member="RobotCtrl::Drive::Close" ref="af902934c2a3f12ef34bc55bb1827cc13" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Close</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39fa32f34e3cd62b99b502948c416897"></a><!-- doxytag: member="RobotCtrl::Drive::Stop" ref="a39fa32f34e3cd62b99b502948c416897" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa24d6438ff31a1dea837423c4047096"></a><!-- doxytag: member="RobotCtrl::Drive::Halt" ref="aaa24d6438ff31a1dea837423c4047096" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Halt</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16bd2f585366688a74f4ad550ffc2ec6"></a><!-- doxytag: member="RobotCtrl::Drive::WaitDone" ref="a16bd2f585366688a74f4ad550ffc2ec6" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>WaitDone</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecd1cd44e2e89488866b58c7753bb4d5"></a><!-- doxytag: member="RobotCtrl::Drive::RunPause" ref="aecd1cd44e2e89488866b58c7753bb4d5" args="(double pauseTimeSeconds)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>RunPause</b> (double pauseTimeSeconds)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdce48d8d5914d1d767f7ad11a13edbd"></a><!-- doxytag: member="RobotCtrl::Drive::RunLine" ref="abdce48d8d5914d1d767f7ad11a13edbd" args="(double length, double speed, double acceleration)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>RunLine</b> (double length, double speed, double acceleration)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ad5b9292f29e8917af31fdb964ce6b6"></a><!-- doxytag: member="RobotCtrl::Drive::RunArcLeft" ref="a3ad5b9292f29e8917af31fdb964ce6b6" args="(double radius, double angle, double speed, double acceleration)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>RunArcLeft</b> (double radius, double angle, double speed, double acceleration)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ef57fad047014b11a60f76c74a4b74c"></a><!-- doxytag: member="RobotCtrl::Drive::RunArcRight" ref="a6ef57fad047014b11a60f76c74a4b74c" args="(double runRadius, double runAngle, double runSpeed, double runAcceleration)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>RunArcRight</b> (double runRadius, double runAngle, double runSpeed, double runAcceleration)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c49e16e45f1db8c54160cd978d501ea"></a><!-- doxytag: member="RobotCtrl::Drive::RunTurn" ref="a2c49e16e45f1db8c54160cd978d501ea" args="(double runAngle, double runSpeed, double runAcceleration)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>RunTurn</b> (double runAngle, double runSpeed, double runAcceleration)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab83216b1690ed4b93b412984318ad345"></a><!-- doxytag: member="RobotCtrl::Drive::RunContourLeft" ref="ab83216b1690ed4b93b412984318ad345" args="(double distance, double runSpeed, double runAcceleration)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>RunContourLeft</b> (double distance, double runSpeed, double runAcceleration)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a76fb877ffa6c136983d59ab7e8f2995b">Drive</a> (<a class="el" href="class_robot_ctrl_1_1_robot.html">Robot</a> robot, RunMode runMode)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#ad79a30093b989b2b701e07d1caf7fecc">Reset</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#af902934c2a3f12ef34bc55bb1827cc13">Close</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a39fa32f34e3cd62b99b502948c416897">Stop</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#aaa24d6438ff31a1dea837423c4047096">Halt</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a16bd2f585366688a74f4ad550ffc2ec6">WaitDone</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#aecd1cd44e2e89488866b58c7753bb4d5">RunPause</a> (double pauseTimeSeconds)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a62eb0b9939a24046a6dd0372cae3758b">RunLine</a> (double length, double speed, double runAcceleration)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a5b1a280fceb771ccad2e19d96e5c4ef3">RunArcLeft</a> (double radius, double angle, double speed, double runAcceleration)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a6ef57fad047014b11a60f76c74a4b74c">RunArcRight</a> (double runRadius, double runAngle, double runSpeed, double runAcceleration)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a2c49e16e45f1db8c54160cd978d501ea">RunTurn</a> (double runAngle, double runSpeed, double runAcceleration)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#ab83216b1690ed4b93b412984318ad345">RunContourLeft</a> (double distance, double runSpeed, double runAcceleration)</td></tr>
 <tr><td colspan="2"><h2>Propertys</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a422e46eec9edf940ccd3afc5f4fde11e"></a><!-- doxytag: member="RobotCtrl::Drive::Position" ref="a422e46eec9edf940ccd3afc5f4fde11e" args="" -->
-<a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Position</b><code> [get, set]</code></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a208251b538e017abf712b1881a32239a"></a><!-- doxytag: member="RobotCtrl::Drive::Power" ref="a208251b538e017abf712b1881a32239a" args="" -->
-bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>Power</b><code> [set]</code></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e6f8392e835c0789ce8cc9ce1a91ed2"></a><!-- doxytag: member="RobotCtrl::Drive::Info" ref="a0e6f8392e835c0789ce8cc9ce1a91ed2" args="" -->
-<a class="el" href="struct_robot_ctrl_1_1_drive_info.html">DriveInfo</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Info</b><code> [get]</code></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c86389ee2d397c20edf926a21326399"></a><!-- doxytag: member="RobotCtrl::Drive::Done" ref="a5c86389ee2d397c20edf926a21326399" args="" -->
-bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>Done</b><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a422e46eec9edf940ccd3afc5f4fde11e">Position</a><code> [get, set]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a208251b538e017abf712b1881a32239a">Power</a><code> [set]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_robot_ctrl_1_1_drive_info.html">DriveInfo</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a0e6f8392e835c0789ce8cc9ce1a91ed2">Info</a><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_drive.html#a5c86389ee2d397c20edf926a21326399">Done</a><code> [get]</code></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p><a class="el" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann.">Drive</a>, damit der Roboter herumfahren kann. </p>
+<hr/><h2>Beschreibung der Konstruktoren und Destruktoren</h2>
+<a class="anchor" id="a76fb877ffa6c136983d59ab7e8f2995b"></a><!-- doxytag: member="RobotCtrl::Drive::Drive" ref="a76fb877ffa6c136983d59ab7e8f2995b" args="(Robot robot, RunMode runMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotCtrl.Drive.Drive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_ctrl_1_1_robot.html">Robot</a>&nbsp;</td>
+          <td class="paramname"> <em>robot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RunMode&nbsp;</td>
+          <td class="paramname"> <em>runMode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Konstruktor f&uuml;r ein <a class="el" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann.">Drive</a> Objekt.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>robot</em>&nbsp;</td><td>Referenz auf einen <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runMode</em>&nbsp;</td><td>enum RunMode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Elementfunktionen</h2>
+<a class="anchor" id="af902934c2a3f12ef34bc55bb1827cc13"></a><!-- doxytag: member="RobotCtrl::Drive::Close" ref="af902934c2a3f12ef34bc55bb1827cc13" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.Close </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode resetiert das referenzierte <a class="el" href="class_robot_ctrl_1_1_drive_ctrl.html">DriveCtrl</a> und beendet die aktuelle Fahrt des <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="aaa24d6438ff31a1dea837423c4047096"></a><!-- doxytag: member="RobotCtrl::Drive::Halt" ref="aaa24d6438ff31a1dea837423c4047096" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.Halt </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Befehl zum Halten des <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad79a30093b989b2b701e07d1caf7fecc"></a><!-- doxytag: member="RobotCtrl::Drive::Reset" ref="ad79a30093b989b2b701e07d1caf7fecc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.Reset </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode resetiert das referenzierte <a class="el" href="class_robot_ctrl_1_1_drive_ctrl.html">DriveCtrl</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b1a280fceb771ccad2e19d96e5c4ef3"></a><!-- doxytag: member="RobotCtrl::Drive::RunArcLeft" ref="a5b1a280fceb771ccad2e19d96e5c4ef3" args="(double radius, double angle, double speed, double runAcceleration)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.RunArcLeft </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runAcceleration</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode setzt die zu fahrende <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a>. In diesem Fall ist es einen Bogen nach links.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>radius</em>&nbsp;</td><td>der Radius des zu fahrenden Bogens </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>angle</em>&nbsp;</td><td>der Winkel des zu fahrenden Bogens </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>speed</em>&nbsp;</td><td>die Geschwindigkeit f&uuml;r die zu fahrende Strecke </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runAcceleration</em>&nbsp;</td><td>die Beschleunigung auf der Strecke </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ef57fad047014b11a60f76c74a4b74c"></a><!-- doxytag: member="RobotCtrl::Drive::RunArcRight" ref="a6ef57fad047014b11a60f76c74a4b74c" args="(double runRadius, double runAngle, double runSpeed, double runAcceleration)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.RunArcRight </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runSpeed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runAcceleration</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode setzt die zu fahrende <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a>. In diesem Fall ist es einen Bogen nach rechts.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>radius</em>&nbsp;</td><td>der Radius des zu fahrenden Bogens </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>angle</em>&nbsp;</td><td>der Winkel des zu fahrenden Bogens </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>speed</em>&nbsp;</td><td>die Geschwindigkeit f&uuml;r die zu fahrende Strecke </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runAcceleration</em>&nbsp;</td><td>die Beschleunigung auf der Strecke </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab83216b1690ed4b93b412984318ad345"></a><!-- doxytag: member="RobotCtrl::Drive::RunContourLeft" ref="ab83216b1690ed4b93b412984318ad345" args="(double distance, double runSpeed, double runAcceleration)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.RunContourLeft </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runSpeed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runAcceleration</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode setzt die zu fahrende <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a>. In diesem Fall ist es eine Fahrt um eine Kontur.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>distance</em>&nbsp;</td><td>der Abstand zur Kontur </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runSpeed</em>&nbsp;</td><td>die Geschwindigkeit f&uuml;r die zu fahrende Strecke </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runAcceleration</em>&nbsp;</td><td>die Beschleunigung auf der Strecke </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a62eb0b9939a24046a6dd0372cae3758b"></a><!-- doxytag: member="RobotCtrl::Drive::RunLine" ref="a62eb0b9939a24046a6dd0372cae3758b" args="(double length, double speed, double runAcceleration)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.RunLine </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runAcceleration</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode setzt die zu fahrende <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a>. In diesem Fall ist es eine gerade Strecke.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>length</em>&nbsp;</td><td>die zu fahrende Strecke in Meter </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>speed</em>&nbsp;</td><td>die Geschwindigket f&uuml;r die zu fahrende Strecke </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runAcceleration</em>&nbsp;</td><td>die Beschleunigung auf der Strecke </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aecd1cd44e2e89488866b58c7753bb4d5"></a><!-- doxytag: member="RobotCtrl::Drive::RunPause" ref="aecd1cd44e2e89488866b58c7753bb4d5" args="(double pauseTimeSeconds)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.RunPause </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>pauseTimeSeconds</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode setzt die zu fahrende <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a>. In diesem Fall ist es eine Pause.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pauseTimeSeconds</em>&nbsp;</td><td>Pause in Sekunden setzen </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c49e16e45f1db8c54160cd978d501ea"></a><!-- doxytag: member="RobotCtrl::Drive::RunTurn" ref="a2c49e16e45f1db8c54160cd978d501ea" args="(double runAngle, double runSpeed, double runAcceleration)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.RunTurn </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runSpeed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>runAcceleration</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode setzt die zu fahrende <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a>. In diesem Fall ist es eine Drehung um die eigene Achse.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>runAngle</em>&nbsp;</td><td>der Winkel der Drehung </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runSpeed</em>&nbsp;</td><td>die Geschwindigkeit f&uuml;r die zu fahrende Strecke </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runAcceleration</em>&nbsp;</td><td>die Beschleunigung auf der Strecke </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a39fa32f34e3cd62b99b502948c416897"></a><!-- doxytag: member="RobotCtrl::Drive::Stop" ref="a39fa32f34e3cd62b99b502948c416897" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.Stop </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Befehl zum Stoppen des <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a16bd2f585366688a74f4ad550ffc2ec6"></a><!-- doxytag: member="RobotCtrl::Drive::WaitDone" ref="a16bd2f585366688a74f4ad550ffc2ec6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Drive.WaitDone </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Zyklisches warten auf beendigung der Fahrt. </p>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Propertys</h2>
+<a class="anchor" id="a5c86389ee2d397c20edf926a21326399"></a><!-- doxytag: member="RobotCtrl::Drive::Done" ref="a5c86389ee2d397c20edf926a21326399" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RobotCtrl.Drive.Done<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property Done gibt Aufschluss dar&uuml;ber, ob eine zu fahrende Strecke absolviert ist. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0e6f8392e835c0789ce8cc9ce1a91ed2"></a><!-- doxytag: member="RobotCtrl::Drive::Info" ref="a0e6f8392e835c0789ce8cc9ce1a91ed2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_robot_ctrl_1_1_drive_info.html">DriveInfo</a> RobotCtrl.Drive.Info<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property <a class="el" href="struct_robot_ctrl_1_1_drive_info.html">DriveInfo</a> gibt ein <a class="el" href="struct_robot_ctrl_1_1_drive_info.html">DriveInfo</a> zur�ck. </p>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="struct_robot_ctrl_1_1_drive_info.html">DriveInfo</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a422e46eec9edf940ccd3afc5f4fde11e"></a><!-- doxytag: member="RobotCtrl::Drive::Position" ref="a422e46eec9edf940ccd3afc5f4fde11e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a> RobotCtrl.Drive.Position<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property Position Abrage oder setzen der aktuellen Position </p>
+
+</div>
+</div>
+<a class="anchor" id="a208251b538e017abf712b1881a32239a"></a><!-- doxytag: member="RobotCtrl::Drive::Power" ref="a208251b538e017abf712b1881a32239a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RobotCtrl.Drive.Power<code> [set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property Power [TRUE/FALSE], damit kann man beide Motoren gleichzeitig einschalten oder ausschalten </p>
+
+</div>
+</div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
 <li>Drive.cs</li>
 </ul>
@@ -99,7 +523,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>Done</b><code> [get]<
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,7 +532,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>Done</b><code> [get]<
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Tue Mar 16 21:56:53 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Thu Mar 18 09:37:05 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

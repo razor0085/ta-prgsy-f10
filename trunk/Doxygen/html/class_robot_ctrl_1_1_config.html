@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
     <ul>
       <li><a href="index.html"><span>Hauptseite</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -46,6 +47,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 </div>
 <div class="contents">
 <h1>RobotCtrl.Config Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Config" -->
+<p>Diese Klasse beinhaltet alle Adressen f&uuml;r die Ansteuerung der Roboter Hardware.  
+<a href="#_details">Mehr ...</a></p>
+
 <p><a href="class_robot_ctrl_1_1_config-members.html">Aufstellung aller Elemente</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Öffentliche Attribute</h2></td></tr>
@@ -72,11 +76,27 @@ const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IOMotorCtrlRight
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1d6da7ec6a2d563c8faec2663e50350"></a><!-- doxytag: member="RobotCtrl::Config::IOMotorCtrlLeft" ref="aa1d6da7ec6a2d563c8faec2663e50350" args="" -->
 const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IOMotorCtrlLeft</b> = 0xF328</td></tr>
 <tr><td colspan="2"><h2>Propertys</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab60bbdfe5e8dfff6ff29e22b64a120f5"></a><!-- doxytag: member="RobotCtrl::Config::IsWinCE" ref="ab60bbdfe5e8dfff6ff29e22b64a120f5" args="" -->
-static bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsWinCE</b><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#ab60bbdfe5e8dfff6ff29e22b64a120f5">IsWinCE</a><code> [get]</code></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p>Diese Klasse beinhaltet alle Adressen f&uuml;r die Ansteuerung der Roboter Hardware. </p>
+<hr/><h2>Dokumentation der Propertys</h2>
+<a class="anchor" id="ab60bbdfe5e8dfff6ff29e22b64a120f5"></a><!-- doxytag: member="RobotCtrl::Config::IsWinCE" ref="ab60bbdfe5e8dfff6ff29e22b64a120f5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RobotCtrl.Config.IsWinCE<code> [static, get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property IsWinCE sagt aus, ob der Code auf dem Roboter (Windows CE) oder auf dem normalen PC l&auml;uft </p>
+
+</div>
+</div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
-<li>Config.cs</li>
+<li><a class="el" href="_config_8cs.html">Config.cs</a></li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -84,7 +104,7 @@ static bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsWinCE</b><co
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,7 +113,7 @@ static bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsWinCE</b><co
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Tue Mar 16 21:56:53 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Thu Mar 18 09:37:05 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

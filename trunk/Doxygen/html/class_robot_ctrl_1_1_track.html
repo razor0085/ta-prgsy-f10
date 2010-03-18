@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
     <ul>
       <li><a href="index.html"><span>Hauptseite</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -45,12 +46,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
   </div>
 </div>
 <div class="contents">
-<h1>RobotCtrl.Track Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Track" --><div class="dynheader">
+<h1>RobotCtrl.Track Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Track" -->
+<p>Klasse <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a>, dient als Basis f&uuml;r eine Strecke.  
+<a href="#_details">Mehr ...</a></p>
+<div class="dynheader">
 Klassendiagramm für RobotCtrl.Track:</div>
 <div class="dynsection">
 <div class="center"><img src="class_robot_ctrl_1_1_track__inherit__graph.png" border="0" usemap="#_robot_ctrl_8_track_inherit__map" alt="Inheritance graph"/></div>
 <map name="_robot_ctrl_8_track_inherit__map" id="_robot_ctrl_8_track_inherit__map">
-<area shape="rect" id="node3" href="class_robot_ctrl_1_1_track_arc_left.html" title="{RobotCtrl.TrackArcLeft\n|+ angle\l+ radius\l|+ TrackArcLeft()\l+ SetSpeed()\l}" alt="" coords="5,347,157,467"/><area shape="rect" id="node5" href="class_robot_ctrl_1_1_track_arc_right.html" title="{RobotCtrl.TrackArcRight\n|+ angle\l+ radius\l|+ TrackArcRight()\l+ SetSpeed()\l}" alt="" coords="181,347,344,467"/><area shape="rect" id="node7" href="class_robot_ctrl_1_1_track_contour_left.html" title="{RobotCtrl.TrackContourLeft\n|&#45; spacing\l|+ TrackContourLeft()\l+ SetSpeed()\l}" alt="" coords="368,355,547,458"/><area shape="rect" id="node9" href="class_robot_ctrl_1_1_track_line.html" title="{RobotCtrl.TrackLine\n||+ TrackLine()\l+ SetSpeed()\l}" alt="" coords="571,355,707,458"/><area shape="rect" id="node11" href="class_robot_ctrl_1_1_track_pause.html" title="{RobotCtrl.TrackPause\n||+ TrackPause()\l+ SetSpeed()\l}" alt="" coords="731,355,880,458"/><area shape="rect" id="node13" href="class_robot_ctrl_1_1_track_turn.html" title="{RobotCtrl.TrackTurn\n|+ angle\l|+ TrackTurn()\l+ SetSpeed()\l}" alt="" coords="904,355,1040,458"/></map>
+<area shape="rect" id="node3" href="class_robot_ctrl_1_1_track_arc_left.html" title="TrackArcLeft wird verwendet um einen Bogen nach links zu fahren." alt="" coords="5,347,157,467"/><area shape="rect" id="node5" href="class_robot_ctrl_1_1_track_arc_right.html" title="TrackArcRight wird verwendet um einen Bogen nach rechts zu fahren." alt="" coords="181,347,344,467"/><area shape="rect" id="node7" href="class_robot_ctrl_1_1_track_contour_left.html" title="TrackContourLeft wird verwendet um eine Kontur linksherum abzufahren." alt="" coords="368,355,547,458"/><area shape="rect" id="node9" href="class_robot_ctrl_1_1_track_line.html" title="TrackLine wird verwendet um eine gerade Strecke abzufahren." alt="" coords="571,355,707,458"/><area shape="rect" id="node11" href="class_robot_ctrl_1_1_track_pause.html" title="TrackPause wird verwendet um einen eine vorgegebene Zeit zu warten." alt="" coords="731,355,880,458"/><area shape="rect" id="node13" href="class_robot_ctrl_1_1_track_turn.html" title="TrackTurn wird verwendet um sich um die eigene Achse zu drehen." alt="" coords="904,355,1040,458"/></map>
 <center><span class="legend">[<a href="graph_legend.html">Legende</a>]</span></center></div>
 <div class="dynheader">
 Zusammengehörigkeiten von RobotCtrl.Track:</div>
@@ -63,12 +67,9 @@ Zusammengehörigkeiten von RobotCtrl.Track:</div>
 <p><a href="class_robot_ctrl_1_1_track-members.html">Aufstellung aller Elemente</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Öffentliche Methoden</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91c0b372e1c332ae1aa18368df116633"></a><!-- doxytag: member="RobotCtrl::Track::Start" ref="a91c0b372e1c332ae1aa18368df116633" args="(PositionInfo startPosition)" -->
-virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Start</b> (<a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a> startPosition)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82386b9a49faa6a31d9706f39238f21b"></a><!-- doxytag: member="RobotCtrl::Track::Step" ref="a82386b9a49faa6a31d9706f39238f21b" args="(double timeInterval)" -->
-virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Step</b> (double timeInterval)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9abc3ccf4bf1d9db8d461f2cb4b4b0d3"></a><!-- doxytag: member="RobotCtrl::Track::SetSpeed" ref="a9abc3ccf4bf1d9db8d461f2cb4b4b0d3" args="(double newSpeed, MotorCtrl left, MotorCtrl right)" -->
-virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetSpeed</b> (double newSpeed, <a class="el" href="class_robot_ctrl_1_1_motor_ctrl.html">MotorCtrl</a> left, <a class="el" href="class_robot_ctrl_1_1_motor_ctrl.html">MotorCtrl</a> right)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_track.html#a91c0b372e1c332ae1aa18368df116633">Start</a> (<a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a> startPosition)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_track.html#a82386b9a49faa6a31d9706f39238f21b">Step</a> (double timeInterval)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_track.html#a9abc3ccf4bf1d9db8d461f2cb4b4b0d3">SetSpeed</a> (double newSpeed, <a class="el" href="class_robot_ctrl_1_1_motor_ctrl.html">MotorCtrl</a> left, <a class="el" href="class_robot_ctrl_1_1_motor_ctrl.html">MotorCtrl</a> right)</td></tr>
 <tr><td colspan="2"><h2>Öffentliche Attribute</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d996b14578c6059e6868e2210e1d582"></a><!-- doxytag: member="RobotCtrl::Track::nominalSpeed" ref="a7d996b14578c6059e6868e2210e1d582" args="" -->
 double&nbsp;</td><td class="memItemRight" valign="bottom"><b>nominalSpeed</b></td></tr>
@@ -90,11 +91,135 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>currentSpeed</b> = 
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a731b5abc7baa77c51b72c5dea7cbfba8"></a><!-- doxytag: member="RobotCtrl::Track::startPosition" ref="a731b5abc7baa77c51b72c5dea7cbfba8" args="" -->
 <a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>startPosition</b></td></tr>
 <tr><td colspan="2"><h2>Propertys</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1c4864f7171475914ef5c0111a0d901"></a><!-- doxytag: member="RobotCtrl::Track::Done" ref="ad1c4864f7171475914ef5c0111a0d901" args="" -->
-virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>Done</b><code> [get]</code></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f01da358c21733d43ac272d3fb549cc"></a><!-- doxytag: member="RobotCtrl::Track::ResidualLength" ref="a4f01da358c21733d43ac272d3fb549cc" args="" -->
-virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>ResidualLength</b><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_track.html#ad1c4864f7171475914ef5c0111a0d901">Done</a><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_track.html#a4f01da358c21733d43ac272d3fb549cc">ResidualLength</a><code> [get]</code></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p>Klasse <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a>, dient als Basis f&uuml;r eine Strecke. </p>
+<hr/><h2>Dokumentation der Elementfunktionen</h2>
+<a class="anchor" id="a9abc3ccf4bf1d9db8d461f2cb4b4b0d3"></a><!-- doxytag: member="RobotCtrl::Track::SetSpeed" ref="a9abc3ccf4bf1d9db8d461f2cb4b4b0d3" args="(double newSpeed, MotorCtrl left, MotorCtrl right)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotCtrl.Track.SetSpeed </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>newSpeed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl.html">MotorCtrl</a>&nbsp;</td>
+          <td class="paramname"> <em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl.html">MotorCtrl</a>&nbsp;</td>
+          <td class="paramname"> <em>right</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode SetSpeed wird verwendet, um den Motoren die neue Geschwinidkeit mitzuteilen.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>newSpeed</em>&nbsp;</td><td>Setzt die neue Geschwindigkeit </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>left</em>&nbsp;</td><td>Referenz auf den linken Motor </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>right</em>&nbsp;</td><td>Referenz auf den rechten Motor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Erneute Implementation in <a class="el" href="class_robot_ctrl_1_1_track_pause.html#a47133c69e455aa2c04f1bc3a6b5999b6">RobotCtrl.TrackPause</a>, <a class="el" href="class_robot_ctrl_1_1_track_line.html#ad73ae0e8f7aea1765834ab90f5bd6b23">RobotCtrl.TrackLine</a>, <a class="el" href="class_robot_ctrl_1_1_track_arc_left.html#aee8e8c1da176807436c2946e39bbd6ae">RobotCtrl.TrackArcLeft</a>, <a class="el" href="class_robot_ctrl_1_1_track_arc_right.html#a7b2db0d3709e4919da0645a6713a87bb">RobotCtrl.TrackArcRight</a>, <a class="el" href="class_robot_ctrl_1_1_track_turn.html#a065e23cd313e746cb65496c9b9df0955">RobotCtrl.TrackTurn</a> und <a class="el" href="class_robot_ctrl_1_1_track_contour_left.html#ae7938250af614625cd08a498c0f15195">RobotCtrl.TrackContourLeft</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91c0b372e1c332ae1aa18368df116633"></a><!-- doxytag: member="RobotCtrl::Track::Start" ref="a91c0b372e1c332ae1aa18368df116633" args="(PositionInfo startPosition)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotCtrl.Track.Start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a>&nbsp;</td>
+          <td class="paramname"> <em>startPosition</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode Start wird verwendet, um eine Startposition vom Typ <a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a> anzugeben</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a></em>&nbsp;</td><td>um den Startpunkt für den <a class="el" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke.">Track</a> festzulegen </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a82386b9a49faa6a31d9706f39238f21b"></a><!-- doxytag: member="RobotCtrl::Track::Step" ref="a82386b9a49faa6a31d9706f39238f21b" args="(double timeInterval)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotCtrl.Track.Step </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>timeInterval</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Methode Step wird verwendet, um auszurechnen wo der Roboter stehen wird nachdem er mit der aktuellen Geschwindigkeit in einem &uuml;bergebenen Zeitintervall fahren würde.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Zeitintervall</em>&nbsp;</td><td>f&uuml;r die Berechnung </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Propertys</h2>
+<a class="anchor" id="ad1c4864f7171475914ef5c0111a0d901"></a><!-- doxytag: member="RobotCtrl::Track::Done" ref="ad1c4864f7171475914ef5c0111a0d901" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool RobotCtrl.Track.Done<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property Done gibt an, ob eine Strecke komplett abgefahren wurde </p>
+
+</div>
+</div>
+<a class="anchor" id="a4f01da358c21733d43ac272d3fb549cc"></a><!-- doxytag: member="RobotCtrl::Track::ResidualLength" ref="a4f01da358c21733d43ac272d3fb549cc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double RobotCtrl.Track.ResidualLength<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property ResidualLength gibt an, wie lange die Strecke ist, welche es noch abzufahren gilt. </p>
+
+</div>
+</div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
 <li>Track.cs</li>
 </ul>
@@ -104,7 +229,7 @@ virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>ResidualLen
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,7 +238,7 @@ virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>ResidualLen
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Tue Mar 16 21:56:53 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Thu Mar 18 09:37:06 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

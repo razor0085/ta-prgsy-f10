@@ -19,6 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
     <ul>
       <li><a href="index.html"><span>Hauptseite</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -45,27 +46,105 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
   </div>
 </div>
 <div class="contents">
-<h1>RobotCtrl.Robot Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Robot" --><div class="dynheader">
+<h1>RobotCtrl.Robot Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Robot" -->
+<p>Basisklasse f&uuml;r einen Roboter.  
+<a href="#_details">Mehr ...</a></p>
+<div class="dynheader">
 Zusammengehörigkeiten von RobotCtrl.Robot:</div>
 <div class="dynsection">
 <div class="center"><img src="class_robot_ctrl_1_1_robot__coll__graph.png" border="0" usemap="#_robot_ctrl_8_robot_coll__map" alt="Collaboration graph"/></div>
 <map name="_robot_ctrl_8_robot_coll__map" id="_robot_ctrl_8_robot_coll__map">
-<area shape="rect" id="node2" href="class_robot_ctrl_1_1_radar.html" title="{RobotCtrl.Radar\n|+ Distance\l&#45; sensor\l&#45; robot\l&#45; runMode\l&#45; distance\l|+ Radar()\l}" alt="" coords="673,1225,788,1380"/><area shape="rect" id="node7" href="class_robot_ctrl_1_1_drive.html" title="{RobotCtrl.Drive\n|+ Position\l+ Power\l+ Info\l+ Done\l&#45; track\l&#45; oldTrack\l&#45; ctrl\l&#45; left\l&#45; right\l&#45; info\l&#45; oldInfo\l&#45; stop\l&#45; halt\l&#45; infoLock\l&#45; trackLock\l&#45; runTracksThread\l&#45; robot\l&#45; drivesLock\l|+ Drive()\l+ Reset()\l+ Close()\l+ Stop()\l+ Halt()\l+ WaitDone()\l+ RunPause()\l+ RunLine()\l+ RunArcLeft()\l+ RunArcRight()\l+ RunTurn()\l+ RunContourLeft()\l&#45; RunTracks()\l&#45; updateInfo()\l}" alt="" coords="341,1000,472,1605"/><area shape="rect" id="node4" href="class_robot_ctrl_1_1_radar_sensor.html" title="{RobotCtrl.RadarSensor\n|+ Distance\l|}" alt="" coords="752,615,907,700"/><area shape="rect" id="node9" href="class_robot_ctrl_1_1_drive_ctrl.html" title="{RobotCtrl.DriveCtrl\n|+ Power\l+ PowerRight\l+ PowerLeft\l+ Status\l+ Command\l&#45; status\l|+ DriveCtrl()\l+ Reset()\l&#45; reset()\l}" alt="" coords="315,554,443,761"/><area shape="rect" id="node11" href="struct_robot_ctrl_1_1_drive_info.html" title="{RobotCtrl.DriveInfo\n|+ Position\l+ Runtime\l+ SpeedL\l+ SpeedR\l+ DistanceL\l+ DistanceR\l+ DriveStatus\l+ MotorStatusL\l+ MotorStatusR\l|+ DriveInfo()\l}" alt="" coords="5,545,133,769"/><area shape="rect" id="node13" href="struct_robot_ctrl_1_1_position_info.html" title="{RobotCtrl.PositionInfo\n|+ X\l+ Y\l+ Angle\l|+ PositionInfo()\l}" alt="" coords="276,201,423,321"/><area shape="rect" id="node15" href="class_robot_ctrl_1_1_track.html" title="{RobotCtrl.Track\n|+ nominalSpeed\l+ acceleration\l+ coveredLength\l+ elapsedTime\l+ Done\l+ ResidualLength\l# reverse\l# length\l# pauseTime\l# currentSpeed\l# startPosition\l|+ Start()\l+ Step()\l+ SetSpeed()\l}" alt="" coords="467,511,589,804"/><area shape="rect" id="node18" href="class_robot_ctrl_1_1_motor_ctrl.html" title="{RobotCtrl.MotorCtrl\n|+ Status\l+ Ready\l+ Distance\l+ Speed\l+ Acceleration\l+ Stopped\l+ Ticks\l# nominalSpeed\l&#45; distance\l&#45; currentSpeed\l&#45; acceleration\l&#45; oldTicks\l&#45; ticks\l&#45; run\l&#45; thread\l&#45; status\l|+ MotorCtrl()\l+ Reset()\l+ Go()\l+ Stop()\l+ Close()\l+ SetPID()\l&#45; reset()\l&#45; setSpeed()\l&#45; setAcceleration()\l&#45; getDistance()\l&#45; simulation()\l}" alt="" coords="157,398,291,917"/><area shape="rect" id="node21" href="class_robot_ctrl_1_1_console.html" title="{RobotCtrl.Console\n|+ Switches\l+ Lamps\l&#45; switches\l&#45; lamps\l|+ Console()\l}" alt="" coords="608,193,733,330"/><area shape="rect" id="node23" href="class_robot_ctrl_1_1_digital_out.html" title="{RobotCtrl.DigitalOut\n|+ Data\l+ this\l# data\l|}" alt="" coords="525,5,661,125"/><area shape="rect" id="node25" href="class_robot_ctrl_1_1_digital_in.html" title="{RobotCtrl.DigitalIn\n|+ Data\l+ this\l&#45; data\l|}" alt="" coords="685,5,811,125"/></map>
+<area shape="rect" id="node2" href="class_robot_ctrl_1_1_radar.html" title="{RobotCtrl.Radar\n|+ Distance\l&#45; sensor\l&#45; robot\l&#45; runMode\l&#45; distance\l|+ Radar()\l}" alt="" coords="673,1225,788,1380"/><area shape="rect" id="node7" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann." alt="" coords="341,1000,472,1605"/><area shape="rect" id="node4" href="class_robot_ctrl_1_1_radar_sensor.html" title="{RobotCtrl.RadarSensor\n|+ Distance\l|}" alt="" coords="752,615,907,700"/><area shape="rect" id="node9" href="class_robot_ctrl_1_1_drive_ctrl.html" title="{RobotCtrl.DriveCtrl\n|+ Power\l+ PowerRight\l+ PowerLeft\l+ Status\l+ Command\l&#45; status\l|+ DriveCtrl()\l+ Reset()\l&#45; reset()\l}" alt="" coords="315,554,443,761"/><area shape="rect" id="node11" href="struct_robot_ctrl_1_1_drive_info.html" title="{RobotCtrl.DriveInfo\n|+ Position\l+ Runtime\l+ SpeedL\l+ SpeedR\l+ DistanceL\l+ DistanceR\l+ DriveStatus\l+ MotorStatusL\l+ MotorStatusR\l|+ DriveInfo()\l}" alt="" coords="5,545,133,769"/><area shape="rect" id="node13" href="struct_robot_ctrl_1_1_position_info.html" title="{RobotCtrl.PositionInfo\n|+ X\l+ Y\l+ Angle\l|+ PositionInfo()\l}" alt="" coords="276,201,423,321"/><area shape="rect" id="node15" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke." alt="" coords="467,511,589,804"/><area shape="rect" id="node18" href="class_robot_ctrl_1_1_motor_ctrl.html" title="{RobotCtrl.MotorCtrl\n|+ Status\l+ Ready\l+ Distance\l+ Speed\l+ Acceleration\l+ Stopped\l+ Ticks\l# nominalSpeed\l&#45; distance\l&#45; currentSpeed\l&#45; acceleration\l&#45; oldTicks\l&#45; ticks\l&#45; run\l&#45; thread\l&#45; status\l|+ MotorCtrl()\l+ Reset()\l+ Go()\l+ Stop()\l+ Close()\l+ SetPID()\l&#45; reset()\l&#45; setSpeed()\l&#45; setAcceleration()\l&#45; getDistance()\l&#45; simulation()\l}" alt="" coords="157,398,291,917"/><area shape="rect" id="node21" href="class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter." alt="" coords="608,193,733,330"/><area shape="rect" id="node23" href="class_robot_ctrl_1_1_digital_out.html" title="DigitalOut, damit der Roboter LED&#39;s setzen kann." alt="" coords="525,5,661,125"/><area shape="rect" id="node25" href="class_robot_ctrl_1_1_digital_in.html" title="DigitalIn, damit der Roboter Switches lesen kann." alt="" coords="685,5,811,125"/></map>
 <center><span class="legend">[<a href="graph_legend.html">Legende</a>]</span></center></div>
 
 <p><a href="class_robot_ctrl_1_1_robot-members.html">Aufstellung aller Elemente</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Öffentliche Methoden</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdd921df41328916b058eaad84ed3078"></a><!-- doxytag: member="RobotCtrl::Robot::Robot" ref="acdd921df41328916b058eaad84ed3078" args="(RunMode runMode)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>Robot</b> (RunMode runMode)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#acdd921df41328916b058eaad84ed3078">Robot</a> (RunMode runMode)</td></tr>
 <tr><td colspan="2"><h2>Propertys</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae78d1691cc943383977741712962bf82"></a><!-- doxytag: member="RobotCtrl::Robot::Console" ref="ae78d1691cc943383977741712962bf82" args="" -->
-<a class="el" href="class_robot_ctrl_1_1_console.html">Console</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Console</b><code> [get]</code></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e1e59f43f8578d78da6c6a19e55f269"></a><!-- doxytag: member="RobotCtrl::Robot::Drive" ref="a6e1e59f43f8578d78da6c6a19e55f269" args="" -->
-<a class="el" href="class_robot_ctrl_1_1_drive.html">Drive</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Drive</b><code> [get]</code></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcc563b2531e72dcdfb9af5cafda1cbc"></a><!-- doxytag: member="RobotCtrl::Robot::Radar" ref="adcc563b2531e72dcdfb9af5cafda1cbc" args="" -->
-<a class="el" href="class_robot_ctrl_1_1_radar.html">Radar</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>Radar</b><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_ctrl_1_1_console.html">Console</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#ae78d1691cc943383977741712962bf82">Console</a><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_ctrl_1_1_drive.html">Drive</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#a6e1e59f43f8578d78da6c6a19e55f269">Drive</a><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_ctrl_1_1_radar.html">Radar</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#adcc563b2531e72dcdfb9af5cafda1cbc">Radar</a><code> [get]</code></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p>Basisklasse f&uuml;r einen Roboter. </p>
+<p>Klasse <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a>, dient als Basis f&uuml;r einen realen oder virtuellen Roboter </p>
+<hr/><h2>Beschreibung der Konstruktoren und Destruktoren</h2>
+<a class="anchor" id="acdd921df41328916b058eaad84ed3078"></a><!-- doxytag: member="RobotCtrl::Robot::Robot" ref="acdd921df41328916b058eaad84ed3078" args="(RunMode runMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotCtrl.Robot.Robot </td>
+          <td>(</td>
+          <td class="paramtype">RunMode&nbsp;</td>
+          <td class="paramname"> <em>runMode</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Konstruktor f&uuml;r die Klasse <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> </p>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd>RunMode</dd></dl>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>runMode</em>&nbsp;</td><td>argument vom Typ enum RunMode in <a class="el" href="class_robot_ctrl_1_1_config.html" title="Diese Klasse beinhaltet alle Adressen f&uuml;r die Ansteuerung der Roboter Hardware...">Config</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Propertys</h2>
+<a class="anchor" id="ae78d1691cc943383977741712962bf82"></a><!-- doxytag: member="RobotCtrl::Robot::Console" ref="ae78d1691cc943383977741712962bf82" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_ctrl_1_1_console.html">Console</a> RobotCtrl.Robot.Console<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property <a class="el" href="class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter.">Console</a> liefert eine Referenz auf die <a class="el" href="class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter.">Console</a> innerhalb des <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> Objektes </p>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter.">Console</a></dd></dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd><a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> <a class="el" href="class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter.">Console</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6e1e59f43f8578d78da6c6a19e55f269"></a><!-- doxytag: member="RobotCtrl::Robot::Drive" ref="a6e1e59f43f8578d78da6c6a19e55f269" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_ctrl_1_1_drive.html">Drive</a> RobotCtrl.Robot.Drive<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property <a class="el" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann.">Drive</a> liefert eine Referenz auf <a class="el" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann.">Drive</a> innerhalb des <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> Objektes </p>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann.">Drive</a></dd></dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd><a class="el" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann.">Drive</a> f&uuml;r den <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adcc563b2531e72dcdfb9af5cafda1cbc"></a><!-- doxytag: member="RobotCtrl::Robot::Radar" ref="adcc563b2531e72dcdfb9af5cafda1cbc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_ctrl_1_1_radar.html">Radar</a> RobotCtrl.Robot.Radar<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property <a class="el" href="class_robot_ctrl_1_1_radar.html">Radar</a> liefert eine Referenz auf <a class="el" href="class_robot_ctrl_1_1_radar.html">Radar</a> innerhalb des <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> Objektes </p>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="class_robot_ctrl_1_1_radar.html">Radar</a></dd></dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd><a class="el" href="class_robot_ctrl_1_1_radar.html">Radar</a> f&uuml;r den <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> </dd></dl>
+
+</div>
+</div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
 <li>Robot.cs</li>
 </ul>
@@ -75,7 +154,7 @@ Zusammengehörigkeiten von RobotCtrl.Robot:</div>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,7 +163,7 @@ Zusammengehörigkeiten von RobotCtrl.Robot:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Tue Mar 16 21:56:53 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Thu Mar 18 09:37:06 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

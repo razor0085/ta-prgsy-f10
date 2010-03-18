@@ -4,6 +4,11 @@
 }
 
 
+\hyperlink{class_robot_ctrl_1_1_digital_in___h_w}{DigitalIn\_\-HW}, damit der Roboter Switches von der Hardware lesen kann.  
+
+
+
+
 Klassendiagramm für RobotCtrl.DigitalIn\_\-HW:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -23,24 +28,61 @@ Zusammengehörigkeiten von RobotCtrl.DigitalIn\_\-HW:\nopagebreak
 \subsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_robot_ctrl_1_1_digital_in___h_w_a50234a4b44c4c522abe6565a3111309e}{
-{\bfseries DigitalIn\_\-HW} (int port)}
-\label{class_robot_ctrl_1_1_digital_in___h_w_a50234a4b44c4c522abe6565a3111309e}
-
+\hyperlink{class_robot_ctrl_1_1_digital_in___h_w_a50234a4b44c4c522abe6565a3111309e}{DigitalIn\_\-HW} (int port)
 \end{DoxyCompactItemize}
 \subsection*{Propertys}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_robot_ctrl_1_1_digital_in___h_w_a22093ed6e3a1b15bbb0406fd56d9b0cc}{
-override int {\bfseries Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}}
-\label{class_robot_ctrl_1_1_digital_in___h_w_a22093ed6e3a1b15bbb0406fd56d9b0cc}
-
+override int \hyperlink{class_robot_ctrl_1_1_digital_in___h_w_a22093ed6e3a1b15bbb0406fd56d9b0cc}{Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \item 
-\hypertarget{class_robot_ctrl_1_1_digital_in___h_w_a1197c7dee03f1a9844a5824e3c6e0941}{
-override bool {\bfseries this} \mbox{[}int bit\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}}
-\label{class_robot_ctrl_1_1_digital_in___h_w_a1197c7dee03f1a9844a5824e3c6e0941}
-
+override bool \hyperlink{class_robot_ctrl_1_1_digital_in___h_w_a1197c7dee03f1a9844a5824e3c6e0941}{this} \mbox{[}int bit\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+\hyperlink{class_robot_ctrl_1_1_digital_in___h_w}{DigitalIn\_\-HW}, damit der Roboter Switches von der Hardware lesen kann. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\hypertarget{class_robot_ctrl_1_1_digital_in___h_w_a50234a4b44c4c522abe6565a3111309e}{
+\index{RobotCtrl::DigitalIn\_\-HW@{RobotCtrl::DigitalIn\_\-HW}!DigitalIn\_\-HW@{DigitalIn\_\-HW}}
+\index{DigitalIn\_\-HW@{DigitalIn\_\-HW}!RobotCtrl::DigitalIn_HW@{RobotCtrl::DigitalIn\_\-HW}}
+\subsubsection[{DigitalIn\_\-HW}]{\setlength{\rightskip}{0pt plus 5cm}RobotCtrl.DigitalIn\_\-HW.DigitalIn\_\-HW (int {\em port})}}
+\label{class_robot_ctrl_1_1_digital_in___h_w_a50234a4b44c4c522abe6565a3111309e}
+Konstruktor der einen Port als Argument bekommt \begin{DoxySeeAlso}{Siehe auch}
+\hyperlink{class_robot_ctrl_1_1_config}{Config}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameter}
+\item[{\em port}]int Port \end{DoxyParams}
+
+
+\subsection{Dokumentation der Propertys}
+\hypertarget{class_robot_ctrl_1_1_digital_in___h_w_a22093ed6e3a1b15bbb0406fd56d9b0cc}{
+\index{RobotCtrl::DigitalIn\_\-HW@{RobotCtrl::DigitalIn\_\-HW}!Data@{Data}}
+\index{Data@{Data}!RobotCtrl::DigitalIn_HW@{RobotCtrl::DigitalIn\_\-HW}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}override int RobotCtrl.DigitalIn\_\-HW.Data\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}}}
+\label{class_robot_ctrl_1_1_digital_in___h_w_a22093ed6e3a1b15bbb0406fd56d9b0cc}
+Property Data lesen von 4 Bit 
+
+Erneute Implementation von \hyperlink{class_robot_ctrl_1_1_digital_in_a9f730b21d4845684a1e085293d2cba50}{RobotCtrl.DigitalIn}.
+
+\hypertarget{class_robot_ctrl_1_1_digital_in___h_w_a1197c7dee03f1a9844a5824e3c6e0941}{
+\index{RobotCtrl::DigitalIn\_\-HW@{RobotCtrl::DigitalIn\_\-HW}!this@{this}}
+\index{this@{this}!RobotCtrl::DigitalIn_HW@{RobotCtrl::DigitalIn\_\-HW}}
+\subsubsection[{this}]{\setlength{\rightskip}{0pt plus 5cm}override bool RobotCtrl.DigitalIn\_\-HW.this\mbox{[}int bit\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}}}
+\label{class_robot_ctrl_1_1_digital_in___h_w_a1197c7dee03f1a9844a5824e3c6e0941}
+Indexer Lesen eines bestimmten Bits
+
+
+\begin{DoxyParams}{Parameter}
+\item[{\em index}]int Indexnummer \end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+bool Ist Bit gesetzt \mbox{[}TRUE/FALSE\mbox{]} 
+\end{DoxyReturn}
+
+
+Erneute Implementation von \hyperlink{class_robot_ctrl_1_1_digital_in_adabed7783bc3ad5603e1adbf2bc37484}{RobotCtrl.DigitalIn}.
+
 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\begin{DoxyCompactItemize}

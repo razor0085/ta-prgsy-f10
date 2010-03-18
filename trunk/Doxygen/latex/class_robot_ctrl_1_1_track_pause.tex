@@ -4,6 +4,11 @@
 }
 
 
+\hyperlink{class_robot_ctrl_1_1_track_pause}{TrackPause} wird verwendet um einen eine vorgegebene Zeit zu warten.  
+
+
+
+
 Klassendiagramm für RobotCtrl.TrackPause:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -23,16 +28,43 @@ Zusammengehörigkeiten von RobotCtrl.TrackPause:\nopagebreak
 \subsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_robot_ctrl_1_1_track_pause_ab869a1e5eb8a5db402ad7a7515700688}{
-{\bfseries TrackPause} (double pauseTimeSeconds)}
-\label{class_robot_ctrl_1_1_track_pause_ab869a1e5eb8a5db402ad7a7515700688}
-
+\hyperlink{class_robot_ctrl_1_1_track_pause_ab869a1e5eb8a5db402ad7a7515700688}{TrackPause} (double pauseTimeSeconds)
 \item 
-\hypertarget{class_robot_ctrl_1_1_track_pause_a47133c69e455aa2c04f1bc3a6b5999b6}{
-override void {\bfseries SetSpeed} (double newSpeed, \hyperlink{class_robot_ctrl_1_1_motor_ctrl}{MotorCtrl} left, \hyperlink{class_robot_ctrl_1_1_motor_ctrl}{MotorCtrl} right)}
-\label{class_robot_ctrl_1_1_track_pause_a47133c69e455aa2c04f1bc3a6b5999b6}
-
+override void \hyperlink{class_robot_ctrl_1_1_track_pause_a47133c69e455aa2c04f1bc3a6b5999b6}{SetSpeed} (double newSpeed, \hyperlink{class_robot_ctrl_1_1_motor_ctrl}{MotorCtrl} left, \hyperlink{class_robot_ctrl_1_1_motor_ctrl}{MotorCtrl} right)
 \end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+\hyperlink{class_robot_ctrl_1_1_track_pause}{TrackPause} wird verwendet um einen eine vorgegebene Zeit zu warten. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\hypertarget{class_robot_ctrl_1_1_track_pause_ab869a1e5eb8a5db402ad7a7515700688}{
+\index{RobotCtrl::TrackPause@{RobotCtrl::TrackPause}!TrackPause@{TrackPause}}
+\index{TrackPause@{TrackPause}!RobotCtrl::TrackPause@{RobotCtrl::TrackPause}}
+\subsubsection[{TrackPause}]{\setlength{\rightskip}{0pt plus 5cm}RobotCtrl.TrackPause.TrackPause (double {\em pauseTimeSeconds})}}
+\label{class_robot_ctrl_1_1_track_pause_ab869a1e5eb8a5db402ad7a7515700688}
+Konstruktor \hyperlink{class_robot_ctrl_1_1_track_pause}{TrackPause}
+
+
+\begin{DoxyParams}{Parameter}
+\item[{\em pauseTimeSeconds}]Zeit in Sekunden \end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\hypertarget{class_robot_ctrl_1_1_track_pause_a47133c69e455aa2c04f1bc3a6b5999b6}{
+\index{RobotCtrl::TrackPause@{RobotCtrl::TrackPause}!SetSpeed@{SetSpeed}}
+\index{SetSpeed@{SetSpeed}!RobotCtrl::TrackPause@{RobotCtrl::TrackPause}}
+\subsubsection[{SetSpeed}]{\setlength{\rightskip}{0pt plus 5cm}override void RobotCtrl.TrackPause.SetSpeed (double {\em newSpeed}, \/  {\bf MotorCtrl} {\em left}, \/  {\bf MotorCtrl} {\em right})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_robot_ctrl_1_1_track_pause_a47133c69e455aa2c04f1bc3a6b5999b6}
+\"{U}berschreibt die SetSpeed Methode der Basisklasse \hyperlink{class_robot_ctrl_1_1_track}{Track}
+
+
+\begin{DoxyParams}{Parameter}
+\item[{\em newSpeed}]Setzt die neue Geschwindigkeit \item[{\em left}]Referenz auf den linken Motor \item[{\em right}]Referenz auf den rechten Motor \end{DoxyParams}
+
+
+Erneute Implementation von \hyperlink{class_robot_ctrl_1_1_track_a9abc3ccf4bf1d9db8d461f2cb4b4b0d3}{RobotCtrl.Track}.
+
 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\begin{DoxyCompactItemize}
