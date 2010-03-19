@@ -46,23 +46,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
   </div>
 </div>
 <div class="contents">
-<h1>RobotCtrl.Radar Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Radar" --><div class="dynheader">
+<h1>RobotCtrl.Radar Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::Radar" -->
+<p>Klasse <a class="el" href="class_robot_ctrl_1_1_radar.html" title="Klasse Radar dient der Orientierung des Robot.">Radar</a> dient der Orientierung des <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a>.  
+<a href="#_details">Mehr ...</a></p>
+<div class="dynheader">
 Zusammengehörigkeiten von RobotCtrl.Radar:</div>
 <div class="dynsection">
 <div class="center"><img src="class_robot_ctrl_1_1_radar__coll__graph.png" border="0" usemap="#_robot_ctrl_8_radar_coll__map" alt="Collaboration graph"/></div>
 <map name="_robot_ctrl_8_radar_coll__map" id="_robot_ctrl_8_radar_coll__map">
-<area shape="rect" id="node4" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter." alt="" coords="613,587,728,759"/><area shape="rect" id="node2" href="class_robot_ctrl_1_1_radar_sensor.html" title="{RobotCtrl.RadarSensor\n|+ Distance\l|}" alt="" coords="660,23,815,108"/><area shape="rect" id="node7" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann." alt="" coords="399,1016,529,1621"/><area shape="rect" id="node9" href="class_robot_ctrl_1_1_drive_ctrl.html" title="{RobotCtrl.DriveCtrl\n|+ Power\l+ PowerRight\l+ PowerLeft\l+ Status\l+ Command\l&#45; status\l|+ DriveCtrl()\l+ Reset()\l&#45; reset()\l}" alt="" coords="5,570,133,777"/><area shape="rect" id="node11" href="struct_robot_ctrl_1_1_drive_info.html" title="{RobotCtrl.DriveInfo\n|+ Position\l+ Runtime\l+ SpeedL\l+ SpeedR\l+ DistanceL\l+ DistanceR\l+ DriveStatus\l+ MotorStatusL\l+ MotorStatusR\l|+ DriveInfo()\l}" alt="" coords="157,561,285,785"/><area shape="rect" id="node13" href="struct_robot_ctrl_1_1_position_info.html" title="{RobotCtrl.PositionInfo\n|+ X\l+ Y\l+ Angle\l|+ PositionInfo()\l}" alt="" coords="205,209,352,329"/><area shape="rect" id="node15" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke." alt="" coords="309,527,432,820"/><area shape="rect" id="node18" href="class_robot_ctrl_1_1_motor_ctrl.html" title="{RobotCtrl.MotorCtrl\n|+ Status\l+ Ready\l+ Distance\l+ Speed\l+ Acceleration\l+ Stopped\l+ Ticks\l# nominalSpeed\l&#45; distance\l&#45; currentSpeed\l&#45; acceleration\l&#45; oldTicks\l&#45; ticks\l&#45; run\l&#45; thread\l&#45; status\l|+ MotorCtrl()\l+ Reset()\l+ Go()\l+ Stop()\l+ Close()\l+ SetPID()\l&#45; reset()\l&#45; setSpeed()\l&#45; setAcceleration()\l&#45; getDistance()\l&#45; simulation()\l}" alt="" coords="456,414,589,933"/><area shape="rect" id="node21" href="class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter." alt="" coords="511,201,636,338"/><area shape="rect" id="node23" href="class_robot_ctrl_1_1_digital_out.html" title="DigitalOut, damit der Roboter LED&#39;s setzen kann." alt="" coords="351,5,487,125"/><area shape="rect" id="node25" href="class_robot_ctrl_1_1_digital_in.html" title="DigitalIn, damit der Roboter Switches lesen kann." alt="" coords="511,5,636,125"/></map>
+<area shape="rect" id="node4" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter." alt="" coords="613,587,728,759"/><area shape="rect" id="node2" href="class_robot_ctrl_1_1_radar_sensor.html" title="RadarSensor ist ein Sensor." alt="" coords="660,23,815,108"/><area shape="rect" id="node7" href="class_robot_ctrl_1_1_drive.html" title="Drive, damit der Roboter herumfahren kann." alt="" coords="399,1016,529,1621"/><area shape="rect" id="node9" href="class_robot_ctrl_1_1_drive_ctrl.html" title="DriveCtrl, Kommunikation mit der Hardware des Roboters." alt="" coords="5,570,133,777"/><area shape="rect" id="node11" href="struct_robot_ctrl_1_1_drive_info.html" title="Struct, der die Informationen zu einem Drive h&auml;lt." alt="" coords="157,561,285,785"/><area shape="rect" id="node13" href="struct_robot_ctrl_1_1_position_info.html" title="Sturct PositionInfo enth&auml;lt Koordinaten." alt="" coords="205,209,352,329"/><area shape="rect" id="node15" href="class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke." alt="" coords="309,527,432,820"/><area shape="rect" id="node18" href="class_robot_ctrl_1_1_motor_ctrl.html" title="MotorCtrl spricht die Motoren des Robot an." alt="" coords="456,414,589,933"/><area shape="rect" id="node21" href="class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter." alt="" coords="511,201,636,338"/><area shape="rect" id="node23" href="class_robot_ctrl_1_1_digital_out.html" title="DigitalOut, damit der Roboter LED&#39;s setzen kann." alt="" coords="351,5,487,125"/><area shape="rect" id="node25" href="class_robot_ctrl_1_1_digital_in.html" title="DigitalIn, damit der Roboter Switches lesen kann." alt="" coords="511,5,636,125"/></map>
 <center><span class="legend">[<a href="graph_legend.html">Legende</a>]</span></center></div>
 
 <p><a href="class_robot_ctrl_1_1_radar-members.html">Aufstellung aller Elemente</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Öffentliche Methoden</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec75e7f4e126ac40c008c5d30d1c8dba"></a><!-- doxytag: member="RobotCtrl::Radar::Radar" ref="aec75e7f4e126ac40c008c5d30d1c8dba" args="(Robot robot, RunMode runMode)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>Radar</b> (<a class="el" href="class_robot_ctrl_1_1_robot.html">Robot</a> robot, RunMode runMode)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_radar.html#aec75e7f4e126ac40c008c5d30d1c8dba">Radar</a> (<a class="el" href="class_robot_ctrl_1_1_robot.html">Robot</a> robot, RunMode runMode)</td></tr>
 <tr><td colspan="2"><h2>Propertys</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0339d462806cb7fc3759d850b5564dd9"></a><!-- doxytag: member="RobotCtrl::Radar::Distance" ref="a0339d462806cb7fc3759d850b5564dd9" args="" -->
-double&nbsp;</td><td class="memItemRight" valign="bottom"><b>Distance</b><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_radar.html#a0339d462806cb7fc3759d850b5564dd9">Distance</a><code> [get]</code></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p>Klasse <a class="el" href="class_robot_ctrl_1_1_radar.html" title="Klasse Radar dient der Orientierung des Robot.">Radar</a> dient der Orientierung des <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a>. </p>
+<hr/><h2>Beschreibung der Konstruktoren und Destruktoren</h2>
+<a class="anchor" id="aec75e7f4e126ac40c008c5d30d1c8dba"></a><!-- doxytag: member="RobotCtrl::Radar::Radar" ref="aec75e7f4e126ac40c008c5d30d1c8dba" args="(Robot robot, RunMode runMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotCtrl.Radar.Radar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_ctrl_1_1_robot.html">Robot</a>&nbsp;</td>
+          <td class="paramname"> <em>robot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RunMode&nbsp;</td>
+          <td class="paramname"> <em>runMode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Konstruktor f&uuml;r einen <a class="el" href="class_robot_ctrl_1_1_radar.html" title="Klasse Radar dient der Orientierung des Robot.">Radar</a> </p>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="class_robot_ctrl_1_1_config.html" title="Diese Klasse beinhaltet alle Adressen f&uuml;r die Ansteuerung der Roboter Hardware...">Config</a></dd></dl>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>robot</em>&nbsp;</td><td>Referenz auf einen <a class="el" href="class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter.">Robot</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>runMode</em>&nbsp;</td><td>Der Runmode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Propertys</h2>
+<a class="anchor" id="a0339d462806cb7fc3759d850b5564dd9"></a><!-- doxytag: member="RobotCtrl::Radar::Distance" ref="a0339d462806cb7fc3759d850b5564dd9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RobotCtrl.Radar.Distance<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property Distance gibt die Distanz zu einem Hindernis zur&uuml;ck. </p>
+
+</div>
+</div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
 <li>Radar.cs</li>
 </ul>
@@ -81,7 +136,7 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>Distance</b><code> 
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Thu Mar 18 09:37:06 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Fri Mar 19 10:35:55 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

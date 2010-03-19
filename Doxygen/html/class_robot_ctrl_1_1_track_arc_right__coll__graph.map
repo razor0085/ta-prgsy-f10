@@ -1,4 +1,4 @@
 <map id="G" name="G">
 <area shape="rect" id="node2" href="$class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke." alt="" coords="25,192,148,485"/>
-<area shape="rect" id="node4" href="$struct_robot_ctrl_1_1_position_info.html" title="{RobotCtrl.PositionInfo\n|+ X\l+ Y\l+ Angle\l|+ PositionInfo()\l}" alt="" coords="13,5,160,125"/>
+<area shape="rect" id="node4" href="$struct_robot_ctrl_1_1_position_info.html" title="Sturct PositionInfo enth&auml;lt Koordinaten." alt="" coords="13,5,160,125"/>
 </map>

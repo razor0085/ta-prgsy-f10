@@ -5,10 +5,23 @@ using System.Text;
 
 namespace RobotCtrl
 {
+    /**
+     * @brief Klasse Radar dient der Orientierung des Robot
+     */
     public class Radar
     {
+        /**
+         * Property Distance gibt die Distanz zu einem Hindernis zur&uuml;ck.
+         */
         public double Distance { get { return distance; } }
 
+        /**
+         * Konstruktor f&uuml;r einen Radar
+         * @see Config
+         * 
+         * @param robot Referenz auf einen Robot
+         * @param runMode Der Runmode
+         */
         public Radar(Robot robot, RunMode runMode)
         {
             if (!Config.IsWinCE)
