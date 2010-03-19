@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_radar_sensor.html" title="RobotCtrl.RadarSensor" alt="" coords="5,5,160,35"/>
-<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_radar_sensor___h_w.html" title="RobotCtrl.RadarSensor_HW" alt="" coords="208,5,392,35"/>
+<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_radar_sensor.html" title="RadarSensor ist ein Sensor." alt="" coords="5,5,160,35"/>
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_radar_sensor___h_w.html" title="RadarSensor_HW erbt von RadarSensor und interagiert mit der Hardware." alt="" coords="208,5,392,35"/>
 </map>

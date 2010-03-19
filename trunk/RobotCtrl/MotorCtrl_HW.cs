@@ -5,6 +5,9 @@ using System.Threading;
 
 namespace RobotCtrl
 {
+    /**
+     * @brief MotorCtrl_HW erbt von MotorCtrl und setzt die Kommandos auf die Robot Hardware ab.
+     */
 	public class MotorCtrl_HW : MotorCtrl
 	{
 		// Treiber-SW zum Motor-Controller-IC LM629
@@ -14,28 +17,60 @@ namespace RobotCtrl
 		// Falls der Zugriff auf diese Klasse nicht übergeordnet synchronisiert wird,
 		// müssen alle "lock(hwLock)" entkommentiert werden!
 
+        /**
+         * Property Status gibt den Status zur&uuml;ck.
+         */
 		public override int Status { get { return readStatus(); } }
+
+        /**
+         * Property Ready gibt an ob der Robot bereit ist.
+         */
 		public override bool Ready { get { return (readStatus() & 0x01) == 0; } }
+
+        /**
+         * Property Acceleration setzt die Beschleunigung a.
+         */
 		public override double Acceleration { set { setAcceleration(value); } }
+
+        /**
+         * Property Speed liest oder schreibt eine Geschwindigkeit.
+         */
 		public override double Speed { set { setSpeed(value); } get { return nominalSpeed; } }
 
+        /**
+         * Property Ticks gibt die abgelaufenen Ticks zur&uuml;ck.
+         */
 		protected override int Ticks { get { return getTicks(); } }
 
+        /**
+         * Konstruktor MotorCtrl_HW
+         * 
+         * @param IOAddress die Hardware Adresse f&uuml;r den Motor
+         */
 		public MotorCtrl_HW(int IOAddress)
 		{
 			io = IOAddress;
 			reset();
 		}
 
+        /**
+         * Methode Close ruft stop auf.
+         */
 		public override void Close()
 		{
 			stop();
 		}
 
+        /**
+         * Methode Reset ruft reset auf.
+         */
 		public override void Reset(){
 			reset();
 		}
 
+        /**
+         * Methode setzt die Hardware in gang.
+         */
 		public override void Go()
 		{
 			lock (hwLock)
@@ -44,6 +79,9 @@ namespace RobotCtrl
 			}
 		}
 
+        /**
+         * Methode Stop stoppt die Ausf&uuml;hrung.
+         */
 		public override void Stop()
 		{
 			lock (hwLock)
@@ -52,6 +90,9 @@ namespace RobotCtrl
 			}
 		}
 
+        /**
+         * Methode SetPID schreibt irgendwelche Daten auf die Hardware.
+         */
 		public override void SetPID(int proportional, int integral, int derivative, int integralLimit, int derivativeInterval)
 		{
 			lock (hwLock)

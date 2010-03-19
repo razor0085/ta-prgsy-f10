@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_drive_ctrl.html" title="RobotCtrl.DriveCtrl" alt="" coords="5,5,133,35"/>
-<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_drive_ctrl___h_w.html" title="RobotCtrl.DriveCtrl_HW" alt="" coords="181,5,339,35"/>
+<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_drive_ctrl.html" title="DriveCtrl, Kommunikation mit der Hardware des Roboters." alt="" coords="5,5,133,35"/>
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_drive_ctrl___h_w.html" title="DriveCtrl_HW erbt von DriveCtrl und setzt die Befehle auf dem realen Roboter auf..." alt="" coords="181,5,339,35"/>
 </map>

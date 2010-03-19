@@ -1,3 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_robot_ctrl_1_1_drive_ctrl.html" title="{RobotCtrl.DriveCtrl\n|+ Power\l+ PowerRight\l+ PowerLeft\l+ Status\l+ Command\l&#45; status\l|+ DriveCtrl()\l+ Reset()\l&#45; reset()\l}" alt="" coords="20,6,148,213"/>
+<area shape="rect" id="node2" href="$class_robot_ctrl_1_1_drive_ctrl.html" title="DriveCtrl, Kommunikation mit der Hardware des Roboters." alt="" coords="20,6,148,213"/>
 </map>

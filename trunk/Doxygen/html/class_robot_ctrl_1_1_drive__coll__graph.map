@@ -1,12 +1,12 @@
 <map id="G" name="G">
 <area shape="rect" id="node13" href="$class_robot_ctrl_1_1_robot.html" title="Basisklasse f&uuml;r einen Roboter." alt="" coords="416,1467,531,1639"/>
-<area shape="rect" id="node2" href="$class_robot_ctrl_1_1_drive_ctrl.html" title="{RobotCtrl.DriveCtrl\n|+ Power\l+ PowerRight\l+ PowerLeft\l+ Status\l+ Command\l&#45; status\l|+ DriveCtrl()\l+ Reset()\l&#45; reset()\l}" alt="" coords="315,349,443,555"/>
-<area shape="rect" id="node4" href="$struct_robot_ctrl_1_1_drive_info.html" title="{RobotCtrl.DriveInfo\n|+ Position\l+ Runtime\l+ SpeedL\l+ SpeedR\l+ DistanceL\l+ DistanceR\l+ DriveStatus\l+ MotorStatusL\l+ MotorStatusR\l|+ DriveInfo()\l}" alt="" coords="467,340,595,564"/>
-<area shape="rect" id="node6" href="$struct_robot_ctrl_1_1_position_info.html" title="{RobotCtrl.PositionInfo\n|+ X\l+ Y\l+ Angle\l|+ PositionInfo()\l}" alt="" coords="540,5,687,125"/>
+<area shape="rect" id="node2" href="$class_robot_ctrl_1_1_drive_ctrl.html" title="DriveCtrl, Kommunikation mit der Hardware des Roboters." alt="" coords="315,349,443,555"/>
+<area shape="rect" id="node4" href="$struct_robot_ctrl_1_1_drive_info.html" title="Struct, der die Informationen zu einem Drive h&auml;lt." alt="" coords="467,340,595,564"/>
+<area shape="rect" id="node6" href="$struct_robot_ctrl_1_1_position_info.html" title="Sturct PositionInfo enth&auml;lt Koordinaten." alt="" coords="540,5,687,125"/>
 <area shape="rect" id="node8" href="$class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke." alt="" coords="619,305,741,599"/>
-<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_motor_ctrl.html" title="{RobotCtrl.MotorCtrl\n|+ Status\l+ Ready\l+ Distance\l+ Speed\l+ Acceleration\l+ Stopped\l+ Ticks\l# nominalSpeed\l&#45; distance\l&#45; currentSpeed\l&#45; acceleration\l&#45; oldTicks\l&#45; ticks\l&#45; run\l&#45; thread\l&#45; status\l|+ MotorCtrl()\l+ Reset()\l+ Go()\l+ Stop()\l+ Close()\l+ SetPID()\l&#45; reset()\l&#45; setSpeed()\l&#45; setAcceleration()\l&#45; getDistance()\l&#45; simulation()\l}" alt="" coords="765,193,899,711"/>
-<area shape="rect" id="node15" href="$class_robot_ctrl_1_1_radar.html" title="{RobotCtrl.Radar\n|+ Distance\l&#45; sensor\l&#45; robot\l&#45; runMode\l&#45; distance\l|+ Radar()\l}" alt="" coords="356,1707,471,1861"/>
-<area shape="rect" id="node17" href="$class_robot_ctrl_1_1_radar_sensor.html" title="{RobotCtrl.RadarSensor\n|+ Distance\l|}" alt="" coords="237,1511,392,1596"/>
+<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_motor_ctrl.html" title="MotorCtrl spricht die Motoren des Robot an." alt="" coords="765,193,899,711"/>
+<area shape="rect" id="node15" href="$class_robot_ctrl_1_1_radar.html" title="Klasse Radar dient der Orientierung des Robot." alt="" coords="356,1707,471,1861"/>
+<area shape="rect" id="node17" href="$class_robot_ctrl_1_1_radar_sensor.html" title="RadarSensor ist ein Sensor." alt="" coords="237,1511,392,1596"/>
 <area shape="rect" id="node21" href="$class_robot_ctrl_1_1_console.html" title="Console f&uuml;r den Roboter." alt="" coords="165,1029,291,1166"/>
 <area shape="rect" id="node23" href="$class_robot_ctrl_1_1_digital_out.html" title="DigitalOut, damit der Roboter LED&#39;s setzen kann." alt="" coords="5,392,141,512"/>
 <area shape="rect" id="node25" href="$class_robot_ctrl_1_1_digital_in.html" title="DigitalIn, damit der Roboter Switches lesen kann." alt="" coords="165,392,291,512"/>
