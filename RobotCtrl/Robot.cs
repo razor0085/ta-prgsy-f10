@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Drawing;
 //using System.Drawing;
 
 /**
@@ -70,8 +71,8 @@ namespace RobotCtrl
          */
         public PositionInfo PositionInfo
         {
-            get { return positionInfo; }
-            set { positionInfo = value; }
+            get { return drive.Position; }
+            set { drive.Position = value; }
         }
 
         /**
@@ -98,14 +99,16 @@ namespace RobotCtrl
 			if (!Config.IsWinCE)
 				runMode = RunMode.VIRTUAL;
 			console = new Console(runMode);
-            drive = new Drive(this, runMode);
-            radar = new Radar(this, runMode);
+            drive = new Drive(runMode);
+            radar = new Radar(runMode);
+
+            drive.Distance = radar.Distance;
 		}
 
 		Console console;
         Drive drive;
         Radar radar;
-        PositionInfo positionInfo;
+        //PositionInfo positionInfo;
         Color color;
 	}
 }

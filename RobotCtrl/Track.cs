@@ -20,6 +20,15 @@ namespace RobotCtrl
 		protected double pauseTime = 0;
 		protected double currentSpeed = 0;
 		protected PositionInfo startPosition;
+        protected double distance = 0;
+
+        /**
+         * Property Distance setzt die Distanz f&uuml;r den Track
+         */
+        public double Distance
+        {
+            set { distance = value; }
+        }
 
         /**
          * Property Done gibt an, ob eine Strecke komplett abgefahren wurde
@@ -296,7 +305,7 @@ namespace RobotCtrl
 
 			const double kp = 5;
 			double leftToRight;
-			leftToRight = 1.0 - kp * (World.Robot.Radar.Distance - spacing);
+            leftToRight = 1.0 - kp * (distance - spacing); // (World.Robot.Radar.Distance - spacing);
 			if (leftToRight >= 1)
 			{
 				left.Speed = -newSpeed;

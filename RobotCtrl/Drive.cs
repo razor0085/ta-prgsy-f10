@@ -37,13 +37,10 @@ namespace RobotCtrl
         /**
          * Konstruktor f&uuml;r ein Drive Objekt.
          * 
-         * @param robot Referenz auf einen Robot
          * @param runMode enum RunMode
          */
-		public Drive(Robot robot, RunMode runMode)
+		public Drive(RunMode runMode)
 		{
-			this.robot = robot;
-
 			if (!Config.IsWinCE)
 				runMode = RunMode.VIRTUAL;
 			if (runMode == RunMode.REAL)
@@ -67,6 +64,14 @@ namespace RobotCtrl
 			runTracksThread.Priority = ThreadPriority.AboveNormal;
 			runTracksThread.Start();
 		}
+
+        /**
+         * Property Distance zum setzen einer Distanz
+         */
+        public double Distance
+        {
+            set { track.Distance = value; }
+        }
 
         /**
          * Methode resetiert das referenzierte DriveCtrl
@@ -408,7 +413,6 @@ namespace RobotCtrl
 		Object infoLock = new object();
 		Object trackLock = new object();
 		Thread runTracksThread;
-		Robot robot;
 		Object drivesLock = new object();
     }
 }

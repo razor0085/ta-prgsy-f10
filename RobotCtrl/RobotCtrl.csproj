@@ -69,6 +69,7 @@
     <Compile Include="IOPort.cs" />
     <Compile Include="MotorCtrl.cs" />
     <Compile Include="MotorCtrl_HW.cs" />
+    <Compile Include="ObstacleMap.cs" />
     <Compile Include="PositionInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Radar.cs" />

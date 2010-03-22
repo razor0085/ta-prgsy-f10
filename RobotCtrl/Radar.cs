@@ -19,10 +19,9 @@ namespace RobotCtrl
          * Konstruktor f&uuml;r einen Radar
          * @see Config
          * 
-         * @param robot Referenz auf einen Robot
          * @param runMode Der Runmode
          */
-        public Radar(Robot robot, RunMode runMode)
+        public Radar(RunMode runMode)
         {
             if (!Config.IsWinCE)
             {
@@ -36,12 +35,10 @@ namespace RobotCtrl
             {
                 sensor = new RadarSensor_HW(Config.IORadarSensor);
             }
-            this.robot = robot;
             this.runMode = runMode;
         }
 
         RadarSensor sensor;
-        Robot robot;
         RunMode runMode;
         double distance;
     }
