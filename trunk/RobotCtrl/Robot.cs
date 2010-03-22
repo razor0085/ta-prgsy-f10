@@ -66,6 +66,20 @@ namespace RobotCtrl
         public Drive Drive { get { return drive; } }
 
         /**
+         * Property PositionInfo liefert oder setzt eine Referenz auf eine Postion
+         */
+        public PositionInfo PositionInfo
+        {
+            get { return positionInfo; }
+            set { positionInfo = value; }
+        }
+
+        /**
+         * Property Color liefert oder setzt eine Farbe des Robot
+         */
+        public Color Color { get { return color; } set { color = value; } }
+
+        /**
          * Property Radar liefert eine Referenz auf Radar innerhalb des Robot Objektes
          * @see Radar
          * 
@@ -91,5 +105,7 @@ namespace RobotCtrl
 		Console console;
         Drive drive;
         Radar radar;
+        PositionInfo positionInfo;
+        Color color;
 	}
 }
