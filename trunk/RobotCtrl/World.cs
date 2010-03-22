@@ -16,9 +16,9 @@ namespace RobotCtrl
             set { robot.Add(value); }
         }
 
-        public Robot getRobot(int index)
+        public static Robot getRobot(int index)
         {
-            if (index > robot.Capacity()-1 || index < 0)
+            if (index > robot.Capacity-1 || index < 0)
             {
                 return null;
             }
@@ -30,13 +30,20 @@ namespace RobotCtrl
             return 0;
         }
 
-        public static ObstacleMap Obstacle
+        public static ObstacleMap ObstacleMap
         {
-            //get { return obstacle; }
-            set { obstacle.Add(value); }
+            set { obstacleMap.Add(value); }
         }
 
-        static List<ObstacleMap> obstacle = new List<ObstacleMap>();
+        public static ObstacleMap getObstacleMap(int index)
+        {
+            if (index > obstacleMap.Capacity -1 || index < 0){
+                return null;
+            }
+            return obstacleMap[index];
+        }
+
+        static List<ObstacleMap> obstacleMap = new List<ObstacleMap>();
         static List<Robot> robot = new List<Robot>();
         static int x;
         static int y;
