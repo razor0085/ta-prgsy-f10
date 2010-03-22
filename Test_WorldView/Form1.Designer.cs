@@ -30,11 +30,19 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.Menu = this.mainMenu1;
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Text = "Form1";
             this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(640, 481);
+            this.Menu = this.mainMenu1;
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

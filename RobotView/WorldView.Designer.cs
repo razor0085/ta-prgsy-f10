@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // WorldView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Name = "WorldView";
+            this.Size = new System.Drawing.Size(463, 421);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

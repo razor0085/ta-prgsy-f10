@@ -81,6 +81,12 @@
     <Compile Include="SwitchView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="WorldView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorldView.Designer.cs">
+      <DependentUpon>WorldView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DriveView.resx">
@@ -98,6 +104,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SwitchView.resx">
       <DependentUpon>SwitchView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorldView.resx">
+      <DependentUpon>WorldView.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
