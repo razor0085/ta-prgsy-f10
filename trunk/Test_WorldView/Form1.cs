@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using RobotView;
 
 namespace Test_WorldView
 {
@@ -14,6 +15,8 @@ namespace Test_WorldView
         public Form1()
         {
             InitializeComponent();
+            WorldView worldView = new WorldView();
+            this.Controls.Add(worldView);
         }
     }
 }
