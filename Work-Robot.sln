@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Motor_CE", "Test_Motor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Motor_XP", "Test_Motor_XP\Test_Motor_XP.csproj", "{4F1701FB-A3C7-4672-886A-E64618753943}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_WorldView_CE", "Test_WorldView\Test_WorldView_CE.csproj", "{D340E0CE-2A8B-4C54-B0D9-D6774E8735F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_WorldView_CE", "Test_WorldView_CE\Test_WorldView_CE.csproj", "{D340E0CE-2A8B-4C54-B0D9-D6774E8735F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_WorldView_XP", "Test_WorldView_XP\Test_WorldView_XP.csproj", "{58F67FE8-8060-4C05-B919-740066600326}"
 EndProject
