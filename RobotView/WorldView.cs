@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using RobotCtrl;
 
 namespace RobotView
 {
@@ -17,10 +18,13 @@ namespace RobotView
         int xMax = 5;
         int yMax = 2;
 
+
+
         public WorldView()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill; // Damit das WorldView gleich gross ist wie das Form
+
         }
 
         int calculateGridSizeInPixel()
@@ -48,6 +52,8 @@ namespace RobotView
             paintRobot(gfx, Color.Gold, 2, 0, 0);
             paintRobot(gfx, Color.Green, 2, 1, Math.PI);
             paintRobot(gfx, Color.Red, 0, -1, 0.5 * Math.PI);
+
+            paintObstacle(gfx);
         }
 
         void paintGrid(Graphics g)
@@ -61,6 +67,7 @@ namespace RobotView
 
             // Fette Linie
             float fetteLinie = 2;
+            
 
             // Grösse des Forms
             int x = this.Width;
@@ -97,22 +104,37 @@ namespace RobotView
 
         void paintRobot(Graphics g, Color color, double x, double y, double angle)
         {
-            // Koordinatenursprung in Pixel
-            int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
-            int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
+            // Koordinatenursprung in Pixel (Offset von 3 Pixel, damit der Robot auf den Koordinaten zu liegen kommt. warum?)
+            int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel() + 3;
+            int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel() + 3;
 
             // Durchmesser und Radius des Robot
             int durchmesser = calculateGridSizeInPixel() / 3;
             int radius = durchmesser / 2;
 
             // Zeichnet den Robot als Ellipse
-            Rectangle rect = new Rectangle(xNullpunkt + (int)(x * calculateGridSizeInPixel()), yNullpunkt + (int)(y * calculateGridSizeInPixel()), durchmesser, durchmesser);
+            Rectangle rect = new Rectangle(xNullpunkt  + (int)(x * calculateGridSizeInPixel()), yNullpunkt + (int)(y * calculateGridSizeInPixel()), durchmesser, durchmesser);
             g.FillEllipse(new SolidBrush(color), rect);
 
             // Zeichnet die Fahrtrichtung im Robot (Winkel geht im Uhrzeigersinn)
             Pen fahrtrichtung = new Pen(Color.Black);
             fahrtrichtung.Width = 3;
             g.DrawLine(fahrtrichtung, xNullpunkt + (int)(x * calculateGridSizeInPixel()) + radius, yNullpunkt + (int)(y * calculateGridSizeInPixel()) + radius, xNullpunkt + (int)(x * calculateGridSizeInPixel()) + radius + (int)(Math.Cos(angle) * radius), yNullpunkt + (int)(y * calculateGridSizeInPixel()) + radius + (int)(Math.Sin(angle) * radius));
+        }
+
+        void paintObstacle(Graphics g)
+        {
+            Image newImage = World.ObstacleMap.getImage();
+            
+            // Create rectangle for displaying image.
+            Rectangle destRect = new Rectangle(100, 100, 250, 50);
+            // Create rectangle for source image.
+            Rectangle srcRect = new Rectangle(0, 0, newImage.Width, newImage.Height);
+            GraphicsUnit units = GraphicsUnit.Pixel;
+            // Draw image to screen.
+            g.DrawImage(newImage, destRect, srcRect, units);
+
+
         }
     }
 }

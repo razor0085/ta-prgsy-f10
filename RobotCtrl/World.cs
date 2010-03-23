@@ -32,21 +32,12 @@ namespace RobotCtrl
 
         public static ObstacleMap ObstacleMap
         {
-            set { obstacleMap.Add(value); }
+            set { obstacleMap = value; }
+            get { return obstacleMap; }
         }
 
-        public static ObstacleMap getObstacleMap(int index)
-        {
-            if (index > obstacleMap.Capacity -1 || index < 0){
-                return null;
-            }
-            return obstacleMap[index];
-        }
-
-        static List<ObstacleMap> obstacleMap = new List<ObstacleMap>();
+        static ObstacleMap obstacleMap = new ObstacleMap();
         static List<Robot> robot = new List<Robot>();
-        static int x;
-        static int y;
     }
 
 }
