@@ -23,6 +23,21 @@ namespace RobotView
             this.Dock = DockStyle.Fill; // Damit das WorldView gleich gross ist wie das Form
         }
 
+        int calculateGridSizeInPixel()
+        {
+            return (Width - 40) / getAbsoluteX();
+        }
+
+        int getAbsoluteX()
+        {
+            return xMax - xMin;
+        }
+
+        int getAbsoluteY()
+        {
+            return yMax - yMin;
+        }
+
         protected override void OnPaint(PaintEventArgs paintEvnt)
         {
             // Get the graphics object
@@ -30,16 +45,16 @@ namespace RobotView
 
             paintGrid(gfx);
 
-            paintRobot(gfx, Color.Gold, 90, 40, 30);
-            paintRobot(gfx, Color.Green, 40, 40, 30);
-            paintRobot(gfx, Color.Red, 140, 70, 30);
+            paintRobot(gfx, Color.Gold, 90, 40, 0);
+            paintRobot(gfx, Color.Green, 40, 40, Math.PI);
+            paintRobot(gfx, Color.Red, 140, 70, 0.5 * Math.PI);
         }
 
         void paintGrid(Graphics g)
         {
             // Create a new pen that we shall use for drawing the line
             Pen horizontalPen = new Pen(Color.Black);
-            Pen verticalPen = new Pen(Color.Red);
+            Pen verticalPen = new Pen(Color.Black);
 
             // Standard Linie
             float standardLinie = horizontalPen.Width;
@@ -52,9 +67,9 @@ namespace RobotView
             int y = this.Height;
 
             // Horizontale Linien zeichnen
-            for (int i = 0; i < y - 40; i = i + 10)
+            for (int i = 0; i < getAbsoluteY() + 1; i++)
             {
-                if (i == 0)
+                if (yMin + i == 0)
                 {
                     horizontalPen.Width = fetteLinie;
                 }
@@ -62,13 +77,13 @@ namespace RobotView
                 {
                     horizontalPen.Width = standardLinie; 
                 }
-                g.DrawLine(horizontalPen, 20, i + 20, x - 20, i + 20);
+                g.DrawLine(horizontalPen, 20, (i * calculateGridSizeInPixel()) + 20, getAbsoluteX() * calculateGridSizeInPixel() + 20, (i * calculateGridSizeInPixel()) + 20);
             }
 
             // Vertikale Linien zeichnen
-            for (int i = 0; i < x - 40; i = i + 10)
+            for (int i = 0; i < getAbsoluteX() + 1; i++)
             {
-                if (i == 0)
+                if (xMin + i == 0)
                 {
                     verticalPen.Width = fetteLinie;  
                 }
@@ -76,20 +91,24 @@ namespace RobotView
                 {
                     verticalPen.Width = standardLinie;
                 }
-                g.DrawLine(verticalPen, i + 20, 20, i + 20, y - 20);
+                g.DrawLine(verticalPen, (i * calculateGridSizeInPixel()) + 20, 20, (i * calculateGridSizeInPixel()) + 20, getAbsoluteY() * calculateGridSizeInPixel() + 20);
             }
         }
 
-        void paintRobot(Graphics g, Color color, int x, int y, int angle)
+        void paintRobot(Graphics g, Color color, int x, int y, double angle)
         {
+            // Durchmesser und Radius des Robot
+            int durchmesser = calculateGridSizeInPixel() / 3;
+            int radius = durchmesser / 2;
+
             // Zeichnet den Robot als Ellipse
-            Rectangle rect = new Rectangle(x, y, 20, 20);
+            Rectangle rect = new Rectangle(x, y, durchmesser, durchmesser);
             g.FillEllipse(new SolidBrush(color), rect);
 
-            // Zeichnet die Fahrtrichtung im Robot
+            // Zeichnet die Fahrtrichtung im Robot (Winkel geht im Uhrzeigersinn)
             Pen fahrtrichtung = new Pen(Color.Black);
             fahrtrichtung.Width = 3;
-            g.DrawLine(fahrtrichtung, x + 10, y + 10, x + 20, y + 20);
+            g.DrawLine(fahrtrichtung, x + radius, y + radius, x + radius + (int)(Math.Cos(angle) * radius), y + radius + (int)(Math.Sin(angle) * radius));
         }
     }
 }
