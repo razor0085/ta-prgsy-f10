@@ -45,9 +45,9 @@ namespace RobotView
 
             paintGrid(gfx);
 
-            paintRobot(gfx, Color.Gold, 90, 40, 0);
-            paintRobot(gfx, Color.Green, 40, 40, Math.PI);
-            paintRobot(gfx, Color.Red, 140, 70, 0.5 * Math.PI);
+            paintRobot(gfx, Color.Gold, 2, 0, 0);
+            paintRobot(gfx, Color.Green, 2, 1, Math.PI);
+            paintRobot(gfx, Color.Red, 0, -1, 0.5 * Math.PI);
         }
 
         void paintGrid(Graphics g)
@@ -95,20 +95,20 @@ namespace RobotView
             }
         }
 
-        void paintRobot(Graphics g, Color color, int x, int y, double angle)
+        void paintRobot(Graphics g, Color color, double x, double y, double angle)
         {
             // Durchmesser und Radius des Robot
             int durchmesser = calculateGridSizeInPixel() / 3;
             int radius = durchmesser / 2;
 
             // Zeichnet den Robot als Ellipse
-            Rectangle rect = new Rectangle(x, y, durchmesser, durchmesser);
+            Rectangle rect = new Rectangle((int)(x * calculateGridSizeInPixel()), (int)(y * calculateGridSizeInPixel()), durchmesser, durchmesser);
             g.FillEllipse(new SolidBrush(color), rect);
 
             // Zeichnet die Fahrtrichtung im Robot (Winkel geht im Uhrzeigersinn)
             Pen fahrtrichtung = new Pen(Color.Black);
             fahrtrichtung.Width = 3;
-            g.DrawLine(fahrtrichtung, x + radius, y + radius, x + radius + (int)(Math.Cos(angle) * radius), y + radius + (int)(Math.Sin(angle) * radius));
+            g.DrawLine(fahrtrichtung, (int)(x * calculateGridSizeInPixel()) + radius, (int)(y * calculateGridSizeInPixel()) + radius, (int)(x * calculateGridSizeInPixel()) + radius + (int)(Math.Cos(angle) * radius), (int)(y * calculateGridSizeInPixel()) + radius + (int)(Math.Sin(angle) * radius));
         }
     }
 }
