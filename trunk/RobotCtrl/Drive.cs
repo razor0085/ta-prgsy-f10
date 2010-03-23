@@ -60,6 +60,8 @@ namespace RobotCtrl
 				left.Acceleration = 10.0;
 				right.Acceleration = 10.0;
 			}
+            if(track == null)
+                track = new Track();
 			runTracksThread = new Thread(RunTracks);
 			runTracksThread.Priority = ThreadPriority.AboveNormal;
 			runTracksThread.Start();
@@ -70,7 +72,13 @@ namespace RobotCtrl
          */
         public double Distance
         {
-            set { track.Distance = value; }
+            set
+            {
+                if (track == null)
+                {
+                    track = new Track();
+                }
+                track.Distance = value; }
         }
 
         /**
