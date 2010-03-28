@@ -134,7 +134,7 @@ namespace RobotView
             // Zeichnet die Fahrtrichtung im Robot (Winkel geht im Uhrzeigersinn)
             Pen fahrtrichtung = new Pen(Color.Black);
             fahrtrichtung.Width = 3;
-            g.DrawLine(fahrtrichtung, xNullpunkt + (int)(x * calculateGridSizeInPixel()) + radius, yNullpunkt - (int)(y * calculateGridSizeInPixel()) + radius, xNullpunkt + (int)(x * calculateGridSizeInPixel()) + radius + (int)(Math.Cos(angle) * radius), yNullpunkt - (int)(y * calculateGridSizeInPixel()) + radius + (int)(Math.Sin(angle) * radius));
+            g.DrawLine(fahrtrichtung, xNullpunkt + (int)(x * calculateGridSizeInPixel()) + radius + 1, yNullpunkt - (int)(y * calculateGridSizeInPixel()) + radius, xNullpunkt + (int)(x * calculateGridSizeInPixel()) + radius + (int)(Math.Cos(angle) * radius) + 1, yNullpunkt - (int)(y * calculateGridSizeInPixel()) + radius + (int)(Math.Sin(angle) * radius));
         }
 
         void paintObstacle(Graphics g)
