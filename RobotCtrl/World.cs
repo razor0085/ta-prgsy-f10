@@ -47,7 +47,14 @@ namespace RobotCtrl
         public static ObstacleMap ObstacleMap
         {
             set { obstacleMap = value; }
-            get { return obstacleMap; }
+            get 
+            {
+                    if (obstacleMap == null)
+                    {
+                        obstacleMap = new ObstacleMap();
+                    }
+                    return obstacleMap; 
+            }
         }
 
         static ObstacleMap obstacleMap = new ObstacleMap();
