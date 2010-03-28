@@ -48,21 +48,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Test_WorldView_CE\Form1.cs">
-      <Link>Form1.cs</Link>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="..\Test_WorldView_CE\Form1.designer.cs">
-      <Link>Form1.designer.cs</Link>
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="..\Test_WorldView_CE\Program.cs">
       <Link>Program.cs</Link>
     </Compile>
+    <Compile Include="..\Test_WorldView_CE\Test_World_CE_Form.cs">
+      <Link>Test_World_CE_Form.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Test_WorldView_CE\Test_World_CE_Form.designer.cs">
+      <Link>Test_World_CE_Form.designer.cs</Link>
+      <DependentUpon>Test_World_CE_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="..\Test_WorldView_CE\Form1.resx">
-      <Link>Form1.resx</Link>
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="..\Test_WorldView_CE\Test_World_CE_Form.resx">
+      <Link>Test_World_CE_Form.resx</Link>
+      <DependentUpon>Test_World_CE_Form.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
