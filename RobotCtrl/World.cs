@@ -26,7 +26,7 @@ namespace RobotCtrl
          */
         public static Robot getRobot(int index)
         {
-            if (index > robot.Capacity-1 || index < 0)
+            if (index > robot.Count || index < 0)
             {
                 return null;
             }
@@ -55,6 +55,13 @@ namespace RobotCtrl
                     }
                     return obstacleMap; 
             }
+        }
+
+        /**
+         * Methode gibt an, wieviele Robot Instanzen vorhanden sind
+         */
+        public static int countRobots(){
+            return robot.Count;
         }
 
         static ObstacleMap obstacleMap = new ObstacleMap();
