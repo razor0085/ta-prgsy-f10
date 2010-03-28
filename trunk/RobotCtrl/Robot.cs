@@ -109,6 +109,6 @@ namespace RobotCtrl
         Drive drive;
         Radar radar;
         //PositionInfo positionInfo;
-        Color color;
+        Color color = Color.Azure;
 	}
 }
