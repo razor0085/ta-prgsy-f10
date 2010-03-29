@@ -76,15 +76,6 @@ namespace RobotCtrl
         }
 
         /**
-         * Property MotorCtrl liefert oder setzt eine Referenz auf einen MotorCtrl
-         */
-        public MotorCtrl MotorCtrl
-        {
-            get { return motor; }
-            set { motor = value; }
-        }
-
-        /**
          * Property Color liefert oder setzt eine Farbe des Robot
          */
         public Color Color { get { return color; } set { color = value; } }
@@ -110,30 +101,15 @@ namespace RobotCtrl
 			console = new Console(runMode);
             drive = new Drive(runMode);
             radar = new Radar(runMode);
-            if (runMode == RunMode.REAL)
-            {
-                ctrl = new DriveCtrl_HW(Config.IODriveCtrl);
-                motor = new MotorCtrl_HW(Config.IOMotorCtrlLeft);
-            }
-            else
-            {
-                ctrl = new DriveCtrl();
-                motor = new MotorCtrl();
-            }
-
+            
             drive.Distance = radar.Distance;
 		}
 
         public void Go()
         {
             drive.Power = true;
-            drive.RunLine(400, 10, 1);
+            drive.RunLine(4, 1, 1);
             drive.Distance = 6000;
-        }
-
-        public void Stop()
-        {
-            motor.Stop();
         }
 
         public PositionInfo getPosition()
@@ -141,11 +117,9 @@ namespace RobotCtrl
             return drive.Position;
         }
 
-        DriveCtrl ctrl;
-		Console console;
+        Console console;
         Drive drive;
         Radar radar;
-        MotorCtrl motor;
         //PositionInfo positionInfo;
         Color color = Color.Azure;
 	}
