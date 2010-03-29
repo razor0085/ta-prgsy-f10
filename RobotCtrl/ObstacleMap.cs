@@ -10,12 +10,12 @@ namespace RobotCtrl
     {
         Bitmap map;
         bool obstArray[];
-        ObstDimension dimension;
+        RectangleF area;
 
-        public ObstDimension dimension
+        public RectangleF dimension
         {
-            get{return dimension;}
-            set{dimension = value;}
+            get{return area;}
+            set{area = value;}
         }
 
         public bool getObstacle
@@ -23,11 +23,11 @@ namespace RobotCtrl
             get {return obstacle;}
         }
         
-        public ObstacleMap(ObstDimension dimension, Bitmap map)
+        public ObstacleMap(RectangleF area, Bitmap map)
         {
             this.map = new Bitmap(@"..\..\..\hindernis.bmp");
-            this.dimension = dimension;
-            this.obstArray = new obstArray[x,y];
+            this.dimension = area;
+            this.obstArray = new obstArray[Image.Height,Image.Width];
 
 
         }
