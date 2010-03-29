@@ -78,7 +78,8 @@ namespace RobotCtrl
                 {
                     track = new Track();
                 }
-                track.Distance = value; }
+                track.Distance = value; 
+            }
         }
 
         /**
