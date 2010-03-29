@@ -25,7 +25,7 @@ namespace RobotView
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill; // Damit das WorldView gleich gross ist wie das Form
-            new Thread(new ThreadStart(this.Refresh)).Start();
+            new Thread(new ThreadStart(this.Refresh)).Start();   
         }
 
         public void Refresh()
@@ -161,6 +161,14 @@ namespace RobotView
             g.DrawImage(newImage, destRect, srcRect, units);
 
 
+        }
+
+        public void Form_Closing(object sender, CancelEventArgs cArgs)
+        {
+            running = false;
+            Thread.Sleep(1000);
+            World.clear();
+            //MessageBox.Show("Form Closing Event....");
         }
     }
 }

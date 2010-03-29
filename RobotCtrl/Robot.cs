@@ -105,16 +105,53 @@ namespace RobotCtrl
             drive.Distance = radar.Distance;
 		}
 
-        public void Go()
+        public void RunPause(double pauseTimeSeconds)
         {
-            drive.Power = true;
-            drive.RunLine(4, 1, 1);
-            drive.Distance = 6000;
+            drive.RunPause(pauseTimeSeconds);
+        }
+
+        public void RunLine(double length, double speed, double runAcceleration)
+        {
+            drive.RunLine(length, speed, runAcceleration);
+        }
+
+        public void RunArcLeft(double radius, double angle, double speed, double runAcceleration)
+        {
+            drive.RunArcLeft(radius, angle, speed, runAcceleration);
+        }
+
+        public void RunArcRight(double runRadius, double runAngle, double runSpeed, double runAcceleration)
+        {
+            drive.RunArcRight(runRadius, runAngle, runSpeed, runAcceleration);
+        }
+
+        public void RunTurn(double runAngle, double runSpeed, double runAcceleration)
+        {
+            drive.RunTurn(runAngle, runSpeed, runAcceleration);
+        }
+
+        public void RunContourLeft(double distance, double runSpeed, double runAcceleration)
+        {
+            drive.RunContourLeft(distance, runSpeed, runAcceleration);
         }
 
         public PositionInfo getPosition()
         {
             return drive.Position;
+        }
+
+        public double Distance
+        {
+            set { drive.Distance = value; }
+        }
+
+        /**
+         * Methode sollte alle laufenden Threads dieses Robot Objekts beenden
+         */
+        public void Clear()
+        {
+            drive.Stop();
+            drive.Close();
         }
 
         Console console;
