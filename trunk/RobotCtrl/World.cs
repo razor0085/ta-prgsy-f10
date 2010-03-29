@@ -27,7 +27,7 @@ namespace RobotCtrl
          */
         public static Robot getRobot(int index)
         {
-            if (index > robot.Count || index < 0)
+            if (index > robot.Count - 1 || index < 0)
             {
                 return null;
             }
@@ -63,6 +63,14 @@ namespace RobotCtrl
          */
         public static int countRobots(){
             return robot.Count;
+        }
+
+        public static void clear()
+        {
+            for (int i = 0; i < robot.Count; i++){
+                getRobot(i).Clear();
+            }
+            robot.Clear();
         }
 
         static ObstacleMap obstacleMap; // = new ObstacleMap();

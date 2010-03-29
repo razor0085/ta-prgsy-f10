@@ -12,7 +12,7 @@ namespace MotorTest
 		[MTAThread]
 		static void Main()
 		{
-			Application.Run(new Form1());
+			Application.Run(new Test_Motor_CE_Form());
 		}
 	}
 }
