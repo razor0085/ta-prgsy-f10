@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
+using System.Drawing;
 
 namespace RobotCtrl
 {
@@ -51,7 +52,7 @@ namespace RobotCtrl
             {
                     if (obstacleMap == null)
                     {
-                        obstacleMap = new ObstacleMap();
+                        obstacleMap = new ObstacleMap(new RectangleF(), null);
                     }
                     return obstacleMap; 
             }
@@ -64,7 +65,7 @@ namespace RobotCtrl
             return robot.Count;
         }
 
-        static ObstacleMap obstacleMap = new ObstacleMap();
+        static ObstacleMap obstacleMap; // = new ObstacleMap();
         static List<Robot> robot = new List<Robot>();
     }
 

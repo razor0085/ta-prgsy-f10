@@ -25,9 +25,12 @@ namespace RobotCtrl
         
         public ObstacleMap(RectangleF area, Bitmap map)
         {
-            this.map = new Bitmap(@"..\..\..\hindernis.bmp");
-            this.dimension = area;
-            this.obstArray = new bool[map.Height,map.Width];
+            if (map == null)
+            {
+                this.map = new Bitmap(@"..\..\..\hindernis.bmp");
+            }
+            this.area = area;
+            this.obstArray = new bool[this.map.Height, this.map.Width];
 
 
         }
