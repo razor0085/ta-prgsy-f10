@@ -22,11 +22,13 @@ namespace Test_WorldView
 
             Robot robot = new Robot(RunMode.VIRTUAL);
             robot.Color = Color.Blue;
-            robot.PositionInfo = new PositionInfo(2.5, -1, 1.5 * Math.PI);
-            Drive drive = robot.Drive;
-            drive.Power = true;
-            drive.RunLine(10, 1, 1);
-            drive.RunArcLeft(10, 90, 1, 1);
+            robot.PositionInfo = new PositionInfo(2.5, -1, 0);
+            //Drive drive = robot.Drive;
+            //drive.Power = true;
+            //drive.RunLine(10, 1, 1);
+            //drive.RunArcLeft(10, 90, 1, 1);
+
+            robot.Go();
 
             //robot.Drive.Power = true;
             //robot.Go();
