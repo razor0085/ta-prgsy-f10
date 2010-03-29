@@ -126,16 +126,19 @@ namespace RobotCtrl
 
         public void Go()
         {
-            ctrl.PowerLeft = true;
-            ctrl.PowerRight = true;
-            motor.SetPID(100, 20, 1000, 1000, 1);
-            motor.Acceleration = 0.5;
-            motor.Go();
+            drive.Power = true;
+            drive.RunLine(400, 10, 1);
+            drive.Distance = 6000;
         }
 
         public void Stop()
         {
             motor.Stop();
+        }
+
+        public PositionInfo getPosition()
+        {
+            return drive.Position;
         }
 
         DriveCtrl ctrl;

@@ -122,9 +122,9 @@ namespace RobotView
             for (int i = 0; i < World.countRobots(); i++)
             {
                 Color color = World.getRobot(i).Color;
-                double x = World.getRobot(i).PositionInfo.X;
-                double y = World.getRobot(i).PositionInfo.Y;
-                double angle = World.getRobot(i).PositionInfo.Angle;
+                double x = World.getRobot(i).getPosition().X;
+                double y = World.getRobot(i).getPosition().Y;
+                double angle = World.getRobot(i).getPosition().Angle;
                 paintRobot(g, color, x, y, angle);
             }
         }
