@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 using RobotCtrl;
 
 namespace RobotView
@@ -24,7 +25,16 @@ namespace RobotView
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill; // Damit das WorldView gleich gross ist wie das Form
+            new Thread(new ThreadStart(this.Refresh)).Start();
+        }
 
+        public void Refresh()
+        {
+            while (true)
+            {
+                Thread.Sleep(100);
+                this.Invalidate();
+            }
         }
 
         int calculateGridSizeInPixel()
@@ -50,9 +60,9 @@ namespace RobotView
             paintObstacle(gfx);
             paintGrid(gfx);
 
-            paintRobot(gfx, Color.Gold, 2, 0, 0);
-            paintRobot(gfx, Color.Green, 3.3, 1, Math.PI);
-            paintRobot(gfx, Color.Red, 0, -1, 0.5 * Math.PI);
+            //paintRobot(gfx, Color.Gold, 2, 0, 0);
+            //paintRobot(gfx, Color.Green, 3.3, 1, Math.PI);
+            //paintRobot(gfx, Color.Red, 0, -1, 0.5 * Math.PI);
 
             paintRobots(gfx);
 
