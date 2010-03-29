@@ -19,8 +19,8 @@ namespace RobotView
         int xMax = 5;
         int yMax = 2;
 
-
-
+        bool running = true;
+        
         public WorldView()
         {
             InitializeComponent();
@@ -30,10 +30,12 @@ namespace RobotView
 
         public void Refresh()
         {
-            while (true)
+            while (running)
             {
                 Thread.Sleep(100);
                 this.Invalidate();
+                System.Console.WriteLine("Robot-Position: x=" + World.getRobot(0).PositionInfo.X + " y=" + World.getRobot(0).PositionInfo.Y);
+                System.Console.WriteLine("Robot-Distance: x=" + World.getRobot(0).MotorCtrl.Distance);
             }
         }
 
