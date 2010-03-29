@@ -9,7 +9,7 @@ namespace RobotCtrl
     public class ObstacleMap
     {
         Bitmap map;
-        bool obstArray[];
+        bool[,] obstArray;
         RectangleF area;
 
         public RectangleF dimension
@@ -18,16 +18,16 @@ namespace RobotCtrl
             set{area = value;}
         }
 
-        public bool getObstacle
-        { 
-            get {return obstacle;}
-        }
+       // public bool getObstacle
+        //{ 
+        //    get {return obstacle;}
+        //}
         
         public ObstacleMap(RectangleF area, Bitmap map)
         {
             this.map = new Bitmap(@"..\..\..\hindernis.bmp");
             this.dimension = area;
-            this.obstArray = new obstArray[Image.Height,Image.Width];
+            this.obstArray = new bool[map.Height,map.Width];
 
 
         }
