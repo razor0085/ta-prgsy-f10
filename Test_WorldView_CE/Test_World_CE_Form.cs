@@ -21,7 +21,7 @@ namespace Test_WorldView
             WorldView worldView = new WorldView();
             this.Controls.Add(worldView);
 
-            Robot robot = new Robot(RunMode.VIRTUAL);
+            Robot robot = new Robot(RunMode.REAL);
             World.Robot = robot;
             robot.Color = Color.Blue;
             robot.PositionInfo = new PositionInfo(0, 0, 0);

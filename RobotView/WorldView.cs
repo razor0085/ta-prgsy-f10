@@ -33,8 +33,8 @@ namespace RobotView
             while (running)
             {
                 Thread.Sleep(100);
-                this.Invalidate();
-                System.Console.WriteLine("Robot-Position: x=" + World.getRobot(0).PositionInfo.X + " y=" + World.getRobot(0).PositionInfo.Y);
+                //this.Invalidate();
+                //System.Console.WriteLine("Robot-Position: x=" + World.getRobot(0).PositionInfo.X + " y=" + World.getRobot(0).PositionInfo.Y);
             }
         }
 
@@ -155,10 +155,10 @@ namespace RobotView
             // Create rectangle for displaying image.
             Rectangle destRect = new Rectangle(100, 100, 250, 50);
             // Create rectangle for source image.
-            Rectangle srcRect = new Rectangle(0, 0, newImage.Width, newImage.Height);
+            //Rectangle srcRect = new Rectangle(0, 0, newImage.Width, newImage.Height);
             GraphicsUnit units = GraphicsUnit.Pixel;
             // Draw image to screen.
-            g.DrawImage(newImage, destRect, srcRect, units);
+            //g.DrawImage(newImage, destRect, srcRect, units);
 
 
         }
