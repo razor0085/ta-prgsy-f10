@@ -27,10 +27,10 @@ namespace RobotCtrl
         {
             if (map == null)
             {
-                this.map = new Bitmap(@"..\..\..\hindernis.bmp");
+                //this.map = new Bitmap(@"..\..\..\hindernis.bmp");
             }
             this.area = area;
-            this.obstArray = new bool[this.map.Height, this.map.Width];
+            //this.obstArray = new bool[this.map.Height, this.map.Width];
 
 
         }

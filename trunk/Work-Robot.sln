@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_WorldView_CE", "Test_W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_WorldView_XP", "Test_WorldView_XP\Test_WorldView_XP.csproj", "{58F67FE8-8060-4C05-B919-740066600326}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunRobot_SimpleConsole", "RunRobot_SimpleConsole\RunRobot_SimpleConsole.csproj", "{BBAC96F9-BACA-49FD-BCE8-00730D7B2424}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,12 @@ Global
 		{58F67FE8-8060-4C05-B919-740066600326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58F67FE8-8060-4C05-B919-740066600326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58F67FE8-8060-4C05-B919-740066600326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAC96F9-BACA-49FD-BCE8-00730D7B2424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAC96F9-BACA-49FD-BCE8-00730D7B2424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAC96F9-BACA-49FD-BCE8-00730D7B2424}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BBAC96F9-BACA-49FD-BCE8-00730D7B2424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAC96F9-BACA-49FD-BCE8-00730D7B2424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAC96F9-BACA-49FD-BCE8-00730D7B2424}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
