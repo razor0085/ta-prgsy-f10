@@ -33,7 +33,6 @@ namespace RunRobot_SimpleConsole
             robot.PositionInfo = new PositionInfo(0, 0, 0);
             thread = new Thread(checkSwitchState);
             thread.Start();
-            //fahren();
         }
 
         public void fahren()
@@ -67,11 +66,11 @@ namespace RunRobot_SimpleConsole
             {
                 if (state != di[0])
                 {
+                    state = di[0];
                     if (switchChanged != null)
                     {
                         switchChanged(this, null);
                     }
-                    //state = di[0];
                 }
                 Thread.Sleep(10);
             }
@@ -83,7 +82,6 @@ namespace RunRobot_SimpleConsole
             {
                 if (di[0] == true)
                 {
-                    state = true;
                     // switch on
                     robot.Drive.Power = true;
                     System.Console.WriteLine("Power On!");
@@ -93,13 +91,10 @@ namespace RunRobot_SimpleConsole
                 else
                 {
                     // switch off
-                    state = false;
                     robot.Drive.Power = false;
-                    //robot.Drive.Reset();
                     robot.Drive.Stop();
                     fahr.Abort();
                     fahr.Join();
-                    fahr = null;
 
                     System.Console.WriteLine("Power Off!");
                 }
