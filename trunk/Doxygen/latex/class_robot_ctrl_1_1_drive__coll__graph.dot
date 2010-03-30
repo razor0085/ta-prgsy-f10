@@ -2,7 +2,7 @@ digraph G
 {
   edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
   node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{RobotCtrl.Drive\n|+ Position\l+ Power\l+ Info\l+ Done\l+ Distance\l- track\l- oldTrack\l- ctrl\l- left\l- right\l- info\l- oldInfo\l- stop\l- halt\l- infoLock\l- trackLock\l- runTracksThread\l- drivesLock\l|+ Drive()\l+ Reset()\l+ Close()\l+ Stop()\l+ Halt()\l+ WaitDone()\l+ RunPause()\l+ RunLine()\l+ RunArcLeft()\l+ RunArcRight()\l+ RunTurn()\l+ RunContourLeft()\l- RunTracks()\l- updateInfo()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 [label="{RobotCtrl.Drive\n|+ Position\l+ Power\l+ Info\l+ Done\l+ Distance\l- track\l- oldTrack\l- ctrl\l- left\l- right\l- info\l- oldInfo\l- stop\l- halt\l- infoLock\l- trackLock\l- runTracksThread\l- drivesLock\l- distance\l|+ Drive()\l+ Reset()\l+ Close()\l+ Stop()\l+ Halt()\l+ WaitDone()\l+ RunPause()\l+ RunLine()\l+ RunArcLeft()\l+ RunArcRight()\l+ RunTurn()\l+ RunContourLeft()\l- RunTracks()\l- updateInfo()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
   Node2 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="ctrl",arrowtail="open"];
   Node2 [label="{RobotCtrl.DriveCtrl\n|+ Power\l+ PowerRight\l+ PowerLeft\l+ Status\l+ Command\l- status\l|+ DriveCtrl()\l+ Reset()\l- reset()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_robot_ctrl_1_1_drive_ctrl.html",tooltip="DriveCtrl, Kommunikation mit der Hardware des Roboters."];
   Node3 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="oldInfo\ninfo",arrowtail="open"];
