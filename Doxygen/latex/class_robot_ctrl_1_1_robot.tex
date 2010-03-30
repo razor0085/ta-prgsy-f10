@@ -9,17 +9,47 @@ Basisklasse f\"{u}r einen Roboter.
 
 
 
-Zusammengehörigkeiten von RobotCtrl.Robot:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=400pt]{class_robot_ctrl_1_1_robot__coll__graph}
-\end{center}
-\end{figure}
-\subsection*{Öffentliche Methoden}
+Zusammengehörigkeiten von RobotCtrl.Robot:\subsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_robot_ctrl_1_1_robot_acdd921df41328916b058eaad84ed3078}{Robot} (RunMode runMode)
+\item 
+\hypertarget{class_robot_ctrl_1_1_robot_a95c4c2d60e88ff9d6827d8d97eee2386}{
+void {\bfseries RunPause} (double pauseTimeSeconds)}
+\label{class_robot_ctrl_1_1_robot_a95c4c2d60e88ff9d6827d8d97eee2386}
+
+\item 
+\hypertarget{class_robot_ctrl_1_1_robot_a6a16f9f310f34fbe408bb7ab51a89a32}{
+void {\bfseries RunLine} (double length, double speed, double runAcceleration)}
+\label{class_robot_ctrl_1_1_robot_a6a16f9f310f34fbe408bb7ab51a89a32}
+
+\item 
+\hypertarget{class_robot_ctrl_1_1_robot_a07b940c45155aae3b6ae5ce7d58a90f1}{
+void {\bfseries RunArcLeft} (double radius, double angle, double speed, double runAcceleration)}
+\label{class_robot_ctrl_1_1_robot_a07b940c45155aae3b6ae5ce7d58a90f1}
+
+\item 
+\hypertarget{class_robot_ctrl_1_1_robot_aaff244d591788ca15722234a71cee2be}{
+void {\bfseries RunArcRight} (double runRadius, double runAngle, double runSpeed, double runAcceleration)}
+\label{class_robot_ctrl_1_1_robot_aaff244d591788ca15722234a71cee2be}
+
+\item 
+\hypertarget{class_robot_ctrl_1_1_robot_ae9c9a939809668a900df594a31e5bba3}{
+void {\bfseries RunTurn} (double runAngle, double runSpeed, double runAcceleration)}
+\label{class_robot_ctrl_1_1_robot_ae9c9a939809668a900df594a31e5bba3}
+
+\item 
+\hypertarget{class_robot_ctrl_1_1_robot_a1fe7604ec3a28152fc34659fdd1f2489}{
+void {\bfseries RunContourLeft} (double distance, double runSpeed, double runAcceleration)}
+\label{class_robot_ctrl_1_1_robot_a1fe7604ec3a28152fc34659fdd1f2489}
+
+\item 
+\hypertarget{class_robot_ctrl_1_1_robot_ae727424d84ab02d96e1cfb22ecc18dcd}{
+\hyperlink{struct_robot_ctrl_1_1_position_info}{PositionInfo} {\bfseries getPosition} ()}
+\label{class_robot_ctrl_1_1_robot_ae727424d84ab02d96e1cfb22ecc18dcd}
+
+\item 
+void \hyperlink{class_robot_ctrl_1_1_robot_afb01a74bfcb74eab60f041a368f93737}{Clear} ()
 \end{DoxyCompactItemize}
 \subsection*{Propertys}
 \begin{DoxyCompactItemize}
@@ -33,6 +63,11 @@ Zusammengehörigkeiten von RobotCtrl.Robot:\nopagebreak
 Color \hyperlink{class_robot_ctrl_1_1_robot_a894338ff794429cdf09647ff8d73d83e}{Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 \hyperlink{class_robot_ctrl_1_1_radar}{Radar} \hyperlink{class_robot_ctrl_1_1_robot_adcc563b2531e72dcdfb9af5cafda1cbc}{Radar}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\hypertarget{class_robot_ctrl_1_1_robot_a9ad5ff537b82e7e39350480bf225e942}{
+double {\bfseries Distance}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}}
+\label{class_robot_ctrl_1_1_robot_a9ad5ff537b82e7e39350480bf225e942}
+
 \end{DoxyCompactItemize}
 
 
@@ -51,6 +86,18 @@ RunMode
 
 \begin{DoxyParams}{Parameter}
 \item[{\em runMode}]argument vom Typ enum RunMode in \hyperlink{class_robot_ctrl_1_1_config}{Config}. \end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\hypertarget{class_robot_ctrl_1_1_robot_afb01a74bfcb74eab60f041a368f93737}{
+\index{RobotCtrl::Robot@{RobotCtrl::Robot}!Clear@{Clear}}
+\index{Clear@{Clear}!RobotCtrl::Robot@{RobotCtrl::Robot}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void RobotCtrl.Robot.Clear ()}}
+\label{class_robot_ctrl_1_1_robot_afb01a74bfcb74eab60f041a368f93737}
+Methode sollte alle laufenden Threads dieses \hyperlink{class_robot_ctrl_1_1_robot}{Robot} Objekts beenden 
+
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:
+
 
 
 \subsection{Dokumentation der Propertys}

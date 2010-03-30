@@ -27,7 +27,9 @@ namespace Test_WorldView
             robot.PositionInfo = new PositionInfo(0, 0, 0);
             //robot.PositionInfo = new PositionInfo(2.5, -1, 0);
             
-            robot.RunLine(2, 1, 1);
+            robot.RunLine(1.05, 1, 1);
+            //robot.Distance = 300;
+            //robot.RunArcLeft(10, 45, 1, 1);
             robot.Distance = 300;
                        
             
