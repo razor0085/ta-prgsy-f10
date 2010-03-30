@@ -32,14 +32,14 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.SuspendLayout();
             // 
-            // Form1
+            // Test_World_View_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(640, 481);
+            this.ClientSize = new System.Drawing.Size(713, 529);
             this.Menu = this.mainMenu1;
-            this.Name = "Form1";
+            this.Name = "Test_World_View_Form";
             this.Text = "Test_World_Form";
             this.ResumeLayout(false);
 
