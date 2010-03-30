@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_drive.html#af902934c2a3f12ef34bc55bb1827cc13" title="RobotCtrl.Drive.Close" alt="" coords="204,32,348,61"/>
+<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_drive.html#a39fa32f34e3cd62b99b502948c416897" title="RobotCtrl.Drive.Stop" alt="" coords="207,85,345,115"/>
+<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_motor_ctrl.html#aa4d43c3586f611f8ca12924b0a92189b" title="RobotCtrl.MotorCtrl.Close" alt="" coords="397,5,568,35"/>
+<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_drive_ctrl.html#a721795047bfe5d2cca3fab6eeb0ab905" title="RobotCtrl.DriveCtrl.Reset" alt="" coords="400,59,565,88"/>
+</map>
