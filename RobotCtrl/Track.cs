@@ -149,8 +149,8 @@ namespace RobotCtrl
     /**
      * @brief TrackArcLeft wird verwendet um einen Bogen nach links zu fahren
      */
-	public class TrackArcLeft : Track
-	{
+    public class TrackArcLeft : Track
+    {
         /**
          * Konstruktor TrackArcLeft
          * 
@@ -159,15 +159,15 @@ namespace RobotCtrl
          * @param speed Geschwindigkeit mit der der Roboter fahren soll
          * @param acceleration Beschleunigung auf dem Bogen
          */
-		public TrackArcLeft(double radius, double angle, double speed, double acceleration)
-		{
-			reverse = (Math.Sign(angle) ^ Math.Sign(speed)) != 0;
-			this.nominalSpeed = Math.Abs(speed);
-			this.acceleration = acceleration;
-			this.angle = Math.Abs(angle);
-			this.radius = Math.Abs(radius);
-			this.length = Math.Abs((radius + Config.AxleLength / 2.0) * 2.0 * Math.PI * angle / 360.0);
-		}
+        public TrackArcLeft(double radius, double angle, double speed, double acceleration)
+        {
+            reverse = (Math.Sign(angle) ^ Math.Sign(speed)) != 0;
+            this.nominalSpeed = Math.Abs(speed);
+            this.acceleration = acceleration;
+            this.angle = Math.Abs(angle);
+            this.radius = Math.Abs(radius);
+            this.length = Math.Abs((radius + Config.AxleLength / 2.0) * 2.0 * Math.PI * angle / 360.0);
+        }
 
         /**
          * &Uuml;berschreibt die SetSpeed Methode der Basisklasse Track
@@ -176,24 +176,24 @@ namespace RobotCtrl
          * @param left Referenz auf den linken Motor
          * @param right Referenz auf den rechten Motor
          */
-		public override void SetSpeed(double newSpeed, MotorCtrl left, MotorCtrl right)
-		{
-			currentSpeed = newSpeed;
-			if (reverse)
-				newSpeed = -newSpeed;
-			left.Speed = -newSpeed * (radius - Config.AxleLength / 2.0) / (radius + Config.AxleLength / 2.0);
-			right.Speed = newSpeed;
-		}
+        public override void SetSpeed(double newSpeed, MotorCtrl left, MotorCtrl right)
+        {
+            currentSpeed = newSpeed;
+            if (reverse)
+                newSpeed = -newSpeed;
+            left.Speed = -newSpeed * (radius - Config.AxleLength / 2.0) / (radius + Config.AxleLength / 2.0);
+            right.Speed = newSpeed;
+        }
 
-		public double angle;
-		public double radius;
-	}
+        public double angle;
+        public double radius;
+    }
 
     /**
      * @brief TrackArcRight wird verwendet um einen Bogen nach rechts zu fahren
      */
-	public class TrackArcRight : Track
-	{
+    public class TrackArcRight : Track
+    {
         /**
          * Konstruktor TrackArcRight
          * 
@@ -202,15 +202,15 @@ namespace RobotCtrl
          * @param speed Geschwindigkeit mit der der Roboter fahren soll
          * @param acceleration Beschleunigung auf dem Bogen
          */
-		public TrackArcRight(double radius, double angle, double speed, double acceleration)
-		{
-			reverse = (Math.Sign(angle) ^ Math.Sign(speed)) != 0;
-			this.nominalSpeed = Math.Abs(speed);
-			this.acceleration = acceleration;
-			this.angle = Math.Abs(angle);
-			this.radius = Math.Abs(radius);
-			this.length = Math.Abs((radius + Config.AxleLength / 2.0) * 2.0 * Math.PI * angle / 360.0);
-		}
+        public TrackArcRight(double radius, double angle, double speed, double acceleration)
+        {
+            reverse = (Math.Sign(angle) ^ Math.Sign(speed)) != 0;
+            this.nominalSpeed = Math.Abs(speed);
+            this.acceleration = acceleration;
+            this.angle = Math.Abs(angle);
+            this.radius = Math.Abs(radius);
+            this.length = Math.Abs((radius + Config.AxleLength / 2.0) * 2.0 * Math.PI * angle / 360.0);
+        }
 
         /**
          * &Uuml;berschreibt die SetSpeed Methode der Basisklasse Track
@@ -219,18 +219,18 @@ namespace RobotCtrl
          * @param left Referenz auf den linken Motor
          * @param right Referenz auf den rechten Motor
          */
-		public override void SetSpeed(double newSpeed, MotorCtrl left, MotorCtrl right)
-		{
-			currentSpeed = newSpeed;
-			if (reverse)
-				newSpeed = -newSpeed;
-			left.Speed = -newSpeed;
-			right.Speed = newSpeed * (radius - Config.AxleLength / 2.0) / (radius + Config.AxleLength / 2.0); ;
-		}
+        public override void SetSpeed(double newSpeed, MotorCtrl left, MotorCtrl right)
+        {
+            currentSpeed = newSpeed;
+            if (reverse)
+                newSpeed = -newSpeed;
+            left.Speed = -newSpeed;
+            right.Speed = newSpeed * (radius - Config.AxleLength / 2.0) / (radius + Config.AxleLength / 2.0); ;
+        }
 
-		public double angle;
-		public double radius;
-	}
+        public double angle;
+        public double radius;
+    }
 
     /**
      * @brief TrackTurn wird verwendet um sich um die eigene Achse zu drehen

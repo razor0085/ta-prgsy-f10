@@ -20,6 +20,7 @@ namespace RobotView
         int yMax = 4;
 
         bool running = true;
+        PositionInfo pos;
         
         public WorldView()
         {
@@ -117,7 +118,13 @@ namespace RobotView
             for (int i = 0; i < World.countRobots(); i++)
             {
                 Color color = World.getRobot(i).Color;
-                PositionInfo pos = World.getRobot(i).getPosition();
+                PositionInfo temp = World.getRobot(i).getPosition();
+                if (!pos.Equals(temp))
+                {
+                    System.Console.WriteLine("Pos alt X:" + pos.X + " Y:" + pos.Y + " angle:" + pos.Angle);
+                    System.Console.WriteLine("Pos neu X:" + temp.X + " Y:" + temp.Y + " angle:" + temp.Angle);
+                    pos = temp;
+                }
                 paintRobot(g, color, pos.X, pos.Y, Math.Abs(pos.Angle) * 2 * Math.PI / 360);
             }
         }
