@@ -131,6 +131,7 @@ namespace RobotCtrl
          */
 		public void RunPause(double pauseTimeSeconds)
 		{
+            if (track == null)
 				track = new TrackPause(pauseTimeSeconds);
 		}
 
@@ -143,6 +144,7 @@ namespace RobotCtrl
          */
         public void RunLine(double length, double speed, double runAcceleration)
 		{
+            if (track == null)
 				track = new TrackLine(length, speed, runAcceleration);
 		}
 
@@ -156,6 +158,7 @@ namespace RobotCtrl
          */
         public void RunArcLeft(double radius, double angle, double speed, double runAcceleration)
 		{
+            if (track == null)
 				track = new TrackArcLeft(radius, angle, speed, runAcceleration);
 		}
 
@@ -169,6 +172,7 @@ namespace RobotCtrl
          */
         public void RunArcRight(double runRadius, double runAngle, double runSpeed, double runAcceleration)
 		{
+            if (track == null)
 				track = new TrackArcRight(runRadius, runAngle, runSpeed, runAcceleration);
 		}
 
@@ -181,6 +185,7 @@ namespace RobotCtrl
          */
 		public void RunTurn(double runAngle, double runSpeed, double runAcceleration)
 		{
+            if (track == null)
 				track = new TrackTurn(runAngle, runSpeed, runAcceleration);
 		}
 
@@ -193,6 +198,7 @@ namespace RobotCtrl
          */
 		public void RunContourLeft(double distance, double runSpeed, double runAcceleration)
 		{
+            if (track == null)
 				track = new TrackContourLeft(distance, runSpeed, runAcceleration);
 		}
 
