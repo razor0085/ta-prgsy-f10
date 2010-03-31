@@ -306,6 +306,8 @@ namespace RobotCtrl
 					else
 					{
 						track = null;
+                        left.Reset();
+                        right.Reset();
 					}
 				}
 				else
