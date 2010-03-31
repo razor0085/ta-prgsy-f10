@@ -81,6 +81,12 @@
     <Compile Include="SwitchView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="TrackView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrackView.Designer.cs">
+      <DependentUpon>TrackView.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorldView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     <EmbeddedResource Include="SwitchView.resx">
       <DependentUpon>SwitchView.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackView.resx">
+      <DependentUpon>TrackView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorldView.resx">
       <DependentUpon>WorldView.cs</DependentUpon>

@@ -16,28 +16,48 @@ namespace Test_WorldView
     {
         WorldView worldView;
         ConsoleView consoleView;
+        DriveView driveView;
+        TrackView trackView;
+
         Thread thread;
         Robot robot;
 
         public Test_World_View_Form()
         {
             InitializeComponent();
-            worldView = new WorldView();
-            worldView.Location = new System.Drawing.Point(220, 20);
-            
-            consoleView = new ConsoleView();
-            consoleView.Location = new System.Drawing.Point(20, 20);
-            this.Controls.Add(worldView);
-            this.Controls.Add(consoleView);
 
+            // Robot erstellen
             robot = new Robot(RunMode.REAL);
             World.Robot = robot;
             robot.Color = Color.Blue;
             robot.PositionInfo = new PositionInfo(0, 0, 0);
+
+            // WorldView erstellen
+            worldView = new WorldView();
+            worldView.Location = new System.Drawing.Point(370, 20);
+            
+            // ConsoleView erstellen
+            consoleView = new ConsoleView();
+            consoleView.Location = new System.Drawing.Point(20, 20);
+
+            // DriveView erstellen
+            driveView = new DriveView(robot.Drive);
+            driveView.Location = new System.Drawing.Point(20, 80);
+
+            // TrackView erstellen
+            trackView = new TrackView(robot.Drive);
+            trackView.Location = new System.Drawing.Point(20, 100);
+
+            this.Controls.Add(worldView);
+            this.Controls.Add(consoleView);
+            this.Controls.Add(driveView);
+            this.Controls.Add(trackView);
+
+
             //robot.PositionInfo = new PositionInfo(2.5, -1, 90);
 
-            thread = new Thread(runTrack);
-            thread.Start();                      
+            //thread = new Thread(runTrack);
+            //thread.Start();                      
             
             this.Closing += new CancelEventHandler(worldView.Form_Closing);           
         }
@@ -52,7 +72,7 @@ namespace Test_WorldView
         {
             if (worldView != null)
             {
-                worldView.Size = new System.Drawing.Size(this.Size.Width - 250, this.Size.Height - 60);
+                worldView.Size = new System.Drawing.Size(this.Size.Width - 390, this.Size.Height - 60);
             }
         }
 
@@ -64,6 +84,7 @@ namespace Test_WorldView
             robot.Drive.WaitDone();
             robot.RunLine(2, 0.5, 0.1);
             robot.Drive.WaitDone();
+
         }
     }
 }
