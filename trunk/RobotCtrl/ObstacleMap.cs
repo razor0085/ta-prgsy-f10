@@ -10,6 +10,7 @@ namespace RobotCtrl
     public class ObstacleMap
     {
         const double maxLength = 2.55;
+        List<Obstacle> obstList;
         bool[,] array;
         Bitmap image;
         RectangleF area;
@@ -20,6 +21,7 @@ namespace RobotCtrl
         public Obstacle Obstacle { get { return obst; } set { obst = value; } }
 
 		public ObstacleMap(RectangleF area, Bitmap image) {
+            obstList = new List<Obstacle>();
 			this.image = image;
 			this.area = area;
             obst = new Obstacle(image, new Point((int)area.X, (int)area.Y), new Size((int)area.Width, (int)area.Height), true);
