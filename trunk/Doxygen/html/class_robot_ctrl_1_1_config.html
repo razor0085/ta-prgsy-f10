@@ -18,6 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Pakete</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
       <li><a href="files.html"><span>Dateien</span></a></li>
       <li>
@@ -42,7 +43,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
       <li><a href="functions.html"><span>Klassen-Elemente</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><b>RobotCtrl</b>.<a class="el" href="class_robot_ctrl_1_1_config.html">Config</a>
+  <div class="navpath"><a class="el" href="namespace_robot_ctrl.html">RobotCtrl</a>.<a class="el" href="class_robot_ctrl_1_1_config.html">Config</a>
   </div>
 </div>
 <div class="contents">
@@ -53,33 +54,166 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 <p><a href="class_robot_ctrl_1_1_config-members.html">Aufstellung aller Elemente</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Öffentliche Attribute</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0a24400febddc495f58ccba68c6b5ef"></a><!-- doxytag: member="RobotCtrl::Config::WheelDiameter" ref="aa0a24400febddc495f58ccba68c6b5ef" args="" -->
-const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>WheelDiameter</b> = 0.076</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6c428a3696bf90c39cb30dd26c2cb58"></a><!-- doxytag: member="RobotCtrl::Config::AxleLength" ref="ad6c428a3696bf90c39cb30dd26c2cb58" args="" -->
-const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>AxleLength</b> = 0.263</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab09729a18f3d44209d9963c414c86d5f"></a><!-- doxytag: member="RobotCtrl::Config::TicksPerRevolution" ref="ab09729a18f3d44209d9963c414c86d5f" args="" -->
-const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>TicksPerRevolution</b> = 28672</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8326de1ceb38f2ed7bafbb9d3dd4e1d"></a><!-- doxytag: member="RobotCtrl::Config::WheelCircumference" ref="ae8326de1ceb38f2ed7bafbb9d3dd4e1d" args="" -->
-const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>WheelCircumference</b> = Math.PI * WheelDiameter</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4084917ff005fc520bb1c337503c33d"></a><!-- doxytag: member="RobotCtrl::Config::MeterPerTick" ref="af4084917ff005fc520bb1c337503c33d" args="" -->
-const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>MeterPerTick</b> = WheelCircumference / TicksPerRevolution</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a989257f3f8a56aae7eaa00bf9de1d97f"></a><!-- doxytag: member="RobotCtrl::Config::IOConsoleLeds" ref="a989257f3f8a56aae7eaa00bf9de1d97f" args="" -->
-const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IOConsoleLeds</b> = 0xF303</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d2acda1cb840afaf782a2c71eedc6b4"></a><!-- doxytag: member="RobotCtrl::Config::IOConsoleSwitches" ref="a3d2acda1cb840afaf782a2c71eedc6b4" args="" -->
-const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IOConsoleSwitches</b> = 0xF303</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ec60e0aa55a87f197bf88cfca362f4c"></a><!-- doxytag: member="RobotCtrl::Config::IORadarSensor" ref="a5ec60e0aa55a87f197bf88cfca362f4c" args="" -->
-const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IORadarSensor</b> = 0xF310</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64fd0db1d0bcb248ab20b1511507bd10"></a><!-- doxytag: member="RobotCtrl::Config::IODriveCtrl" ref="a64fd0db1d0bcb248ab20b1511507bd10" args="" -->
-const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IODriveCtrl</b> = 0xF330</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3e15e92eb2fe300cd20690de0ed0d11"></a><!-- doxytag: member="RobotCtrl::Config::IOMotorCtrlRight" ref="aa3e15e92eb2fe300cd20690de0ed0d11" args="" -->
-const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IOMotorCtrlRight</b> = 0xF320</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1d6da7ec6a2d563c8faec2663e50350"></a><!-- doxytag: member="RobotCtrl::Config::IOMotorCtrlLeft" ref="aa1d6da7ec6a2d563c8faec2663e50350" args="" -->
-const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IOMotorCtrlLeft</b> = 0xF328</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#aa0a24400febddc495f58ccba68c6b5ef">WheelDiameter</a> = 0.076</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#ad6c428a3696bf90c39cb30dd26c2cb58">AxleLength</a> = 0.263</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#ab09729a18f3d44209d9963c414c86d5f">TicksPerRevolution</a> = 28672</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#ae8326de1ceb38f2ed7bafbb9d3dd4e1d">WheelCircumference</a> = Math.PI * <a class="el" href="class_robot_ctrl_1_1_config.html#aa0a24400febddc495f58ccba68c6b5ef">WheelDiameter</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#af4084917ff005fc520bb1c337503c33d">MeterPerTick</a> = <a class="el" href="class_robot_ctrl_1_1_config.html#ae8326de1ceb38f2ed7bafbb9d3dd4e1d">WheelCircumference</a> / <a class="el" href="class_robot_ctrl_1_1_config.html#ab09729a18f3d44209d9963c414c86d5f">TicksPerRevolution</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#a989257f3f8a56aae7eaa00bf9de1d97f">IOConsoleLeds</a> = 0xF303</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#a3d2acda1cb840afaf782a2c71eedc6b4">IOConsoleSwitches</a> = 0xF303</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#a5ec60e0aa55a87f197bf88cfca362f4c">IORadarSensor</a> = 0xF310</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#a64fd0db1d0bcb248ab20b1511507bd10">IODriveCtrl</a> = 0xF330</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#aa3e15e92eb2fe300cd20690de0ed0d11">IOMotorCtrlRight</a> = 0xF320</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#aa1d6da7ec6a2d563c8faec2663e50350">IOMotorCtrlLeft</a> = 0xF328</td></tr>
 <tr><td colspan="2"><h2>Propertys</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_config.html#ab60bbdfe5e8dfff6ff29e22b64a120f5">IsWinCE</a><code> [get]</code></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
 <p>Diese Klasse beinhaltet alle Adressen f&uuml;r die Ansteuerung der Roboter Hardware. </p>
+<hr/><h2>Dokumentation der Datenelemente</h2>
+<a class="anchor" id="ad6c428a3696bf90c39cb30dd26c2cb58"></a><!-- doxytag: member="RobotCtrl::Config::AxleLength" ref="ad6c428a3696bf90c39cb30dd26c2cb58" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_robot_ctrl_1_1_config.html#ad6c428a3696bf90c39cb30dd26c2cb58">RobotCtrl.Config.AxleLength</a> = 0.263</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a989257f3f8a56aae7eaa00bf9de1d97f"></a><!-- doxytag: member="RobotCtrl::Config::IOConsoleLeds" ref="a989257f3f8a56aae7eaa00bf9de1d97f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="class_robot_ctrl_1_1_config.html#a989257f3f8a56aae7eaa00bf9de1d97f">RobotCtrl.Config.IOConsoleLeds</a> = 0xF303</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3d2acda1cb840afaf782a2c71eedc6b4"></a><!-- doxytag: member="RobotCtrl::Config::IOConsoleSwitches" ref="a3d2acda1cb840afaf782a2c71eedc6b4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="class_robot_ctrl_1_1_config.html#a3d2acda1cb840afaf782a2c71eedc6b4">RobotCtrl.Config.IOConsoleSwitches</a> = 0xF303</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64fd0db1d0bcb248ab20b1511507bd10"></a><!-- doxytag: member="RobotCtrl::Config::IODriveCtrl" ref="a64fd0db1d0bcb248ab20b1511507bd10" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="class_robot_ctrl_1_1_config.html#a64fd0db1d0bcb248ab20b1511507bd10">RobotCtrl.Config.IODriveCtrl</a> = 0xF330</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa1d6da7ec6a2d563c8faec2663e50350"></a><!-- doxytag: member="RobotCtrl::Config::IOMotorCtrlLeft" ref="aa1d6da7ec6a2d563c8faec2663e50350" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="class_robot_ctrl_1_1_config.html#aa1d6da7ec6a2d563c8faec2663e50350">RobotCtrl.Config.IOMotorCtrlLeft</a> = 0xF328</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa3e15e92eb2fe300cd20690de0ed0d11"></a><!-- doxytag: member="RobotCtrl::Config::IOMotorCtrlRight" ref="aa3e15e92eb2fe300cd20690de0ed0d11" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="class_robot_ctrl_1_1_config.html#aa3e15e92eb2fe300cd20690de0ed0d11">RobotCtrl.Config.IOMotorCtrlRight</a> = 0xF320</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5ec60e0aa55a87f197bf88cfca362f4c"></a><!-- doxytag: member="RobotCtrl::Config::IORadarSensor" ref="a5ec60e0aa55a87f197bf88cfca362f4c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="class_robot_ctrl_1_1_config.html#a5ec60e0aa55a87f197bf88cfca362f4c">RobotCtrl.Config.IORadarSensor</a> = 0xF310</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4084917ff005fc520bb1c337503c33d"></a><!-- doxytag: member="RobotCtrl::Config::MeterPerTick" ref="af4084917ff005fc520bb1c337503c33d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_robot_ctrl_1_1_config.html#af4084917ff005fc520bb1c337503c33d">RobotCtrl.Config.MeterPerTick</a> = <a class="el" href="class_robot_ctrl_1_1_config.html#ae8326de1ceb38f2ed7bafbb9d3dd4e1d">WheelCircumference</a> / <a class="el" href="class_robot_ctrl_1_1_config.html#ab09729a18f3d44209d9963c414c86d5f">TicksPerRevolution</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab09729a18f3d44209d9963c414c86d5f"></a><!-- doxytag: member="RobotCtrl::Config::TicksPerRevolution" ref="ab09729a18f3d44209d9963c414c86d5f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_robot_ctrl_1_1_config.html#ab09729a18f3d44209d9963c414c86d5f">RobotCtrl.Config.TicksPerRevolution</a> = 28672</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8326de1ceb38f2ed7bafbb9d3dd4e1d"></a><!-- doxytag: member="RobotCtrl::Config::WheelCircumference" ref="ae8326de1ceb38f2ed7bafbb9d3dd4e1d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_robot_ctrl_1_1_config.html#ae8326de1ceb38f2ed7bafbb9d3dd4e1d">RobotCtrl.Config.WheelCircumference</a> = Math.PI * <a class="el" href="class_robot_ctrl_1_1_config.html#aa0a24400febddc495f58ccba68c6b5ef">WheelDiameter</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa0a24400febddc495f58ccba68c6b5ef"></a><!-- doxytag: member="RobotCtrl::Config::WheelDiameter" ref="aa0a24400febddc495f58ccba68c6b5ef" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_robot_ctrl_1_1_config.html#aa0a24400febddc495f58ccba68c6b5ef">RobotCtrl.Config.WheelDiameter</a> = 0.076</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Dokumentation der Propertys</h2>
 <a class="anchor" id="ab60bbdfe5e8dfff6ff29e22b64a120f5"></a><!-- doxytag: member="RobotCtrl::Config::IsWinCE" ref="ab60bbdfe5e8dfff6ff29e22b64a120f5" args="" -->
 <div class="memitem">
@@ -104,7 +238,7 @@ const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IOMotorCtrlLeft<
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,7 +247,7 @@ const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>IOMotorCtrlLeft<
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Thu Apr 1 12:33:14 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Fri Apr 2 12:46:24 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
