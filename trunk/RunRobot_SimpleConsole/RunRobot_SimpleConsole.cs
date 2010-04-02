@@ -38,25 +38,25 @@ namespace RunRobot_SimpleConsole
         public void fahren()
         {
             robot.RunLine(1, 0.2, 0.1);
-            robot.Distance = 30;
+            //robot.Distance = 30;
             while (robot.Drive.Done != true && state == true)
             {
                 Thread.Sleep(10);
             }
             robot.RunArcLeft(1, 90, 0.2, 0.1);
-            robot.Distance = 30;
+            //robot.Distance = 30;
             while (robot.Drive.Done != true && state == true)
             {
                 Thread.Sleep(10);
             }
             robot.RunArcRight(1, 90, 0.2, 0.1);
-            robot.Distance = 30;
+            //robot.Distance = 30;
             while (robot.Drive.Done != true && state == true)
             {
                 Thread.Sleep(10);
             }
             robot.RunTurn(180, 0.2, 0.1);
-            robot.Distance = 30;
+            //robot.Distance = 30;
         }
 
         public void checkSwitchState()
