@@ -22,10 +22,12 @@ namespace RobotView
 
         bool running = true;
         PositionInfo pos;
+        PositionInfo old_pos;
         
         public WorldView()
         {
             InitializeComponent();
+            
             //this.Dock = DockStyle.Fill; // Damit das WorldView gleich gross ist wie das Form
             new Thread(new ThreadStart(this.Refresh)).Start();   
         }
@@ -34,8 +36,15 @@ namespace RobotView
         {
             while (running)
             {
-                Thread.Sleep(10);
-                this.Invalidate();
+                Thread.Sleep(80);
+                if (!pos.Equals( World.getRobot(0).PositionInfo))
+                {
+                    int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
+                    int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
+                    int durchmesser = calculateGridSizeInPixel() / 3;
+                    Rectangle rect = new Rectangle(xNullpunkt + (int)(pos.X * calculateGridSizeInPixel()) - durchmesser, yNullpunkt - (int)(pos.Y * calculateGridSizeInPixel()) - durchmesser, durchmesser * 2, durchmesser * 2); 
+                    this.Invalidate(rect);
+                }
                 //System.Console.WriteLine("Robot-Position: x=" + World.getRobot(0).PositionInfo.X + " y=" + World.getRobot(0).PositionInfo.Y);
             }
         }
@@ -57,14 +66,24 @@ namespace RobotView
 
         protected override void OnPaint(PaintEventArgs paintEvnt)
         {
-            // Get the graphics object
-            Graphics gfx = paintEvnt.Graphics;
+            Graphics gxOff; //Offscreen graphics
+            Bitmap m_bmpOffscreen = null;
 
-            paintObstacle(gfx);
-            paintGrid(gfx);
+            if (m_bmpOffscreen == null) //Bitmap for doublebuffering
+            {
+                m_bmpOffscreen = new Bitmap(ClientSize.Width, ClientSize.Height);
+            }
 
-            paintRobots(gfx);
+            gxOff = Graphics.FromImage(m_bmpOffscreen);
 
+            gxOff.Clear(this.BackColor);
+            //Draw some bitmap
+            paintObstacle(gxOff);
+            paintGrid(gxOff);
+            paintRobots(gxOff);
+            paintEvnt.Graphics.DrawImage(m_bmpOffscreen, 0, 0);
+
+            base.OnPaint(paintEvnt);
         }
 
         void paintGrid(Graphics g)
