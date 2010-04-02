@@ -18,6 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Pakete</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
       <li><a href="files.html"><span>Dateien</span></a></li>
       <li>
@@ -42,7 +43,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
       <li><a href="functions.html"><span>Klassen-Elemente</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><b>RobotCtrl</b>.<a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html">MotorCtrl_HW</a>
+  <div class="navpath"><a class="el" href="namespace_robot_ctrl.html">RobotCtrl</a>.<a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html">MotorCtrl_HW</a>
   </div>
 </div>
 <div class="contents">
@@ -74,12 +75,9 @@ Zusammengehörigkeiten von RobotCtrl.MotorCtrl_HW:</div>
 <tr><td class="memItemLeft" align="right" valign="top">override void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#ad7a992614ff75966b4381f8f8ef56cfd">Stop</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">override void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a24f22cd266cce1e701f9823e02816ff5">SetPID</a> (int proportional, int integral, int derivative, int integralLimit, int derivativeInterval)</td></tr>
 <tr><td colspan="2"><h2>Geschützte Attribute</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b2e8f281c704b73014ed11f838dfab5"></a><!-- doxytag: member="RobotCtrl::MotorCtrl_HW::samplePeriod" ref="a9b2e8f281c704b73014ed11f838dfab5" args="" -->
-const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>samplePeriod</b> = 256E-6</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a054d80af56e02234681d2ad157be9376"></a><!-- doxytag: member="RobotCtrl::MotorCtrl_HW::speedScale" ref="a054d80af56e02234681d2ad157be9376" args="" -->
-const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>speedScale</b> = samplePeriod / Config.MeterPerTick * (1 &lt;&lt; 16)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae79f545c62e3a7dbbd0efd6d434c68e"></a><!-- doxytag: member="RobotCtrl::MotorCtrl_HW::accelerationScale" ref="aae79f545c62e3a7dbbd0efd6d434c68e" args="" -->
-const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>accelerationScale</b> = samplePeriod * samplePeriod / Config.MeterPerTick * (1 &lt;&lt; 16)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a9b2e8f281c704b73014ed11f838dfab5">samplePeriod</a> = 256E-6</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a054d80af56e02234681d2ad157be9376">speedScale</a> = <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a9b2e8f281c704b73014ed11f838dfab5">samplePeriod</a> / <a class="el" href="class_robot_ctrl_1_1_config.html#af4084917ff005fc520bb1c337503c33d">Config.MeterPerTick</a> * (1 &lt;&lt; 16)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#aae79f545c62e3a7dbbd0efd6d434c68e">accelerationScale</a> = <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a9b2e8f281c704b73014ed11f838dfab5">samplePeriod</a> * <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a9b2e8f281c704b73014ed11f838dfab5">samplePeriod</a> / <a class="el" href="class_robot_ctrl_1_1_config.html#af4084917ff005fc520bb1c337503c33d">Config.MeterPerTick</a> * (1 &lt;&lt; 16)</td></tr>
 <tr><td colspan="2"><h2>Propertys</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">override int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a0c39f88363e68b382cf946f37fe98e16">Status</a><code> [get]</code></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">override bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#aa5f0c2dd90cf577ef951e58e957976c9">Ready</a><code> [get]</code></td></tr>
@@ -244,6 +242,46 @@ const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>accelerationS
 
 </div>
 </div>
+<hr/><h2>Dokumentation der Datenelemente</h2>
+<a class="anchor" id="aae79f545c62e3a7dbbd0efd6d434c68e"></a><!-- doxytag: member="RobotCtrl::MotorCtrl_HW::accelerationScale" ref="aae79f545c62e3a7dbbd0efd6d434c68e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#aae79f545c62e3a7dbbd0efd6d434c68e">RobotCtrl.MotorCtrl_HW.accelerationScale</a> = <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a9b2e8f281c704b73014ed11f838dfab5">samplePeriod</a> * <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a9b2e8f281c704b73014ed11f838dfab5">samplePeriod</a> / <a class="el" href="class_robot_ctrl_1_1_config.html#af4084917ff005fc520bb1c337503c33d">Config.MeterPerTick</a> * (1 &lt;&lt; 16)<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b2e8f281c704b73014ed11f838dfab5"></a><!-- doxytag: member="RobotCtrl::MotorCtrl_HW::samplePeriod" ref="a9b2e8f281c704b73014ed11f838dfab5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a9b2e8f281c704b73014ed11f838dfab5">RobotCtrl.MotorCtrl_HW.samplePeriod</a> = 256E-6<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a054d80af56e02234681d2ad157be9376"></a><!-- doxytag: member="RobotCtrl::MotorCtrl_HW::speedScale" ref="a054d80af56e02234681d2ad157be9376" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a054d80af56e02234681d2ad157be9376">RobotCtrl.MotorCtrl_HW.speedScale</a> = <a class="el" href="class_robot_ctrl_1_1_motor_ctrl___h_w.html#a9b2e8f281c704b73014ed11f838dfab5">samplePeriod</a> / <a class="el" href="class_robot_ctrl_1_1_config.html#af4084917ff005fc520bb1c337503c33d">Config.MeterPerTick</a> * (1 &lt;&lt; 16)<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Dokumentation der Propertys</h2>
 <a class="anchor" id="aeee6ccb14bb1c24c2541c64c0ad91c0e"></a><!-- doxytag: member="RobotCtrl::MotorCtrl_HW::Acceleration" ref="aeee6ccb14bb1c24c2541c64c0ad91c0e" args="" -->
 <div class="memitem">
@@ -326,7 +364,7 @@ const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>accelerationS
 </div>
 </div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
-<li>MotorCtrl_HW.cs</li>
+<li><a class="el" href="_motor_ctrl___h_w_8cs.html">MotorCtrl_HW.cs</a></li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -334,7 +372,7 @@ const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>accelerationS
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -343,7 +381,7 @@ const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>accelerationS
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Thu Apr 1 12:33:15 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Fri Apr 2 12:46:30 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
