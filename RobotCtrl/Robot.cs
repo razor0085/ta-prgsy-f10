@@ -96,13 +96,19 @@ namespace RobotCtrl
          */
         public Robot(RunMode runMode)
 		{
-			if (!Config.IsWinCE)
-				runMode = RunMode.VIRTUAL;
-			console = new Console(runMode);
+            if (!Config.IsWinCE)
+            {
+                runMode = RunMode.VIRTUAL;
+            }
+            else
+            {
+                runMode = RunMode.REAL;
+            }
+            console = new Console(runMode);
             drive = new Drive(runMode);
             radar = new Radar(runMode);
             
-            drive.Distance = radar.Distance;
+            //drive.Distance = radar.Distance;
 		}
 
         public void RunPause(double pauseTimeSeconds)
@@ -135,15 +141,10 @@ namespace RobotCtrl
             drive.RunContourLeft(distance, runSpeed, runAcceleration);
         }
 
-        public PositionInfo getPosition()
-        {
-            return drive.Position;
-        }
-
-        public double Distance
-        {
-            set { drive.Distance = value; }
-        }
+        //public double Distance
+        //{
+        //    set { drive.Distance = value; }
+        //}
 
         /**
          * Methode sollte alle laufenden Threads dieses Robot Objekts beenden

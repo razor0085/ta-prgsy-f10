@@ -65,17 +65,17 @@ namespace RobotCtrl
 			runTracksThread.Start();
 		}
 
-        /**
-         * Property Distance zum setzen einer Distanz
-         */
-        public double Distance
-        {
-            set
-            { 
-                if(track != null)
-                    track.Distance = value; 
-            }
-        }
+        ///**
+        // * Property Distance zum setzen einer Distanz
+        // */
+        //public double Distance
+        //{
+        //    set
+        //    { 
+        //        if(track != null)
+        //            track.Distance = value; 
+        //    }
+        //}
 
         /**
          * Methode resetiert das referenzierte DriveCtrl
@@ -391,9 +391,15 @@ namespace RobotCtrl
 				//??????????????????????????????????
 				//throw new ApplicationException("Ihre Ergänzung in Drive.updateInfo fehlt.");
 				//??????????????????????????????????
-                x2 = x1;
-                y2 = y1;
-                phi2 = phi1 + dL / (Config.AxleLength / 2);
+                double d = (dL + dR) / 2.0;
+                double radius = Config.AxleLength * d / (dR - dL);
+                double x0 = x1 + radius * Math.Cos(phi1 + Math.PI / 2.0);
+                double y0 = y1 + radius * Math.Sin(phi1 + Math.PI / 2.0);
+                double dphi = d / radius;
+
+                x2 = x0 + (x1 - x0) * Math.Cos(dphi) - (y1 - y0) * Math.Sin(dphi);
+                y2 = y0 + (x1 - x0) * Math.Sin(dphi) + (y1 - y0) * Math.Cos(dphi);
+                phi2 = phi1 + dphi;
 			}
 			lock (infoLock)
 			{

@@ -82,7 +82,7 @@ namespace Test_WorldView
             robot.RunLine(2, 0.5, 0.1);
             robot.Drive.WaitDone();
             robot.RunTurn(90, 0.5, 0.1);
-            robot.Drive.Distance = 300;
+            //robot.Drive.Distance = 300;
             robot.Drive.WaitDone();
             robot.RunLine(2, 0.5, 0.1);
             robot.Drive.WaitDone();
