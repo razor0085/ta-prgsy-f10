@@ -35,6 +35,7 @@ namespace Test_WorldView
             // WorldView erstellen
             worldView = new WorldView();
             worldView.Location = new System.Drawing.Point(370, 20);
+            worldView.Size = new System.Drawing.Size(this.Size.Width - 390, this.Size.Height - 60);
             
             // ConsoleView erstellen
             consoleView = new ConsoleView();
