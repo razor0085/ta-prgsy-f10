@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#a40da4517920bfe3bec78b5d9ff647624" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.fahren" alt="" coords="468,85,833,115"/>
+<area shape="rect" id="node21" href="$class_robot_ctrl_1_1_drive.html#a39fa32f34e3cd62b99b502948c416897" title="RobotCtrl.Drive.Stop" alt="" coords="581,139,720,168"/>
+<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_robot.html#a07b940c45155aae3b6ae5ce7d58a90f1" title="RobotCtrl.Robot.RunArcLeft" alt="" coords="888,5,1069,35"/>
+<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_robot.html#aaff244d591788ca15722234a71cee2be" title="RobotCtrl.Robot.RunArcRight" alt="" coords="884,59,1073,88"/>
+<area shape="rect" id="node13" href="$class_robot_ctrl_1_1_robot.html#a6a16f9f310f34fbe408bb7ab51a89a32" title="RobotCtrl.Robot.RunLine" alt="" coords="896,112,1061,141"/>
+<area shape="rect" id="node17" href="$class_robot_ctrl_1_1_robot.html#ae9c9a939809668a900df594a31e5bba3" title="RobotCtrl.Robot.RunTurn" alt="" coords="896,165,1061,195"/>
+<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_drive.html#a5b1a280fceb771ccad2e19d96e5c4ef3" title="RobotCtrl.Drive.RunArcLeft" alt="" coords="1128,5,1304,35"/>
+<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_drive.html#a6ef57fad047014b11a60f76c74a4b74c" title="RobotCtrl.Drive.RunArcRight" alt="" coords="1124,59,1308,88"/>
+<area shape="rect" id="node15" href="$class_robot_ctrl_1_1_drive.html#a62eb0b9939a24046a6dd0372cae3758b" title="RobotCtrl.Drive.RunLine" alt="" coords="1137,112,1295,141"/>
+<area shape="rect" id="node19" href="$class_robot_ctrl_1_1_drive.html#a2c49e16e45f1db8c54160cd978d501ea" title="RobotCtrl.Drive.RunTurn" alt="" coords="1136,165,1296,195"/>
+</map>
