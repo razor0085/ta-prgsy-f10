@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_robot.html#a6a16f9f310f34fbe408bb7ab51a89a32" title="RobotCtrl.Robot.RunLine" alt="" coords="368,5,533,35"/>
+<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_robot.html#ae9c9a939809668a900df594a31e5bba3" title="RobotCtrl.Robot.RunTurn" alt="" coords="368,59,533,88"/>
+<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_drive.html#a16bd2f585366688a74f4ad550ffc2ec6" title="RobotCtrl.Drive.WaitDone" alt="" coords="367,112,535,141"/>
+<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_drive.html#a62eb0b9939a24046a6dd0372cae3758b" title="RobotCtrl.Drive.RunLine" alt="" coords="585,5,743,35"/>
+<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_drive.html#a2c49e16e45f1db8c54160cd978d501ea" title="RobotCtrl.Drive.RunTurn" alt="" coords="584,59,744,88"/>
+</map>
