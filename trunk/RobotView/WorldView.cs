@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
@@ -147,17 +148,16 @@ namespace RobotView
 
         void paintObstacle(Graphics g)
         {
-            Image newImage = World.ObstacleMap.getImage();
-            
-            // Create rectangle for displaying image.
-            Rectangle destRect = new Rectangle(100, 100, 250, 50);
-            // Create rectangle for source image.
-            //Rectangle srcRect = new Rectangle(0, 0, newImage.Width, newImage.Height);
-            GraphicsUnit units = GraphicsUnit.Pixel;
-            // Draw image to screen.
-            //g.DrawImage(newImage, destRect, srcRect, units);
+            RectangleF area = World.ObstacleMap.Area;
+            int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
+            int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
 
+            // Transparente Farbe festlegen, CompactFramework unterstützt nur eine einzige Transparente Farbe
+            ImageAttributes attr = new ImageAttributes();
+            attr.SetColorKey(Color.White, Color.White); // Wir wählen weiss als transparente Farbe
 
+            Rectangle dstRect = new Rectangle(xNullpunkt + ((int)area.X) * calculateGridSizeInPixel(), yNullpunkt - (int)area.Y * calculateGridSizeInPixel(), (int)area.Width * calculateGridSizeInPixel(), (int)area.Height * calculateGridSizeInPixel());
+            g.DrawImage(World.ObstacleMap.Image, dstRect, 0, 0, World.ObstacleMap.Image.Width, World.ObstacleMap.Image.Height, GraphicsUnit.Pixel, attr);
         }
 
         public void Form_Closing(object sender, CancelEventArgs cArgs)
