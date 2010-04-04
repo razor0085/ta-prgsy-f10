@@ -13,7 +13,7 @@ namespace RobotCtrl
         /**
          * Property Distance gibt die Distanz zu einem Hindernis zur&uuml;ck.
          */
-        public double Distance { get { return distance; } }
+        public double Distance { get { return sensor.Distance; } }
 
         /**
          * Konstruktor f&uuml;r einen Radar
@@ -40,6 +40,5 @@ namespace RobotCtrl
 
         RadarSensor sensor;
         RunMode runMode;
-        double distance;
     }
 }
