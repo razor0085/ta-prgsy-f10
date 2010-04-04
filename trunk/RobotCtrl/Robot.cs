@@ -76,6 +76,21 @@ namespace RobotCtrl
         }
 
         /**
+         * Property RelativeRadarPosition liefert oder setzt die genaue Position und Ausrichtung des RadarSensor
+         */
+        public PositionInfo RelativeRadarPosition
+        {
+            set { relRadarPosition = value; }
+            get {
+                    if (relRadarPosition .X == 0)
+                    {
+                        relRadarPosition = new PositionInfo(0.2, 0.1, 45);
+                    }
+                    return relRadarPosition; 
+            }
+        }
+
+        /**
          * Property Color liefert oder setzt eine Farbe des Robot
          */
         public Color Color { get { return color; } set { color = value; } }
@@ -141,10 +156,14 @@ namespace RobotCtrl
             drive.RunContourLeft(distance, runSpeed, runAcceleration);
         }
 
-        //public double Distance
-        //{
-        //    set { drive.Distance = value; }
-        //}
+        /**
+         * Methode gibt an, wieviel Abstand zu einem Hindernis gemessen wurde
+         */
+        public double getFreeSpace()
+        {
+            //return radar.Distance;
+            return 2.55;
+        }
 
         /**
          * Methode sollte alle laufenden Threads dieses Robot Objekts beenden
@@ -158,7 +177,7 @@ namespace RobotCtrl
         Console console;
         Drive drive;
         Radar radar;
-        //PositionInfo positionInfo;
+        PositionInfo relRadarPosition;
         Color color = Color.Azure;
 	}
 }

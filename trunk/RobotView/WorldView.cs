@@ -23,6 +23,7 @@ namespace RobotView
         bool running = true;
         PositionInfo pos;
         PositionInfo old_pos;
+        PositionInfo relativeRadar;
         
         public WorldView()
         {
@@ -41,7 +42,7 @@ namespace RobotView
                 {
                     int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
                     int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
-                    int durchmesser = calculateGridSizeInPixel() / 3;
+                    int durchmesser = calculateGridSizeInPixel();
                     Rectangle rect = new Rectangle(xNullpunkt + (int)(pos.X * calculateGridSizeInPixel()) - durchmesser, yNullpunkt - (int)(pos.Y * calculateGridSizeInPixel()) - durchmesser, durchmesser * 2, durchmesser * 2); 
                     this.Invalidate(rect);
                 }
@@ -141,7 +142,12 @@ namespace RobotView
                 DriveInfo driveInfo = World.getRobot(i).Drive.Info;
                 //System.Console.WriteLine("DistanceL : " + driveInfo.DistanceL.ToString("F3") + " DistanceR : " + driveInfo.DistanceR.ToString("F3"));
                 pos = World.getRobot(i).Drive.Info.Position;
+                relativeRadar = World.getRobot(i).RelativeRadarPosition;
+                double freeSpace = World.getRobot(i).getFreeSpace();
+
                 paintRobot(g, color, pos.X, pos.Y, pos.Angle * 2 * Math.PI / 360);
+                //paintRadarSensor(g, relativeRadar.X, relativeRadar.Y, relativeRadar.Angle * 2 * Math.PI / 360, freeSpace);
+                paintRadarSensor(g, pos.X, pos.Y, (relativeRadar.Angle + pos.Angle) * 2 * Math.PI / 360, freeSpace);
             }
         }
 
@@ -163,6 +169,20 @@ namespace RobotView
             Pen fahrtrichtung = new Pen(Color.Red);
             fahrtrichtung.Width = 3;
             g.DrawLine(fahrtrichtung, xNullpunkt + (int)(x * calculateGridSizeInPixel()), yNullpunkt - (int)(y * calculateGridSizeInPixel()), xNullpunkt + (int)(x * calculateGridSizeInPixel()) + (int)(Math.Cos(angle) * radius), yNullpunkt - (int)(y * calculateGridSizeInPixel()) - (int)(Math.Sin(angle) * radius));
+        }
+
+        void paintRadarSensor(Graphics g, double x, double y, double angle, double freeSpace_radar)
+        {
+            // Koordinatenursprung in Pixel (Offset von 3 Pixel, damit der Robot auf den Koordinaten zu liegen kommt. warum?)
+            int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
+            int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
+            double freeSpace = freeSpace_radar * calculateGridSizeInPixel();
+
+            // Zeichnet den Radar Strahl
+            Pen radar = new Pen(Color.DarkGreen);
+            radar.Width = 3;
+            radar.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            g.DrawLine(radar, xNullpunkt + (int)(x * calculateGridSizeInPixel()), yNullpunkt - (int)(y * calculateGridSizeInPixel()), xNullpunkt + (int)(x * calculateGridSizeInPixel()) + (int)(Math.Cos(angle) * freeSpace), yNullpunkt - (int)(y * calculateGridSizeInPixel()) - (int)(Math.Sin(angle) * freeSpace));
         }
 
         void paintObstacle(Graphics g)
