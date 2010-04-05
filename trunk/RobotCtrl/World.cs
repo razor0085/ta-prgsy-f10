@@ -59,7 +59,7 @@ namespace RobotCtrl
             {
                     if (obstacleMap == null)
                     {
-                        RectangleF area = new RectangleF(1, 3, 2, 1); 
+                        RectangleF area = new RectangleF(1, 1, 2, 1); 
                         obstacleMap = new ObstacleMap(area, new Bitmap(@"..\..\..\hindernis.bmp"));
                     }
                     return obstacleMap; 
