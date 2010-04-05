@@ -51,6 +51,7 @@ namespace RobotCtrl
     public class Robot
 	{
         public event System.EventHandler Kollisionskurs;
+        public event System.EventHandler MinimumDistance;
 
         /**
          * Property Console liefert eine Referenz auf die Console innerhalb des Robot Objektes
@@ -138,19 +139,36 @@ namespace RobotCtrl
          */
         private void measureDistance()
         {
+            double distance;
+            double minimum_distance = 2.55;
+
             while (running)
             {
-                Thread.Sleep(10);
+                Thread.Sleep(5);
                 if (radar != null)
                 {
-                    double distance = radar.Distance;
+                    distance = radar.Distance;
                     if (distance < 0.3)
                     {
-                        System.Console.WriteLine("Distanz! " + distance);
                         if (Kollisionskurs != null)
                         {
                             Kollisionskurs(this, new EventArgs());
-                            
+                        }
+                    }
+
+                    if (Math.Abs(distance - minimum_distance) > 0.1)
+                    {
+                        if (distance < minimum_distance)
+                        {
+                            minimum_distance = distance;
+                        }
+                        else
+                        {
+                            if (MinimumDistance != null)
+                            {
+                                MinimumDistance(this, new EventArgs());
+                            }
+                            minimum_distance = 2.55;
                         }
                     }
                 }
