@@ -107,6 +107,11 @@ namespace RobotCtrl
 			stop = true;
 		}
 
+        public void Run()
+        {
+            stop = false;
+        }
+
         /**
          * Befehl zum Halten des Robot.
          */

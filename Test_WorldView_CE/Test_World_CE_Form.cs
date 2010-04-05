@@ -19,8 +19,12 @@ namespace Test_WorldView
         DriveView driveView;
         TrackView trackView;
 
+        double vorgabe = 1;
+
         Thread thread;
         Robot robot;
+
+        bool stop = false;
 
         public Test_World_View_Form()
         {
@@ -55,10 +59,10 @@ namespace Test_WorldView
             this.Controls.Add(trackView);
 
 
-            //robot.PositionInfo = new PositionInfo(2.5, -1, 90);
+            robot.PositionInfo = new PositionInfo(0.5, 1.5, 90);
 
-            //thread = new Thread(runTrack);
-            //thread.Start();                      
+            thread = new Thread(runTrack);
+            thread.Start();                      
             
             this.Closing += new CancelEventHandler(worldView.Form_Closing);           
         }
@@ -77,15 +81,69 @@ namespace Test_WorldView
             }
         }
 
+        public void KollisionsKursHandler(Object o, EventArgs e)
+        {
+            if (stop == false)
+            {
+                stop = true;
+                robot.Drive.Stop();
+                robot.Drive.WaitDone();
+                robot.Drive.RunTurn(45, 0.1, 0.1);
+                robot.Drive.WaitDone();
+                stop = false;
+                
+            }
+            //robot.Drive.Run();
+            //System.Console.WriteLine("Kollison detect!");
+        }
+
         public void runTrack()
         {
-            robot.RunLine(2, 0.5, 0.1);
-            robot.Drive.WaitDone();
-            robot.RunTurn(90, 0.5, 0.1);
-            //robot.Drive.Distance = 300;
-            robot.Drive.WaitDone();
-            robot.RunLine(2, 0.5, 0.1);
-            robot.Drive.WaitDone();
+            robot.Kollisionskurs += KollisionsKursHandler;
+            double freeSpace = robot.getFreeSpace();
+            double minimal_freeSpace = 2.55;
+
+            while (freeSpace >= 2.50)
+            {
+                robot.RunTurn(10, 0.5, 0.5);
+                robot.Drive.WaitDone();
+                freeSpace = robot.getFreeSpace();
+                if (freeSpace < minimal_freeSpace)
+                    minimal_freeSpace = freeSpace;
+            }
+
+            while (true)
+            {
+                freeSpace = robot.getFreeSpace();
+                robot.RunLine(0.5, 0.5, 0.1);
+                robot.Drive.WaitDone();
+                freeSpace = robot.getFreeSpace();
+                if (freeSpace < minimal_freeSpace)
+                {
+                    System.Console.WriteLine("richtige Richtung!");
+                }
+                else
+                {
+                    System.Console.WriteLine("falsche Richtung!");
+                }
+                // freeSpace > vorgabe, dann nach rechts fahren
+                if (freeSpace > (vorgabe - 0.2))
+                {
+                    robot.RunArcRight(1, 10, 1, 0.1);
+                    robot.Drive.WaitDone();
+                }
+                    // freeSpace < vorgabe, dann nach links fahren
+                else if (freeSpace < (vorgabe + 0.2))
+                {
+                    robot.RunArcLeft(1, 10, 1, 0.1);
+                    robot.Drive.WaitDone();
+                }
+                else
+                {
+                    robot.RunLine(0.5, 1, 0.1);
+                    robot.Drive.WaitDone();
+                }
+            }
 
         }
     }
