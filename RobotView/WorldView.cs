@@ -41,12 +41,12 @@ namespace RobotView
                 Thread.Sleep(80);
                 if (!pos.Equals( World.getRobot(0).PositionInfo))
                 {
-                //    int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
-                //    int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
-                //    int durchmesser = calculateGridSizeInPixel() * 3;
-                //    Rectangle rect = new Rectangle(xNullpunkt + (int)(pos.X * calculateGridSizeInPixel()) - durchmesser, yNullpunkt - (int)(pos.Y * calculateGridSizeInPixel()) - durchmesser, durchmesser * 2, durchmesser * 2); 
-                //    this.Invalidate(rect);
-                    this.Invalidate();
+                    int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
+                    int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
+                    int durchmesser = calculateGridSizeInPixel() * 2;
+                    Rectangle rect = new Rectangle(xNullpunkt + (int)(pos.X * calculateGridSizeInPixel()) - durchmesser, yNullpunkt - (int)(pos.Y * calculateGridSizeInPixel()) - durchmesser, durchmesser * 2, durchmesser * 2);
+                    this.Invalidate(rect);
+                    //this.Invalidate();
                 }
                 
                 //System.Console.WriteLine("Robot-Position: x=" + World.getRobot(0).PositionInfo.X + " y=" + World.getRobot(0).PositionInfo.Y);
@@ -87,14 +87,10 @@ namespace RobotView
             }
 
             gxOff = Graphics.FromImage(m_bmpOffscreen);
-            //if (this.resize == true)
-            //{
-                gxOff.Clear(this.BackColor);
-                //Draw some bitmap
-                paintObstacle(gxOff);
-                paintGrid(gxOff);
-                resize = false;
-            //}
+            gxOff.Clear(this.BackColor);
+            //Draw some bitmap
+            paintObstacle(gxOff);
+            paintGrid(gxOff);
             paintRobots(gxOff);
             paintEvnt.Graphics.DrawImage(m_bmpOffscreen, 0, 0);
 
@@ -160,7 +156,6 @@ namespace RobotView
                 double freeSpace = World.getRobot(i).getFreeSpace();
 
                 paintRobot(g, color, pos.X, pos.Y, pos.Angle * 2 * Math.PI / 360);
-                //paintRadarSensor(g, relativeRadar.X, relativeRadar.Y, relativeRadar.Angle * 2 * Math.PI / 360, freeSpace);
                 paintRadarSensor(g, pos.X, pos.Y, (relativeRadar.Angle + pos.Angle) * 2 * Math.PI / 360, freeSpace);
             }
         }
@@ -208,6 +203,8 @@ namespace RobotView
             // Transparente Farbe festlegen, CompactFramework unterstützt nur eine einzige Transparente Farbe
             ImageAttributes attr = new ImageAttributes();
             attr.SetColorKey(Color.White, Color.White); // Wir wählen weiss als transparente Farbe
+
+            System.Console.WriteLine("Obstacle Coordinates: X=" + area.X + " Y=" + area.Y + " Width=" + area.Width + " Height=" + area.Height);
 
             Rectangle dstRect = new Rectangle(xNullpunkt + ((int)area.X) * calculateGridSizeInPixel(), yNullpunkt - (int)area.Y * calculateGridSizeInPixel(), (int)area.Width * calculateGridSizeInPixel(), (int)area.Height * calculateGridSizeInPixel());
             g.DrawImage(World.ObstacleMap.Image, dstRect, 0, 0, World.ObstacleMap.Image.Width, World.ObstacleMap.Image.Height, GraphicsUnit.Pixel, attr);
