@@ -161,8 +161,7 @@ namespace RobotCtrl
          */
         public double getFreeSpace()
         {
-            //return radar.Distance;
-            return 2.55;
+            return radar.Distance;
         }
 
         /**
