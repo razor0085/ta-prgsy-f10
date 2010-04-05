@@ -21,6 +21,7 @@ namespace RobotView
         int yMax = 4;
 
         bool running = true;
+        bool resize = true;
         PositionInfo pos;
         PositionInfo old_pos;
         PositionInfo relativeRadar;
@@ -40,12 +41,14 @@ namespace RobotView
                 Thread.Sleep(80);
                 if (!pos.Equals( World.getRobot(0).PositionInfo))
                 {
-                    int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
-                    int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
-                    int durchmesser = calculateGridSizeInPixel();
-                    Rectangle rect = new Rectangle(xNullpunkt + (int)(pos.X * calculateGridSizeInPixel()) - durchmesser, yNullpunkt - (int)(pos.Y * calculateGridSizeInPixel()) - durchmesser, durchmesser * 2, durchmesser * 2); 
-                    this.Invalidate(rect);
+                //    int xNullpunkt = Math.Abs(xMin) * calculateGridSizeInPixel();
+                //    int yNullpunkt = Math.Abs(yMax) * calculateGridSizeInPixel();
+                //    int durchmesser = calculateGridSizeInPixel() * 3;
+                //    Rectangle rect = new Rectangle(xNullpunkt + (int)(pos.X * calculateGridSizeInPixel()) - durchmesser, yNullpunkt - (int)(pos.Y * calculateGridSizeInPixel()) - durchmesser, durchmesser * 2, durchmesser * 2); 
+                //    this.Invalidate(rect);
+                    this.Invalidate();
                 }
+                
                 //System.Console.WriteLine("Robot-Position: x=" + World.getRobot(0).PositionInfo.X + " y=" + World.getRobot(0).PositionInfo.Y);
             }
         }
@@ -65,10 +68,18 @@ namespace RobotView
             return yMax - yMin;
         }
 
+        protected override void OnResize(EventArgs e)
+        {
+            this.resize = true;
+            base.OnResize(e);
+            Invalidate();
+        }
+
         protected override void OnPaint(PaintEventArgs paintEvnt)
         {
             Graphics gxOff; //Offscreen graphics
             Bitmap m_bmpOffscreen = null;
+            //System.Console.WriteLine(paintEvnt.GetType);
 
             if (m_bmpOffscreen == null) //Bitmap for doublebuffering
             {
@@ -76,11 +87,14 @@ namespace RobotView
             }
 
             gxOff = Graphics.FromImage(m_bmpOffscreen);
-
-            gxOff.Clear(this.BackColor);
-            //Draw some bitmap
-            paintObstacle(gxOff);
-            paintGrid(gxOff);
+            //if (this.resize == true)
+            //{
+                gxOff.Clear(this.BackColor);
+                //Draw some bitmap
+                paintObstacle(gxOff);
+                paintGrid(gxOff);
+                resize = false;
+            //}
             paintRobots(gxOff);
             paintEvnt.Graphics.DrawImage(m_bmpOffscreen, 0, 0);
 
