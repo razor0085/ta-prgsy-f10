@@ -65,18 +65,6 @@ namespace RobotCtrl
 			runTracksThread.Start();
 		}
 
-        ///**
-        // * Property Distance zum setzen einer Distanz
-        // */
-        //public double Distance
-        //{
-        //    set
-        //    { 
-        //        if(track != null)
-        //            track.Distance = value; 
-        //    }
-        //}
-
         /**
          * Methode resetiert das referenzierte DriveCtrl
          */
@@ -106,11 +94,6 @@ namespace RobotCtrl
 		{
 			stop = true;
 		}
-
-        public void Run()
-        {
-            stop = false;
-        }
 
         /**
          * Befehl zum Halten des Robot.

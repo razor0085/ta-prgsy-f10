@@ -26,6 +26,8 @@ namespace Test_WorldView
 
         bool stop = false;
 
+        private static Mutex MyMutex = new Mutex(false, "MyMutex");
+
         public Test_World_View_Form()
         {
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace Test_WorldView
             this.Controls.Add(trackView);
 
 
-            robot.PositionInfo = new PositionInfo(0, 0.8, 45);
+            //robot.PositionInfo = new PositionInfo(0, 0.8, 45);
 
             thread = new Thread(runTrack);
             thread.Start();                      
@@ -90,62 +92,82 @@ namespace Test_WorldView
                 robot.Drive.WaitDone();
                 robot.Drive.RunTurn(45, 0.1, 0.1);
                 robot.Drive.WaitDone();
-                stop = false;
-                
+                stop = false;               
             }
-            //robot.Drive.Run();
-            //System.Console.WriteLine("Kollison detect!");
+        }
+
+        public void MinimumDistanceHandler(Object o, EventArgs e)
+        {
+            System.Console.WriteLine("MinimumDistanceHandler");
+            robot.Drive.Stop();
+            //robot.Drive.WaitDone();
+            robot.MinimumDistance -= this.MinimumDistanceHandler;
+            System.Console.WriteLine("End MinimumDistanceHandler");
+        }
+
+        public void findObstacle()
+        {
+            robot.MinimumDistance += this.MinimumDistanceHandler;
+            robot.RunTurn(360, 0.5, 0.1);
+            robot.Drive.WaitDone();
+            robot.Drive.WaitDone();
+        }
+
+        public void reduceDistance()
+        {
+            double freeSpace = robot.getFreeSpace() - 0.6;
+            robot.RunTurn(-45, 0.5, 0.1);
+            robot.Drive.WaitDone();
+            robot.Drive.WaitDone();
+            robot.RunLine(freeSpace, 0.5, 0.1);
+            robot.Drive.WaitDone();
+            robot.Drive.WaitDone();
+            robot.RunTurn(45, 0.5, 0.1);
+            robot.Drive.WaitDone();
+            robot.Drive.WaitDone();
+        }
+
+        public void followObstacle()
+        {
+            robot.MinimumDistance += this.MinimumDistanceHandler;
+            double freeSpace = robot.getFreeSpace() - 0.3;
+            robot.RunLine(2, 0.5, 0.1);
+            robot.Drive.WaitDone();
+            robot.RunLine(0.2, 0.5, 0.1);
+            robot.Drive.WaitDone();
+            robot.Drive.WaitDone();
+        }
+
+        public void runConturRight()
+        {
+            double freeSpace = robot.getFreeSpace() - 0.6;
+            robot.RunArcRight(0.6, 90, 0.5, 0.1);
+            robot.Drive.WaitDone();
+            robot.Drive.WaitDone();
         }
 
         public void runTrack()
         {
+            // Reaktion, wenn wir kollidieren würden
             robot.Kollisionskurs += KollisionsKursHandler;
-            double freeSpace = robot.getFreeSpace();
-            double minimal_freeSpace = 2.55;
+            
+            // Warten bis GUI vollständig geladen ist
+            Thread.Sleep(3000);
+            
+            // Drehen wir uns um die eigene Achse, bis wir das Obstacle finden (max 360°)
+            findObstacle();
 
-            while (freeSpace >= 2.50)
+            // Reduzieren der Distanz zum Obstacle
+            reduceDistance();
+
+            for (int i = 0; i < 4; i++)
             {
-                robot.RunTurn(10, 0.5, 0.5);
-                robot.Drive.WaitDone();
-                freeSpace = robot.getFreeSpace();
-                if (freeSpace < minimal_freeSpace)
-                    minimal_freeSpace = freeSpace;
+                // Kontur des Obstacles entlang fahren
+                followObstacle();
+
+                // Um die Ecke biegen
+                runConturRight();
             }
-
-            while (true)
-            {
-                freeSpace = robot.getFreeSpace();
-                robot.RunLine(0.5, 0.5, 0.1);
-                robot.Drive.WaitDone();
-                freeSpace = robot.getFreeSpace();
-                if (freeSpace < minimal_freeSpace)
-                {
-                    System.Console.WriteLine("richtige Richtung!");
-
-                    // freeSpace > vorgabe, dann nach rechts fahren
-                    if (freeSpace > (vorgabe - 0.2))
-                    {
-                        robot.RunArcRight(1, 10, 1, 0.1);
-                        robot.Drive.WaitDone();
-                    }
-                    // freeSpace < vorgabe, dann nach links fahren
-                    else if (freeSpace < (vorgabe + 0.2))
-                    {
-                        robot.RunArcLeft(1, 10, 1, 0.1);
-                        robot.Drive.WaitDone();
-                    }
-                }
-                else
-                {
-                    //robot.RunLine(0.5, 1, 0.1);
-                    //robot.Drive.WaitDone();
-
-                    robot.RunArcRight(0.5, 20, 0.5,0.1);
-                    robot.Drive.WaitDone();
-
-                }
-            }
-
         }
     }
 }
