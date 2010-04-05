@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
-//using System.Drawing;
+using System.Threading;
 
 /**
  * @mainpage Hochschule f&uuml;r Technik & Architektur, HTA Luzern 
@@ -50,6 +50,8 @@ namespace RobotCtrl
 
     public class Robot
 	{
+        public event System.EventHandler Kollisionskurs;
+
         /**
          * Property Console liefert eine Referenz auf die Console innerhalb des Robot Objektes
          * @see Console
@@ -84,7 +86,7 @@ namespace RobotCtrl
             get {
                     if (relRadarPosition .X == 0)
                     {
-                        relRadarPosition = new PositionInfo(0.2, 0.1, 45);
+                        relRadarPosition = new PositionInfo(0.2, 0.1, -45);
                     }
                     return relRadarPosition; 
             }
@@ -122,9 +124,38 @@ namespace RobotCtrl
             console = new Console(runMode);
             drive = new Drive(runMode);
             radar = new Radar(runMode);
-            
+
+            thread = new Thread(measureDistance);
+            thread.Start();
             //drive.Distance = radar.Distance;
+
+            running = true;
 		}
+
+        /**
+         * Methode prüft zyklisch, ob der Robot auf Kollisionskurs ist.
+         * Wenn das der Fall ist, wir ein Event gezündet.
+         */
+        private void measureDistance()
+        {
+            while (running)
+            {
+                Thread.Sleep(10);
+                if (radar != null)
+                {
+                    double distance = radar.Distance;
+                    if (distance < 0.3)
+                    {
+                        System.Console.WriteLine("Distanz! " + distance);
+                        if (Kollisionskurs != null)
+                        {
+                            Kollisionskurs(this, new EventArgs());
+                            
+                        }
+                    }
+                }
+            }
+        }
 
         public void RunPause(double pauseTimeSeconds)
         {
@@ -171,6 +202,7 @@ namespace RobotCtrl
         {
             drive.Stop();
             drive.Close();
+            running = false;
         }
 
         Console console;
@@ -178,5 +210,7 @@ namespace RobotCtrl
         Radar radar;
         PositionInfo relRadarPosition;
         Color color = Color.Azure;
+        Thread thread;
+        bool running;
 	}
 }

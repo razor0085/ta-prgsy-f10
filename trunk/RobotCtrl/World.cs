@@ -39,14 +39,22 @@ namespace RobotCtrl
          */
         public static double GetFreeSpace()
         {
-            PositionInfo offset = getRobot(0).RelativeRadarPosition;
-            PositionInfo pos = getRobot(0).PositionInfo;
-            double phi = pos.Angle / 180.0 * Math.PI;
-            PositionInfo radarPos = new PositionInfo(
-                pos.X + offset.X * Math.Cos(phi) - offset.Y * Math.Sin(phi),
-                pos.Y + offset.X * Math.Sin(phi) + offset.Y * Math.Cos(phi),
-                (pos.Angle + offset.Angle) % 360);
-            return obstacleMap.GetFreeSpace(radarPos);
+            if (getRobot(0) != null)
+            {
+                PositionInfo offset = getRobot(0).RelativeRadarPosition;
+                PositionInfo pos = getRobot(0).PositionInfo;
+                double phi = pos.Angle / 180.0 * Math.PI;
+                PositionInfo radarPos = new PositionInfo(
+                    pos.X + offset.X * Math.Cos(phi) - offset.Y * Math.Sin(phi),
+                    pos.Y + offset.X * Math.Sin(phi) + offset.Y * Math.Cos(phi),
+                    (pos.Angle + offset.Angle) % 360);
+
+                if (obstacleMap != null)
+                {
+                    return obstacleMap.GetFreeSpace(radarPos);
+                }
+            }
+            return 2.55;
         }
 
         /**
