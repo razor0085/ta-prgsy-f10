@@ -59,7 +59,7 @@ namespace Test_WorldView
             this.Controls.Add(trackView);
 
 
-            robot.PositionInfo = new PositionInfo(0.5, 1.5, 90);
+            robot.PositionInfo = new PositionInfo(0, 0.8, 45);
 
             thread = new Thread(runTrack);
             thread.Start();                      
@@ -121,27 +121,28 @@ namespace Test_WorldView
                 if (freeSpace < minimal_freeSpace)
                 {
                     System.Console.WriteLine("richtige Richtung!");
-                }
-                else
-                {
-                    System.Console.WriteLine("falsche Richtung!");
-                }
-                // freeSpace > vorgabe, dann nach rechts fahren
-                if (freeSpace > (vorgabe - 0.2))
-                {
-                    robot.RunArcRight(1, 10, 1, 0.1);
-                    robot.Drive.WaitDone();
-                }
+
+                    // freeSpace > vorgabe, dann nach rechts fahren
+                    if (freeSpace > (vorgabe - 0.2))
+                    {
+                        robot.RunArcRight(1, 10, 1, 0.1);
+                        robot.Drive.WaitDone();
+                    }
                     // freeSpace < vorgabe, dann nach links fahren
-                else if (freeSpace < (vorgabe + 0.2))
-                {
-                    robot.RunArcLeft(1, 10, 1, 0.1);
-                    robot.Drive.WaitDone();
+                    else if (freeSpace < (vorgabe + 0.2))
+                    {
+                        robot.RunArcLeft(1, 10, 1, 0.1);
+                        robot.Drive.WaitDone();
+                    }
                 }
                 else
                 {
-                    robot.RunLine(0.5, 1, 0.1);
+                    //robot.RunLine(0.5, 1, 0.1);
+                    //robot.Drive.WaitDone();
+
+                    robot.RunArcRight(0.5, 20, 0.5,0.1);
                     robot.Drive.WaitDone();
+
                 }
             }
 
