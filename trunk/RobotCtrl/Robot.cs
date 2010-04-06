@@ -130,6 +130,9 @@ namespace RobotCtrl
             thread.Start();
             //drive.Distance = radar.Distance;
 
+            // Reaktion, wenn wir kollidieren würden
+            Kollisionskurs += KollisionsKursHandler;
+            
             running = true;
 		}
 
@@ -148,7 +151,7 @@ namespace RobotCtrl
                 if (radar != null)
                 {
                     distance = radar.Distance;
-                    if (distance < 0.3)
+                    if (distance < 0.1)
                     {
                         if (Kollisionskurs != null)
                         {
@@ -175,34 +178,71 @@ namespace RobotCtrl
             }
         }
 
-        public void RunPause(double pauseTimeSeconds)
+        public void KollisionsKursHandler(Object o, EventArgs e)
         {
-            drive.RunPause(pauseTimeSeconds);
+            System.Console.WriteLine("Collision Detect!");
+            Drive.Stop();
         }
 
-        public void RunLine(double length, double speed, double runAcceleration)
+        public void MinimumDistanceHandler(Object o, EventArgs e)
         {
-            drive.RunLine(length, speed, runAcceleration);
+            Drive.Stop();
+            MinimumDistance -= this.MinimumDistanceHandler;
         }
 
-        public void RunArcLeft(double radius, double angle, double speed, double runAcceleration)
+        public void findObstacle()
         {
-            drive.RunArcLeft(radius, angle, speed, runAcceleration);
+            MinimumDistance += this.MinimumDistanceHandler;
+            Drive.RunTurn(360, 0.2, 0.1);
+            Drive.WaitDone();
+            Drive.WaitDone();
         }
 
-        public void RunArcRight(double runRadius, double runAngle, double runSpeed, double runAcceleration)
+        public void reduceDistanceToObstacle()
         {
-            drive.RunArcRight(runRadius, runAngle, runSpeed, runAcceleration);
+            // Berechne Strecke bis zum Hindernis, minus 0.4 m
+            double freeSpace = getFreeSpace() - 0.4;
+            // Drehe den Robot, damit er senkrecht zum Hindernis steht
+            Drive.RunTurn(-45, 0.2, 0.1);
+            Drive.WaitDone();
+            Drive.WaitDone();
+            // Reduziere Distanz zum Hindernis
+            Drive.RunLine(freeSpace, 0.2, 0.1);
+            Drive.WaitDone();
+            Drive.WaitDone();
+             // Drehe zurück in damit der Robot wieder den Ursprungswinkel zum Hindernis hat
+            Drive.RunTurn(45, 0.2, 0.1);
+            Drive.WaitDone();
+            Drive.WaitDone();
         }
 
-        public void RunTurn(double runAngle, double runSpeed, double runAcceleration)
+        public void followObstacle()
         {
-            drive.RunTurn(runAngle, runSpeed, runAcceleration);
+            MinimumDistance += this.MinimumDistanceHandler;           
+            double actual_distance = getFreeSpace();
+            double old_distance = actual_distance;
+            while (getFreeSpace() < 2.5 && running)
+            {
+                Thread.Sleep(1000);
+                actual_distance = getFreeSpace();
+                System.Console.WriteLine("Aktuelle Distanz: " + actual_distance);
+                
+                // Solange der Abstand zum Hindernis gleich bleibt, fahren
+                if (old_distance == actual_distance)
+                {
+                    Drive.RunLine(2, 0.5, 0.1);
+                    Drive.WaitDone();
+                }
+
+
+            }
         }
 
-        public void RunContourLeft(double distance, double runSpeed, double runAcceleration)
+        public void runConturRight()
         {
-            drive.RunContourLeft(distance, runSpeed, runAcceleration);
+            Drive.RunArcRight(0.6, 90, 0.5, 0.1);
+            Drive.WaitDone();
+            Drive.WaitDone();
         }
 
         /**

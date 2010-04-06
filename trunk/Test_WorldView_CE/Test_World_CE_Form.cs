@@ -24,8 +24,6 @@ namespace Test_WorldView
         Thread thread;
         Robot robot;
 
-        bool stop = false;
-
         private static Mutex MyMutex = new Mutex(false, "MyMutex");
 
         public Test_World_View_Form()
@@ -83,90 +81,24 @@ namespace Test_WorldView
             }
         }
 
-        public void KollisionsKursHandler(Object o, EventArgs e)
-        {
-            if (stop == false)
-            {
-                stop = true;
-                robot.Drive.Stop();
-                robot.Drive.WaitDone();
-                robot.Drive.RunTurn(45, 0.1, 0.1);
-                robot.Drive.WaitDone();
-                stop = false;               
-            }
-        }
-
-        public void MinimumDistanceHandler(Object o, EventArgs e)
-        {
-            System.Console.WriteLine("MinimumDistanceHandler");
-            robot.Drive.Stop();
-            //robot.Drive.WaitDone();
-            robot.MinimumDistance -= this.MinimumDistanceHandler;
-            System.Console.WriteLine("End MinimumDistanceHandler");
-        }
-
-        public void findObstacle()
-        {
-            robot.MinimumDistance += this.MinimumDistanceHandler;
-            robot.RunTurn(360, 0.5, 0.1);
-            robot.Drive.WaitDone();
-            robot.Drive.WaitDone();
-        }
-
-        public void reduceDistance()
-        {
-            double freeSpace = robot.getFreeSpace() - 0.6;
-            robot.RunTurn(-45, 0.5, 0.1);
-            robot.Drive.WaitDone();
-            robot.Drive.WaitDone();
-            robot.RunLine(freeSpace, 0.5, 0.1);
-            robot.Drive.WaitDone();
-            robot.Drive.WaitDone();
-            robot.RunTurn(45, 0.5, 0.1);
-            robot.Drive.WaitDone();
-            robot.Drive.WaitDone();
-        }
-
-        public void followObstacle()
-        {
-            robot.MinimumDistance += this.MinimumDistanceHandler;
-            double freeSpace = robot.getFreeSpace() - 0.3;
-            robot.RunLine(2, 0.5, 0.1);
-            robot.Drive.WaitDone();
-            robot.RunLine(0.2, 0.5, 0.1);
-            robot.Drive.WaitDone();
-            robot.Drive.WaitDone();
-        }
-
-        public void runConturRight()
-        {
-            double freeSpace = robot.getFreeSpace() - 0.6;
-            robot.RunArcRight(0.6, 90, 0.5, 0.1);
-            robot.Drive.WaitDone();
-            robot.Drive.WaitDone();
-        }
-
         public void runTrack()
         {
-            // Reaktion, wenn wir kollidieren würden
-            robot.Kollisionskurs += KollisionsKursHandler;
-            
             // Warten bis GUI vollständig geladen ist
             Thread.Sleep(3000);
             
             // Drehen wir uns um die eigene Achse, bis wir das Obstacle finden (max 360°)
-            findObstacle();
+            robot.findObstacle();
 
             // Reduzieren der Distanz zum Obstacle
-            reduceDistance();
+            robot.reduceDistanceToObstacle();
 
             for (int i = 0; i < 4; i++)
             {
                 // Kontur des Obstacles entlang fahren
-                followObstacle();
+                robot.followObstacle();
 
                 // Um die Ecke biegen
-                runConturRight();
+                robot.runConturRight();
             }
         }
     }
