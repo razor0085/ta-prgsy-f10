@@ -193,7 +193,7 @@ namespace RobotCtrl
         public void findObstacle()
         {
             MinimumDistance += this.MinimumDistanceHandler;
-            Drive.RunTurn(360, 0.2, 0.1);
+            Drive.RunTurn(360, 0.1, 0.1);
             Drive.WaitDone();
             Drive.WaitDone();
         }
@@ -216,6 +216,10 @@ namespace RobotCtrl
             Drive.WaitDone();
         }
 
+        /**
+         * Methode veranlasst Robot, dem Hindernis entlang zu fahren, bist der Sensor
+         * freie Sicht ( > 2.5m ) meldet.
+         */
         public void followObstacle()
         {
             MinimumDistance += this.MinimumDistanceHandler;           
@@ -234,6 +238,18 @@ namespace RobotCtrl
                     Drive.WaitDone();
                 }
 
+                // Robot hat sich vom Hindernis entfernt, Korrektur berechnen und fahren
+                if (old_distance < actual_distance)
+                {
+
+                }
+
+                // Robot ist auf Hindernis zu gefahren, Kollision könnte eintreten
+                // Korrektur berechnen und fahren
+                if (old_distance > actual_distance)
+                {
+
+                }
 
             }
         }
@@ -241,7 +257,6 @@ namespace RobotCtrl
         public void runConturRight()
         {
             Drive.RunArcRight(0.6, 90, 0.5, 0.1);
-            Drive.WaitDone();
             Drive.WaitDone();
         }
 

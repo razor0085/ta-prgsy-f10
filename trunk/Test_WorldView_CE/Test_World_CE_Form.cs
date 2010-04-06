@@ -44,6 +44,7 @@ namespace Test_WorldView
             // ConsoleView erstellen
             consoleView = new ConsoleView();
             consoleView.Location = new System.Drawing.Point(20, 20);
+            consoleView.RobotConsole = robot.Console;
 
             // DriveView erstellen
             driveView = new DriveView(robot.Drive);
