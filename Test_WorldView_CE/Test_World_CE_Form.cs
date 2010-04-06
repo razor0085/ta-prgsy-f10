@@ -21,7 +21,7 @@ namespace Test_WorldView
 
         double vorgabe = 1;
 
-        Thread thread;
+        Thread fahr;
         Robot robot;
 
         private static Mutex MyMutex = new Mutex(false, "MyMutex");
@@ -35,6 +35,7 @@ namespace Test_WorldView
             World.Robot = robot;
             robot.Color = Color.Blue;
             robot.PositionInfo = new PositionInfo(0, 0, 0);
+            robot.switchChanged += this.switchHandler;
 
             // WorldView erstellen
             worldView = new WorldView();
@@ -62,8 +63,8 @@ namespace Test_WorldView
 
             //robot.PositionInfo = new PositionInfo(0, 0.8, 45);
 
-            thread = new Thread(runTrack);
-            thread.Start();                      
+            //fahr = new Thread(runTrack);
+            //fahr.Start();                      
             
             this.Closing += new CancelEventHandler(worldView.Form_Closing);           
         }
@@ -82,10 +83,39 @@ namespace Test_WorldView
             }
         }
 
+        public void switchHandler(Object o, EventArgs e)
+        {
+            try
+            {
+                if (robot.Console.Switches[0] == true)
+                {
+                    // switch on
+                    robot.Drive.Power = true;
+                    System.Console.WriteLine("Power On!");
+                    fahr = new Thread(runTrack);
+                    fahr.Start();
+                }
+                else
+                {
+                    // switch off
+                    robot.Drive.Power = false;
+                    robot.Drive.Stop();
+                    fahr.Abort();
+                    fahr.Join();
+
+                    System.Console.WriteLine("Power Off!");
+                }
+            }
+            catch (ThreadAbortException ex)
+            {
+                System.Console.WriteLine("Thread killed! " + ex);
+            }
+        }
+
         public void runTrack()
         {
             // Warten bis GUI vollständig geladen ist
-            Thread.Sleep(3000);
+            //Thread.Sleep(3000);
             
             // Drehen wir uns um die eigene Achse, bis wir das Obstacle finden (max 360°)
             robot.findObstacle();

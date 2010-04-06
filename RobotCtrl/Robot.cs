@@ -52,6 +52,7 @@ namespace RobotCtrl
 	{
         public event System.EventHandler Kollisionskurs;
         public event System.EventHandler MinimumDistance;
+        public event System.EventHandler switchChanged;
 
         /**
          * Property Console liefert eine Referenz auf die Console innerhalb des Robot Objektes
@@ -126,15 +127,37 @@ namespace RobotCtrl
             drive = new Drive(runMode);
             radar = new Radar(runMode);
 
-            thread = new Thread(measureDistance);
-            thread.Start();
-            //drive.Distance = radar.Distance;
+            measureDistance_thread = new Thread(measureDistance);
+            measureDistance_thread.Priority = ThreadPriority.AboveNormal;
+            measureDistance_thread.Start();
 
+            checkSwitchState_thread = new Thread(checkSwitchState);
+            checkSwitchState_thread.Start();
+            
             // Reaktion, wenn wir kollidieren würden
             Kollisionskurs += KollisionsKursHandler;
             
             running = true;
 		}
+
+        private void checkSwitchState()
+        {
+            while (running)
+            {
+                Thread.Sleep(100);
+                for (int i = 0; i < 4; i++)
+                {
+                    if (switchState[i] != console.Switches[i])
+                    {
+                        switchState[i] = console.Switches[i];
+                        if (switchChanged != null)
+                        {
+                            switchChanged(this, null);
+                        }
+                    }
+                }
+            }
+        }
 
         /**
          * Methode prüft zyklisch, ob der Robot auf Kollisionskurs ist.
@@ -147,7 +170,7 @@ namespace RobotCtrl
 
             while (running)
             {
-                Thread.Sleep(5);
+                Thread.Sleep(1);
                 if (radar != null)
                 {
                     distance = radar.Distance;
@@ -187,21 +210,24 @@ namespace RobotCtrl
         public void MinimumDistanceHandler(Object o, EventArgs e)
         {
             Drive.Stop();
+            obstacleFound = true;
             MinimumDistance -= this.MinimumDistanceHandler;
         }
 
         public void findObstacle()
-        {
+        {         
             MinimumDistance += this.MinimumDistanceHandler;
-            Drive.RunTurn(360, 0.1, 0.1);
-            Drive.WaitDone();
-            Drive.WaitDone();
+            while (!obstacleFound)
+            {
+                Drive.RunTurn(360, 0.1, 0.1);
+                Drive.WaitDone();
+            }
         }
 
         public void reduceDistanceToObstacle()
         {
-            // Berechne Strecke bis zum Hindernis, minus 0.4 m
-            double freeSpace = getFreeSpace() - 0.4;
+            // Berechne Strecke bis zum Hindernis, minus 0.6 m
+            double freeSpace = getFreeSpace() - 0.6;
             // Drehe den Robot, damit er senkrecht zum Hindernis steht
             Drive.RunTurn(-45, 0.2, 0.1);
             Drive.WaitDone();
@@ -252,11 +278,13 @@ namespace RobotCtrl
                 }
 
             }
+            Drive.RunLine(0.3, 0.5, 0.1);
+            Drive.WaitDone();
         }
 
         public void runConturRight()
         {
-            Drive.RunArcRight(0.6, 90, 0.5, 0.1);
+            Drive.RunArcRight(0.5, 90, 0.5, 0.1);
             Drive.WaitDone();
         }
 
@@ -283,7 +311,10 @@ namespace RobotCtrl
         Radar radar;
         PositionInfo relRadarPosition;
         Color color = Color.Azure;
-        Thread thread;
-        bool running;
+        Thread measureDistance_thread;
+        Thread checkSwitchState_thread;
+        bool running = true;
+        bool[] switchState = { false, false, false, false };
+        bool obstacleFound = false;
 	}
 }
