@@ -34,7 +34,7 @@ namespace Test_WorldView
             robot = new Robot(RunMode.REAL);
             World.Robot = robot;
             robot.Color = Color.Blue;
-            robot.PositionInfo = new PositionInfo(0, 0, 0);
+            robot.PositionInfo = new PositionInfo(0, 0, 90);
             robot.switchChanged += this.switchHandler;
 
             // WorldView erstellen
@@ -100,6 +100,9 @@ namespace Test_WorldView
                     // switch off
                     robot.Drive.Power = false;
                     robot.Drive.Stop();
+                    robot.Drive.WaitDone();
+                    robot.Drive.WaitDone();
+                    robot.Drive.Position = new PositionInfo(0, 0, 0);
                     fahr.Abort();
                     fahr.Join();
 
@@ -114,23 +117,20 @@ namespace Test_WorldView
 
         public void runTrack()
         {
-            // Warten bis GUI vollständig geladen ist
-            //Thread.Sleep(3000);
-            
+            robot.Kollisionskurs += robot.KollisionsKursHandler;
             // Drehen wir uns um die eigene Achse, bis wir das Obstacle finden (max 360°)
-            robot.findObstacle();
+           // robot.findObstacle();
+           
 
-            // Reduzieren der Distanz zum Obstacle
-            robot.reduceDistanceToObstacle();
+            robot.followObstacle();
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    // Kontur des Obstacles entlang fahren
+            //    robot.followObstacle();
 
-            for (int i = 0; i < 4; i++)
-            {
-                // Kontur des Obstacles entlang fahren
-                robot.followObstacle();
-
-                // Um die Ecke biegen
-                robot.runConturRight();
-            }
+            //    // Um die Ecke biegen
+            //    robot.runConturRight();
+            //}
         }
     }
 }
