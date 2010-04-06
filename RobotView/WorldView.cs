@@ -17,7 +17,7 @@ namespace RobotView
         int xMin = -1;
         int yMin = -4;
 
-        int xMax = 5;
+        int xMax = 8;
         int yMax = 4;
 
         bool running = true;
