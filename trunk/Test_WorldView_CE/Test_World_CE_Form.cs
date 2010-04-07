@@ -34,7 +34,7 @@ namespace Test_WorldView
             robot = new Robot(RunMode.REAL);
             World.Robot = robot;
             robot.Color = Color.Blue;
-            robot.PositionInfo = new PositionInfo(0, 0, 90);
+            robot.PositionInfo = new PositionInfo(-1, 0, 90);
             robot.switchChanged += this.switchHandler;
 
             // WorldView erstellen
@@ -102,7 +102,7 @@ namespace Test_WorldView
                     robot.Drive.Stop();
                     robot.Drive.WaitDone();
                     robot.Drive.WaitDone();
-                    robot.Drive.Position = new PositionInfo(0, 0, 0);
+                    robot.Drive.Position = new PositionInfo(-1, 0, 90);
                     fahr.Abort();
                     fahr.Join();
 

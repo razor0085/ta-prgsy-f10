@@ -88,7 +88,8 @@ namespace RobotCtrl
             get {
                     if (relRadarPosition .X == 0)
                     {
-                        relRadarPosition = new PositionInfo(0.2, 0.1, -90);
+                        //relRadarPosition = new PositionInfo(0.2, 0.1, -90);
+                        relRadarPosition = new PositionInfo(0, 0, -90); // Für Test von Obstacle Map setzen wir den RadarSensor auf den Mittelpunkt
                     }
                     return relRadarPosition; 
             }
