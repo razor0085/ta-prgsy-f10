@@ -1,7 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_robot.html#a6a16f9f310f34fbe408bb7ab51a89a32" title="RobotCtrl.Robot.RunLine" alt="" coords="368,5,533,35"/>
-<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_robot.html#ae9c9a939809668a900df594a31e5bba3" title="RobotCtrl.Robot.RunTurn" alt="" coords="368,59,533,88"/>
-<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_drive.html#a16bd2f585366688a74f4ad550ffc2ec6" title="RobotCtrl.Drive.WaitDone" alt="" coords="367,112,535,141"/>
-<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_drive.html#a62eb0b9939a24046a6dd0372cae3758b" title="RobotCtrl.Drive.RunLine" alt="" coords="585,5,743,35"/>
-<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_drive.html#a2c49e16e45f1db8c54160cd978d501ea" title="RobotCtrl.Drive.RunTurn" alt="" coords="584,59,744,88"/>
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_robot.html#a3b882dbfa7826c6cedcbe2d56fe36ecf" title="RobotCtrl.Robot.followObstacle" alt="" coords="387,32,589,61"/>
+<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_robot.html#a523c55c4fa9ce6f8aa47232c6f3cc5d5" title="RobotCtrl.Robot.KollisionsKursHandler" alt="" coords="365,85,611,115"/>
+<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_robot.html#a5ac16c3dac9aab133dc4084278671b59" title="RobotCtrl.Robot.getFreeSpace" alt="" coords="693,5,891,35"/>
+<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_robot.html#a145bb0d36fe7f21d1575f9559f73d516" title="RobotCtrl.Robot.MinimumDistanceHandler" alt="" coords="659,59,925,88"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$class_robot_ctrl_1_1_drive.html#af902934c2a3f12ef34bc55bb1827cc13" title="RobotCtrl.Drive.Close" alt="" coords="223,5,367,35"/>
-<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_drive.html#ad79a30093b989b2b701e07d1caf7fecc" title="RobotCtrl.Drive.Reset" alt="" coords="221,59,368,88"/>
+<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_drive.html#ad79a30093b989b2b701e07d1caf7fecc" title="RobotCtrl.Drive.Reset" alt="" coords="221,59,368,88"/>
 <area shape="rect" id="node5" href="$class_robot_ctrl_1_1_robot.html#afb01a74bfcb74eab60f041a368f93737" title="RobotCtrl.Robot.Clear" alt="" coords="417,5,564,35"/>
+<area shape="rect" id="node7" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#a4813c7fe1386c01b2934a921034da646" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.switchHandler" alt="" coords="613,5,1027,35"/>
+<area shape="rect" id="node9" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="1075,5,1557,35"/>
 </map>

@@ -1,10 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_robot.html#a07b940c45155aae3b6ae5ce7d58a90f1" title="RobotCtrl.Robot.RunArcLeft" alt="" coords="427,5,608,35"/>
-<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_robot.html#aaff244d591788ca15722234a71cee2be" title="RobotCtrl.Robot.RunArcRight" alt="" coords="423,59,612,88"/>
-<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_robot.html#a6a16f9f310f34fbe408bb7ab51a89a32" title="RobotCtrl.Robot.RunLine" alt="" coords="435,112,600,141"/>
-<area shape="rect" id="node15" href="$class_robot_ctrl_1_1_robot.html#ae9c9a939809668a900df594a31e5bba3" title="RobotCtrl.Robot.RunTurn" alt="" coords="435,165,600,195"/>
-<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_drive.html#a5b1a280fceb771ccad2e19d96e5c4ef3" title="RobotCtrl.Drive.RunArcLeft" alt="" coords="667,5,843,35"/>
-<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_drive.html#a6ef57fad047014b11a60f76c74a4b74c" title="RobotCtrl.Drive.RunArcRight" alt="" coords="663,59,847,88"/>
-<area shape="rect" id="node13" href="$class_robot_ctrl_1_1_drive.html#a62eb0b9939a24046a6dd0372cae3758b" title="RobotCtrl.Drive.RunLine" alt="" coords="676,112,833,141"/>
-<area shape="rect" id="node17" href="$class_robot_ctrl_1_1_drive.html#a2c49e16e45f1db8c54160cd978d501ea" title="RobotCtrl.Drive.RunTurn" alt="" coords="675,165,835,195"/>
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_robot.html#a523c55c4fa9ce6f8aa47232c6f3cc5d5" title="RobotCtrl.Robot.KollisionsKursHandler" alt="" coords="421,5,667,35"/>
+<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_drive.html#a5b1a280fceb771ccad2e19d96e5c4ef3" title="RobotCtrl.Drive.RunArcLeft" alt="" coords="456,59,632,88"/>
+<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_drive.html#a6ef57fad047014b11a60f76c74a4b74c" title="RobotCtrl.Drive.RunArcRight" alt="" coords="452,112,636,141"/>
+<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_drive.html#a62eb0b9939a24046a6dd0372cae3758b" title="RobotCtrl.Drive.RunLine" alt="" coords="465,165,623,195"/>
+<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_drive.html#a2c49e16e45f1db8c54160cd978d501ea" title="RobotCtrl.Drive.RunTurn" alt="" coords="464,219,624,248"/>
 </map>
