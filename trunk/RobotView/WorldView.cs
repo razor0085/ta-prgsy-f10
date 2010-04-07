@@ -206,7 +206,7 @@ namespace RobotView
 
             //System.Console.WriteLine("Obstacle Coordinates: X=" + area.X + " Y=" + area.Y + " Width=" + area.Width + " Height=" + area.Height);
 
-            Rectangle dstRect = new Rectangle(xNullpunkt + ((int)area.X) * calculateGridSizeInPixel(), yNullpunkt - (int)area.Height * calculateGridSizeInPixel(), (int)area.Width * calculateGridSizeInPixel(), (int)area.Height * calculateGridSizeInPixel());
+            Rectangle dstRect = new Rectangle(xNullpunkt + ((int)area.X) * calculateGridSizeInPixel(), yNullpunkt -(int)area.Y * calculateGridSizeInPixel() - (int)area.Height * calculateGridSizeInPixel(), (int)area.Width * calculateGridSizeInPixel(), (int)area.Height * calculateGridSizeInPixel());
             g.DrawImage(World.ObstacleMap.Image, dstRect, 0, 0, World.ObstacleMap.Image.Width, World.ObstacleMap.Image.Height, GraphicsUnit.Pixel, attr);
         }
 

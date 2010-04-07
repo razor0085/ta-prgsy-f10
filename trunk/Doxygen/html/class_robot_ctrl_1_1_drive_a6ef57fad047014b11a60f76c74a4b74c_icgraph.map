@@ -1,6 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_robot.html#aaff244d591788ca15722234a71cee2be" title="RobotCtrl.Robot.RunArcRight" alt="" coords="241,5,431,35"/>
-<area shape="rect" id="node5" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#a40da4517920bfe3bec78b5d9ff647624" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.fahren" alt="" coords="481,5,847,35"/>
-<area shape="rect" id="node7" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#a4813c7fe1386c01b2934a921034da646" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.switchHandler" alt="" coords="896,5,1309,35"/>
-<area shape="rect" id="node9" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="1357,5,1840,35"/>
+<area shape="rect" id="node3" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#a40da4517920bfe3bec78b5d9ff647624" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.fahren" alt="" coords="241,5,607,35"/>
+<area shape="rect" id="node5" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#a4813c7fe1386c01b2934a921034da646" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.switchHandler" alt="" coords="656,5,1069,35"/>
+<area shape="rect" id="node7" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="1117,5,1600,35"/>
 </map>

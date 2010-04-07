@@ -34,7 +34,7 @@ namespace Test_WorldView
             robot = new Robot(RunMode.REAL);
             World.Robot = robot;
             robot.Color = Color.Blue;
-            robot.PositionInfo = new PositionInfo(-1, 0, 90);
+            robot.PositionInfo = new PositionInfo(0, 0, 90);
             robot.switchChanged += this.switchHandler;
 
             // WorldView erstellen
@@ -123,14 +123,6 @@ namespace Test_WorldView
            
 
             robot.followObstacle();
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    // Kontur des Obstacles entlang fahren
-            //    robot.followObstacle();
-
-            //    // Um die Ecke biegen
-            //    robot.runConturRight();
-            //}
         }
     }
 }

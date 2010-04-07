@@ -48,16 +48,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 </div>
 <div class="contents">
 <h1>RobotCtrl.ObstacleMap Klassenreferenz</h1><!-- doxytag: class="RobotCtrl::ObstacleMap" -->
+<p><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html" title="ObstacleMap, verwaltet alle Hindernisse f&uuml;r den virtuellen Modus.">ObstacleMap</a>, verwaltet alle Hindernisse f&uuml;r den virtuellen Modus.  
+<a href="#_details">Mehr ...</a></p>
+
 <p><a href="class_robot_ctrl_1_1_obstacle_map-members.html">Aufstellung aller Elemente</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Öffentliche Methoden</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html#aa685bbf8cef8ae30c8a2a59a602f44b9">ObstacleMap</a> (RectangleF area, Bitmap map)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Bitmap&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html#a6331e9073a17ee26ba3e272f4f20122f">getImage</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html#abd518505e82643493e1cf0a57f982b40">ObstacleMap</a> (RectangleF area, Bitmap image)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html#ad478f1e258ec2e298d9c26461b877dae">GetFreeSpace</a> (<a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a> position)</td></tr>
 <tr><td colspan="2"><h2>Propertys</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">RectangleF&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html#a62cd370edbb98ccfd63af84f52c92e34">dimension</a><code> [get, set]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Bitmap&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html#aeaea36e86288138da883b6703155c299">Image</a><code> [get]</code></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">RectangleF&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html#a241c985bbff75ab145dca01ee6d31d6e">Area</a><code> [get]</code></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p><a class="el" href="class_robot_ctrl_1_1_obstacle_map.html" title="ObstacleMap, verwaltet alle Hindernisse f&uuml;r den virtuellen Modus.">ObstacleMap</a>, verwaltet alle Hindernisse f&uuml;r den virtuellen Modus. </p>
 <hr/><h2>Beschreibung der Konstruktoren und Destruktoren</h2>
-<a class="anchor" id="aa685bbf8cef8ae30c8a2a59a602f44b9"></a><!-- doxytag: member="RobotCtrl::ObstacleMap::ObstacleMap" ref="aa685bbf8cef8ae30c8a2a59a602f44b9" args="(RectangleF area, Bitmap map)" -->
+<a class="anchor" id="abd518505e82643493e1cf0a57f982b40"></a><!-- doxytag: member="RobotCtrl::ObstacleMap::ObstacleMap" ref="abd518505e82643493e1cf0a57f982b40" args="(RectangleF area, Bitmap image)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -71,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Bitmap&nbsp;</td>
-          <td class="paramname"> <em>map</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>image</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -81,38 +87,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
       </table>
 </div>
 <div class="memdoc">
+<p>Konstruktor für <a class="el" href="class_robot_ctrl_1_1_obstacle_map.html" title="ObstacleMap, verwaltet alle Hindernisse f&uuml;r den virtuellen Modus.">ObstacleMap</a> </p>
 
 </div>
 </div>
 <hr/><h2>Dokumentation der Elementfunktionen</h2>
-<a class="anchor" id="a6331e9073a17ee26ba3e272f4f20122f"></a><!-- doxytag: member="RobotCtrl::ObstacleMap::getImage" ref="a6331e9073a17ee26ba3e272f4f20122f" args="()" -->
+<a class="anchor" id="ad478f1e258ec2e298d9c26461b877dae"></a><!-- doxytag: member="RobotCtrl::ObstacleMap::GetFreeSpace" ref="ad478f1e258ec2e298d9c26461b877dae" args="(PositionInfo position)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Bitmap RobotCtrl.ObstacleMap.getImage </td>
+          <td class="memname">double RobotCtrl.ObstacleMap.GetFreeSpace </td>
           <td>(</td>
-          <td class="paramname"></td>
+          <td class="paramtype"><a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a>&nbsp;</td>
+          <td class="paramname"> <em>position</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Methode berechnet den Abstand zum Hindernis</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="struct_robot_ctrl_1_1_position_info.html" title="Sturct PositionInfo enth&auml;lt Koordinaten.">PositionInfo</a></em>&nbsp;</td><td>Positionsinformationen mit Fusspunkt und Winkel des <a class="el" href="class_robot_ctrl_1_1_radar_sensor.html" title="RadarSensor ist ein Sensor.">RadarSensor</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>double Abstand zum <a class="el" href="class_robot_ctrl_1_1_obstacle.html">Obstacle</a> </dd></dl>
 
 </div>
 </div>
 <hr/><h2>Dokumentation der Propertys</h2>
-<a class="anchor" id="a62cd370edbb98ccfd63af84f52c92e34"></a><!-- doxytag: member="RobotCtrl::ObstacleMap::dimension" ref="a62cd370edbb98ccfd63af84f52c92e34" args="" -->
+<a class="anchor" id="a241c985bbff75ab145dca01ee6d31d6e"></a><!-- doxytag: member="RobotCtrl::ObstacleMap::Area" ref="a241c985bbff75ab145dca01ee6d31d6e" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">RectangleF RobotCtrl.ObstacleMap.dimension<code> [get, set]</code></td>
+          <td class="memname">RectangleF RobotCtrl.ObstacleMap.Area<code> [get]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Property zum Lesen der <a class="el" href="class_robot_ctrl_1_1_obstacle.html">Obstacle</a> Dimension </p>
+
+</div>
+</div>
+<a class="anchor" id="aeaea36e86288138da883b6703155c299"></a><!-- doxytag: member="RobotCtrl::ObstacleMap::Image" ref="aeaea36e86288138da883b6703155c299" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap RobotCtrl.ObstacleMap.Image<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Property zum Lesen des <a class="el" href="class_robot_ctrl_1_1_obstacle.html">Obstacle</a> Images </p>
 
 </div>
 </div>
@@ -134,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Fri Apr 2 12:46:30 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Wed Apr 7 23:10:48 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
