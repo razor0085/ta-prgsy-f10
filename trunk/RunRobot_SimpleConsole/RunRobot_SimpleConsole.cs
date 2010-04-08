@@ -12,13 +12,11 @@ namespace RunRobot_SimpleConsole
     {
         Robot robot;
         DigitalIn_HW di;
-        Thread thread;
         Thread fahr;
         bool state = false;
+        bool[] switchState = { false, false, false, false };
 
         bool fahre_umHindernis = false;
-
-        public event System.EventHandler switchChanged;
 
         static void Main(string[] args)
         {
@@ -28,13 +26,11 @@ namespace RunRobot_SimpleConsole
 
         public RunRobot_SimpleConsole()
         {
-            switchChanged += new EventHandler(switchHandler);
             robot = new Robot(RunMode.REAL);
+            robot.switchChanged += new EventHandler(switchHandler);
             di = new DigitalIn_HW(Config.IOConsoleSwitches);
             robot.PositionInfo = new PositionInfo(0, 0, 0);
-            thread = new Thread(checkSwitchState);
             fahre_umHindernis = true;
-            thread.Start();
         }
 
         public void fahren()
@@ -70,51 +66,46 @@ namespace RunRobot_SimpleConsole
             
         }
 
-        public void checkSwitchState()
-        {
-            
-            while (true)
-            {
-                if (state != di[0])
-                {
-                    state = di[0];
-                    if (switchChanged != null)
-                    {
-                        switchChanged(this, null);
-                    }
-                }
-                Thread.Sleep(10);
-            }
-        }
-
         public void switchHandler(Object o, EventArgs e)
         {
             try
             {
-                if (di[0] == true)
+                if (robot.Console.Switches[0] != switchState[0]){
+                    switchState[0] = robot.Console.Switches[0];
+                    if(robot.Console.Switches[0] == true)
+                    {
+                         // switch on
+                         robot.Drive.Power = true;
+                         System.Console.WriteLine("Power On!");
+                         fahr = new Thread(fahreUmHindernis);
+                         fahr.Start();
+                    }
+                    else
+                    {
+                        // switch off
+                        robot.Drive.Power = false;
+                        robot.Stop();
+                        fahr.Abort();
+                        fahr.Join();
+                        
+                        System.Console.WriteLine("Power Off!");
+                    }
+                }
+
+                if (robot.Console.Switches[1] == true)
                 {
-                    // switch on
-                    robot.Drive.Power = true;
-                    robot.Run();
-                    System.Console.WriteLine("Power On!");
-                    fahr = new Thread(fahren);
-                    fahr.Start();
+                    // schnell fahren!
+                    System.Console.WriteLine("schnell fahren!");
+                    robot.runFast(true);
                 }
                 else
                 {
-                    // switch off
-                    robot.Drive.Power = false;
-                    robot.Drive.Stop();
-                    robot.Drive.Position = new PositionInfo();
-                    fahr.Abort();
-                    fahr.Join();
+                    // langsam fahren!
+                    System.Console.WriteLine("langsam fahren!");
+                    robot.runFast(false);
+                }
 
-                    System.Console.WriteLine("Power Off!");
-                }
-                if (di[3] == true)
-                {
-                    robot.Clear();
-                }
+                
             }
             catch (ThreadAbortException ex)
             {
@@ -124,11 +115,7 @@ namespace RunRobot_SimpleConsole
 
         void fahreUmHindernis()
         {
-            // Drehen wir uns um die eigene Achse, bis wir das Obstacle finden (max 360°)
-           // robot.findObstacle();
-
-            // Reduzieren der Distanz zum Obstacle
-            
+            robot.Kollisionskurs += robot.KollisionsKursHandler;
             robot.followObstacle();
         }
     }
