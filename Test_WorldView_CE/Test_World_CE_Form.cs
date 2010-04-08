@@ -24,6 +24,8 @@ namespace Test_WorldView
         Thread fahr;
         Robot robot;
 
+        bool[] switchState = { false, false, false, false };
+
         private static Mutex MyMutex = new Mutex(false, "MyMutex");
 
         public Test_World_View_Form()
@@ -87,27 +89,45 @@ namespace Test_WorldView
         {
             try
             {
-                if (robot.Console.Switches[0] == true)
+                if (robot.Console.Switches[0] != switchState[0])
                 {
-                    // switch on
-                    robot.Drive.Power = true;
-                    System.Console.WriteLine("Power On!");
-                    fahr = new Thread(runTrack);
-                    fahr.Start();
+                    switchState[0] = robot.Console.Switches[0];
+                    if (robot.Console.Switches[0] == true)
+                    {
+                        // switch on
+                        robot.Drive.Position = new PositionInfo(0, 0, 90);
+                        robot.Drive.Power = true;
+                        System.Console.WriteLine("Power On!");
+                        fahr = new Thread(fahreUmHindernis);
+                        fahr.Start();
+                    }
+                    else
+                    {
+                        // switch off
+                        
+                        robot.Drive.Stop();
+                        robot.Drive.Power = false;
+                        robot.Drive.Position = new PositionInfo(0, 0, 90);
+                        robot.Stop();
+
+                        System.Console.WriteLine("Power Off!");
+                    }
+                }
+
+                if (robot.Console.Switches[1] == true)
+                {
+                    // schnell fahren!
+                    System.Console.WriteLine("schnell fahren!");
+                    robot.runFast(true);
                 }
                 else
                 {
-                    // switch off
-                    robot.Drive.Power = false;
-                    robot.Drive.Stop();
-                    robot.Drive.WaitDone();
-                    robot.Drive.WaitDone();
-                    robot.Drive.Position = new PositionInfo(-1, 0, 90);
-                    fahr.Abort();
-                    fahr.Join();
-
-                    System.Console.WriteLine("Power Off!");
+                    // langsam fahren!
+                    System.Console.WriteLine("langsam fahren!");
+                    robot.runFast(false);
                 }
+
+
             }
             catch (ThreadAbortException ex)
             {
@@ -115,13 +135,9 @@ namespace Test_WorldView
             }
         }
 
-        public void runTrack()
+        public void fahreUmHindernis()
         {
             robot.Kollisionskurs += robot.KollisionsKursHandler;
-            // Drehen wir uns um die eigene Achse, bis wir das Obstacle finden (max 360°)
-           // robot.findObstacle();
-           
-
             robot.followObstacle();
         }
     }

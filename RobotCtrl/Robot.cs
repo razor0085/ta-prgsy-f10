@@ -51,7 +51,7 @@ namespace RobotCtrl
     public class Robot
 	{
         public event System.EventHandler Kollisionskurs;
-        public event System.EventHandler MinimumDistance;
+        public event System.EventHandler EndOfObstacle;
         public event System.EventHandler switchChanged;
 
         /**
@@ -118,14 +118,20 @@ namespace RobotCtrl
 		{
             if (!Config.IsWinCE)
             {
-                runMode = RunMode.VIRTUAL;
+                this.runMode = RunMode.VIRTUAL;
             }
             else
             {
-                runMode = RunMode.REAL;
+                this.runMode = RunMode.REAL;
             }
-            running = true;
             console = new Console(runMode);
+            initializeComponent();           
+		}
+
+        void initializeComponent()
+        {
+            running = true;
+            
             drive = new Drive(runMode);
             radar = new Radar(runMode);
 
@@ -135,16 +141,14 @@ namespace RobotCtrl
 
             checkSwitchState_thread = new Thread(checkSwitchState);
             checkSwitchState_thread.Start();
-            
+
             // Reaktion, wenn wir kollidieren würden
             Kollisionskurs += KollisionsKursHandler;
-            
-            
-		}
+        }
 
         private void checkSwitchState()
         {
-            while (running)
+            while (true)
             {
                 Thread.Sleep(100);
                 for (int i = 0; i < 4; i++)
@@ -154,7 +158,7 @@ namespace RobotCtrl
                         switchState[i] = console.Switches[i];
                         if (switchChanged != null)
                         {
-                            switchChanged(this, null);
+                            switchChanged(this, new SwitchEvent(i));
                         }
                     }
                 }
@@ -184,23 +188,18 @@ namespace RobotCtrl
                         }
                     }
 
-                    if (Math.Abs(distance - minimum_distance) > 0.1)
+                    if (Math.Abs(distance - minimum_distance) > 0.2)
                     {
-                        if (distance < minimum_distance)
+                        if (minimum_distance > distance - sensor_tolerance)
                         {
                             minimum_distance = distance;
-                            //if (MinimumDistance != null)
-                            //{
-                            //    MinimumDistance(this, new EventArgs());
-                            //    System.Console.WriteLine("MinimumDistace");
-                            //}
                         }
                         else
                         {
-                            if (MinimumDistance != null)
+                            if (EndOfObstacle != null)
                             {
-                                MinimumDistance(this, new EventArgs());
-                                System.Console.WriteLine("MinimumDistace");
+                                EndOfObstacle(this, new EventArgs());
+                                System.Console.WriteLine("EndOfObstacle");
                             }
                             minimum_distance = 2.55;
                         }
@@ -216,10 +215,32 @@ namespace RobotCtrl
             Kollisionskurs -= KollisionsKursHandler;
         }
 
-        public void MinimumDistanceHandler(Object o, EventArgs e)
+        public void EndOfObstacleHandler(Object o, EventArgs e)
         {
+            DriveInfo old_info = Drive.Info;
+            DriveInfo actual_info = Drive.Info;
+            while (old_info.DistanceL > actual_info.DistanceL - 0.3 && running)
+            {
+                actual_info = Drive.Info;
+                Thread.Sleep(1);
+            }
             Drive.Stop();
-            MinimumDistance -= this.MinimumDistanceHandler;
+            EndOfObstacle -= this.EndOfObstacleHandler;
+        }
+
+        /**
+         * Methode setzt die zu fahrende Geschwindigkeit
+         */
+        public void runFast(bool p)
+        {
+            if (p)
+            {
+                runline_speed = runline_speed_fast;
+            }
+            else
+            {
+                runline_speed = runline_speed_slow;
+            }
         }
 
 
@@ -229,32 +250,73 @@ namespace RobotCtrl
          */
         public void followObstacle()
         {
-            MinimumDistance += this.MinimumDistanceHandler;           
+            EndOfObstacle += this.EndOfObstacleHandler;
+            sensor_tolerance = 1.5;
             double actual_distance = getFreeSpace();
             double old_distance = actual_distance;
-            while (Drive.Position.Angle > -260)
+            for(int i = 0; i < 3; i++)
             {
-                Drive.RunLine(10, 1, 0.01);
-                Drive.WaitDone();
-                Drive.RunLine(0.3, 1, 0.05);
-                Drive.WaitDone();
-                Drive.RunTurn(-90, 1, 0.1);
-                Drive.WaitDone();
-                //Drive.RunLine(0.3, 1, 0.1);
-                //Drive.WaitDone();
-
-                followObstacle();
+                if (running)
+                {
+                    //System.Console.WriteLine("1: " + Drive.Position.X + " " + Drive.Position.Y + " " + Drive.Position.Angle); 
+                    drive.RunLine(10, runline_speed, 0.01);
+                    drive.WaitDone();
+                }
+                if (running)
+                {                  
+                    System.Console.WriteLine("2: " + Drive.Position.X + " " + Drive.Position.Y + " " + Drive.Position.Angle); 
+                    drive.RunTurn(-90, 1, 0.08);
+                    drive.WaitDone();
+                }
+                System.Console.WriteLine("X: " + Drive.Position.X + " " + Drive.Position.Y + " " + Drive.Position.Angle); 
+                EndOfObstacle += this.EndOfObstacleHandler;
             }
-            Drive.RunLine(0.1, 1, 0.1);
-            Drive.WaitDone();
+            EndOfObstacle -= this.EndOfObstacleHandler;
+            sensor_tolerance = 0.3;
+            System.Console.WriteLine("3 x Ecke umfahren!");
+            if (running)
+            {
+                drive.RunLine(10, runline_speed, 0.01);
+            }
+            System.Console.WriteLine("freeSpace " + getFreeSpace());
+            while (Math.Abs(getFreeSpace()) > 2 && running)
+            {
+                Thread.Sleep(1);
+                System.Console.WriteLine("freeSpace " + getFreeSpace());
+            }
+            EndOfObstacle += this.EndOfObstacleHandler;
+            drive.WaitDone();
+            einparken();
         }
 
-        public void runArcRight()
+        public void einparken()
         {
-            Drive.RunLine(0.8, 0.5, 0.1);
-            Drive.WaitDone();
-            Drive.RunTurn(-90, 0.5, 0.1);
-            Drive.WaitDone();
+            System.Console.WriteLine("Einparken! Distanz zum Parken: " + Radar.Distance);
+            double luecken_tiefe = Math.Abs(getFreeSpace());
+            if (running)
+            {
+                if (!Config.IsWinCE)
+                {
+                    drive.RunTurn(-90, 0.8, 0.08); // Virtueller Modus
+                }
+                else
+                {
+                    drive.RunTurn(-105, 0.8, 0.08); // Real Robot
+                }
+                drive.WaitDone();
+            }
+            if (running)
+            {
+                if (!Config.IsWinCE)
+                {
+                    drive.RunLine(luecken_tiefe - 0.2, runline_speed, 0.1);
+                }
+                else
+                {
+                    drive.RunLine(1.5 * luecken_tiefe, runline_speed, 0.1);
+                }
+                drive.WaitDone();
+            }
         }
 
         /**
@@ -265,14 +327,9 @@ namespace RobotCtrl
             return radar.Distance;
         }
 
-        public void Run()
-        {
-            running = true;
-        }
-
         public void Stop()
         {
-            running = false;
+            Clear();
         }
 
         /**
@@ -281,10 +338,15 @@ namespace RobotCtrl
         public void Clear()
         {
             drive.Stop();
+            drive.Reset();
             drive.Close();
             running = false;
+            //checkSwitchState_thread.Join();
+            measureDistance_thread.Join();
+            initializeComponent();
         }
 
+        RunMode runMode;
         Console console;
         Drive drive;
         Radar radar;
@@ -296,5 +358,9 @@ namespace RobotCtrl
         bool[] switchState = { false, false, false, false };
         bool obstacleFound = false;
         double collisionDistance;
-	}
+        double sensor_tolerance = 0.3;
+        double runline_speed_fast = 1;
+        double runline_speed_slow = 0.3;
+        double runline_speed = 0.3;
+    }
 }
