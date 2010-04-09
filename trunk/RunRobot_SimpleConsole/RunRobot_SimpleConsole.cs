@@ -92,7 +92,7 @@ namespace RunRobot_SimpleConsole
                     }
                 }
 
-                if (robot.Console.Switches[1] == true)
+                if (robot.Console.Switches[3] == true)
                 {
                     // schnell fahren!
                     System.Console.WriteLine("schnell fahren!");
