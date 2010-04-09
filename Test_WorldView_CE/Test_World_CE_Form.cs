@@ -105,16 +105,17 @@ namespace Test_WorldView
                     {
                         // switch off
                         
-                        robot.Drive.Stop();
+                        //robot.Drive.Stop();
+                        robot.Stop();
                         robot.Drive.Power = false;
                         robot.Drive.Position = new PositionInfo(0, 0, 90);
-                        robot.Stop();
+                        
 
                         System.Console.WriteLine("Power Off!");
                     }
                 }
 
-                if (robot.Console.Switches[1] == true)
+                if (robot.Console.Switches[3] == true)
                 {
                     // schnell fahren!
                     System.Console.WriteLine("schnell fahren!");

@@ -410,6 +410,7 @@ namespace RobotCtrl
 		DriveInfo oldInfo;
 		bool stop;
 		bool halt;
+        bool running = false;
 		Object infoLock = new object();
 		Object trackLock = new object();
 		Thread runTracksThread;
