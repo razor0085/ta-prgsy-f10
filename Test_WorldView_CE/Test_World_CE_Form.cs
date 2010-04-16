@@ -26,7 +26,7 @@ namespace Test_WorldView
 
         bool[] switchState = { false, false, false, false };
 
-        private static Mutex MyMutex = new Mutex(false, "MyMutex");
+        private static Mutex MyMutex = new Mutex(false);
 
         public Test_World_View_Form()
         {
@@ -37,7 +37,7 @@ namespace Test_WorldView
             World.Robot = robot;
             robot.Color = Color.Blue;
             robot.PositionInfo = new PositionInfo(0, 0, 90);
-            robot.switchChanged += this.switchHandler;
+            //robot.switchChanged += this.switchHandler;
 
             // WorldView erstellen
             worldView = new WorldView();
@@ -106,7 +106,7 @@ namespace Test_WorldView
                         // switch off
                         
                         //robot.Drive.Stop();
-                        robot.Stop();
+                        //robot.Stop();
                         robot.Drive.Power = false;
                         robot.Drive.Position = new PositionInfo(0, 0, 90);
                         
@@ -119,13 +119,13 @@ namespace Test_WorldView
                 {
                     // schnell fahren!
                     System.Console.WriteLine("schnell fahren!");
-                    robot.runFast(true);
+                    //robot.runFast(true);
                 }
                 else
                 {
                     // langsam fahren!
                     System.Console.WriteLine("langsam fahren!");
-                    robot.runFast(false);
+                    //robot.runFast(false);
                 }
 
 
@@ -138,8 +138,7 @@ namespace Test_WorldView
 
         public void fahreUmHindernis()
         {
-            robot.Kollisionskurs += robot.KollisionsKursHandler;
-            robot.followObstacle();
+            //robot.followObstacle();
         }
     }
 }

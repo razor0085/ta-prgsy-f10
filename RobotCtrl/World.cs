@@ -83,10 +83,10 @@ namespace RobotCtrl
 
         public static void clear()
         {
-            for (int i = 0; i < robot.Count; i++){
-                getRobot(i).Clear();
-            }
-            robot.Clear();
+            //for (int i = 0; i < robot.Count; i++){
+            //    getRobot(i).Clear();
+            //}
+            //robot.Clear();
         }
 
         static ObstacleMap obstacleMap; // = new ObstacleMap();

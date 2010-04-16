@@ -44,7 +44,14 @@ namespace RobotView
 
 		void resetButton_Click(object sender, EventArgs e)
 		{
-			drive.Position = new PositionInfo(0, 0, 0);
+            if (World.countRobots() != 0)
+            {
+                drive.Position = World.getRobot(0).getInitialPosition();
+            }
+            else
+            {
+                drive.Position = new PositionInfo(0, 0, 0);
+            }
 		}
 
 		Drive drive;
