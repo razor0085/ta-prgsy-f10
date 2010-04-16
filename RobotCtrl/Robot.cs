@@ -64,8 +64,12 @@ namespace RobotCtrl
             {
                 this.runMode = RunMode.VIRTUAL;
             }
-			robotConsole = new Console(this.runMode);
-            drive = new Drive(this.runMode);
+            else
+            {
+                this.runMode = runMode;
+            }
+			robotConsole = new Console(runMode);
+            drive = new Drive(runMode);
             relativRadarPosition = new PositionInfo(0, 0, PositionInfo.Angle - 90);
             color = Color.Blue;
             if (this.runMode == RunMode.VIRTUAL)
@@ -76,11 +80,12 @@ namespace RobotCtrl
             {
                 radarSensor = new RadarSensor_HW(Config.IORadarSensor);
             }
+            DigitalInChanged += DigitalInChanged_Handler;
             digitalIn = new Thread(checkDigitalIn);
             digitalIn.Name = "checkDigitalIn";
             digitalIn.Start();
 
-            DigitalInChanged += DigitalInChanged_Handler;
+            
 		}
 
         public double getFreeSpace()
@@ -103,15 +108,16 @@ namespace RobotCtrl
 
         void checkDigitalIn()
         {
-            bool[] data = {false, false, false, false};
             int i = 0;
-
+            System.Console.WriteLine("check DigitalIn");
             while (true)
             {
                 for(; i < 4; i++)
                 {
+                    //System.Console.WriteLine("Check " + i + " " + Console.Switches[i]);
                     if (data[i] != robotConsole.Switches[i])
                     {
+                        System.Console.WriteLine("Switch " + i + " changed!");
                         if (DigitalInChanged != null)
                         {
                             DigitalInChanged(robotConsole.Switches, new DigitalInEventArg(i));
@@ -120,7 +126,7 @@ namespace RobotCtrl
                     }
                 }
                 i = 0;
-                Thread.Sleep(100);
+                Thread.Sleep(10);
             }
         }
 
@@ -166,6 +172,7 @@ namespace RobotCtrl
          */
         public void followObstacle()
         {
+            drive.Power = true;
             fahreGeradeaus();
             dreheNachRechts();
             fahreGeradeaus();
@@ -182,10 +189,10 @@ namespace RobotCtrl
             drive.RunLine(10, runline_speed, runline_acceleration);
             while (running && !drive.Done)
             {
-                if (!Config.IsWinCE)
-                {
-                    Thread.Sleep(10);
-                }
+                //if (!Config.IsWinCE)
+                
+                Thread.Sleep(10);
+                
                 if (getFreeSpace() > 2)
                 {
                     if (obstacle_found == true)
@@ -193,10 +200,9 @@ namespace RobotCtrl
                         double distanceL = drive.Info.DistanceL;
                         while (distanceL > drive.Info.DistanceL - runline_distance)
                         {
-                            if (!Config.IsWinCE)
-                            {
+                            
                                 Thread.Sleep(10);
-                            }
+                            
                         }
                         drive.Stop();
                     }
@@ -234,7 +240,7 @@ namespace RobotCtrl
             drive.RunLine(10, runline_speed, runline_acceleration);
             while (running && !drive.Done)
             {
-                if (!Config.IsWinCE)
+                //if (!Config.IsWinCE)
                 {
                     Thread.Sleep(10);
                 }
@@ -245,7 +251,7 @@ namespace RobotCtrl
                         double distanceL = drive.Info.DistanceL;
                         while (distanceL > drive.Info.DistanceL - runline_distance)
                         {
-                            if (!Config.IsWinCE)
+                            //if (!Config.IsWinCE)
                             {
                                 Thread.Sleep(10);
                             }
@@ -284,7 +290,7 @@ namespace RobotCtrl
             }
         }
 
-
+        bool[] data = { false, false, false, false };
         RunMode runMode;
         bool running = true;
 		Console robotConsole;
