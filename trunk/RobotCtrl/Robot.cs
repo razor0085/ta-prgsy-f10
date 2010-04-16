@@ -48,204 +48,117 @@ namespace RobotCtrl
      * @brief Basisklasse f&uuml;r einen Roboter
      */
 
-    public class Robot
+	public class Robot
 	{
-        public event System.EventHandler Kollisionskurs;
-        public event System.EventHandler EndOfObstacle;
-        public event System.EventHandler switchChanged;
+        public event System.EventHandler DigitalInChanged;
 
-        /**
-         * Property Console liefert eine Referenz auf die Console innerhalb des Robot Objektes
-         * @see Console
-         * 
-         * @return Robot Console
-         */ 
-		public Console Console { get { return console; }}
-
-        /**
-         * Property Drive liefert eine Referenz auf Drive innerhalb des Robot Objektes
-         * @see Drive
-         * 
-         * @return Drive f&uuml;r den Robot
-         */ 
+		public Console Console { get { return robotConsole; } }
+        public PositionInfo RelativeRadarPosition { get { return relativRadarPosition; } set { relativRadarPosition = value; } }
+        public PositionInfo PositionInfo { get { return drive.Position; } set { drive.Position = value; } }
+        public Color Color { get { return color; } set { color = value; } }
         public Drive Drive { get { return drive; } }
 
-        /**
-         * Property PositionInfo liefert oder setzt eine Referenz auf eine Postion
-         */
-        public PositionInfo PositionInfo
-        {
-            get { return drive.Position; }
-            set { drive.Position = value; }
-        }
-
-        /**
-         * Property RelativeRadarPosition liefert oder setzt die genaue Position und Ausrichtung des RadarSensor
-         */
-        public PositionInfo RelativeRadarPosition
-        {
-            set { relRadarPosition = value; }
-            get {
-                    if (relRadarPosition .X == 0)
-                    {
-                        //relRadarPosition = new PositionInfo(0.2, 0.1, -90);
-                        relRadarPosition = new PositionInfo(0, 0, -90); // Für Test von Obstacle Map setzen wir den RadarSensor auf den Mittelpunkt
-                    }
-                    return relRadarPosition; 
-            }
-        }
-
-        /**
-         * Property Color liefert oder setzt eine Farbe des Robot
-         */
-        public Color Color { get { return color; } set { color = value; } }
-
-        /**
-         * Property Radar liefert eine Referenz auf Radar innerhalb des Robot Objektes
-         * @see Radar
-         * 
-         * @return Radar f&uuml;r den Robot
-         */ 
-        public Radar Radar { get { return radar; } }
-
-        /**
-         * Konstruktor f&uuml;r die Klasse Robot
-         * @see #RunMode
-         * 
-         * @param runMode argument vom Typ enum #RunMode in Config.
-         */
-        public Robot(RunMode runMode)
+		public Robot(RunMode runMode)
 		{
             if (!Config.IsWinCE)
             {
                 this.runMode = RunMode.VIRTUAL;
             }
+			robotConsole = new Console(this.runMode);
+            drive = new Drive(this.runMode);
+            relativRadarPosition = new PositionInfo(0, 0, PositionInfo.Angle - 90);
+            color = Color.Blue;
+            if (this.runMode == RunMode.VIRTUAL)
+            {
+                radarSensor = new RadarSensor();
+            }
             else
             {
-                this.runMode = RunMode.REAL;
+                radarSensor = new RadarSensor_HW(Config.IORadarSensor);
             }
-            console = new Console(runMode);
-            checkSwitchState_thread = new Thread(checkSwitchState);
-            checkSwitchState_thread.Start();
-            initializeComponent();           
+            digitalIn = new Thread(checkDigitalIn);
+            digitalIn.Name = "checkDigitalIn";
+            digitalIn.Start();
+
+            DigitalInChanged += DigitalInChanged_Handler;
 		}
 
-        void initializeComponent()
+        public double getFreeSpace()
         {
-            running = true;
-            
-            drive = new Drive(runMode);
-            radar = new Radar(runMode);
-
-            measureDistance_thread = new Thread(measureDistance);
-            measureDistance_thread.Priority = ThreadPriority.AboveNormal;
-            measureDistance_thread.Start();
-
-            // Reaktion, wenn wir kollidieren würden
-            Kollisionskurs += KollisionsKursHandler;
+            //System.Console.WriteLine("getFreeSpace: " + Math.Abs(radarSensor.Distance));
+            return Math.Abs(radarSensor.Distance);
         }
 
-        private void checkSwitchState()
+        public PositionInfo getInitialPosition()
         {
+            if (runMode == RunMode.VIRTUAL)
+            {
+                return new PositionInfo(0, 0, 90);
+            }
+            else
+            {
+                return new PositionInfo(0, 0, 0);
+            }
+        }
+
+        void checkDigitalIn()
+        {
+            bool[] data = {false, false, false, false};
+            int i = 0;
+
             while (true)
             {
+                for(; i < 4; i++)
+                {
+                    if (data[i] != robotConsole.Switches[i])
+                    {
+                        if (DigitalInChanged != null)
+                        {
+                            DigitalInChanged(robotConsole.Switches, new DigitalInEventArg(i));
+                        }
+                        data[i] = robotConsole.Switches[i];
+                    }
+                }
+                i = 0;
                 Thread.Sleep(100);
-                for (int i = 0; i < 4; i++)
-                {
-                    if (switchState[i] != console.Switches[i])
-                    {
-                        switchState[i] = console.Switches[i];
-                        if (switchChanged != null)
-                        {
-                            switchChanged(this, new SwitchEvent(i));
-                        }
-                    }
-                }
             }
         }
 
-        /**
-         * Methode prüft zyklisch, ob der Robot auf Kollisionskurs ist.
-         * Wenn das der Fall ist, wir ein Event gezündet.
-         */
-        private void measureDistance()
+        void DigitalInChanged_Handler(Object sender, EventArgs e)
         {
-            double distance;
-            double minimum_distance = 2.55;
+            bool state = ((DigitalIn)sender)[((DigitalInEventArg)e).BitNumber];
+            int switch_number = ((DigitalInEventArg)e).BitNumber;
 
-            while (running)
+            if (switch_number == 0 && state)
             {
-                Thread.Sleep(1);
-                if (radar != null)
-                {
-                    distance = radar.Distance;
-                    if (distance < 0.1)
-                    {
-                        if (Kollisionskurs != null)
-                        {
-                            Kollisionskurs(this, new EventArgs());
-                        }
-                    }
-
-                    if (Math.Abs(distance - minimum_distance) > 0.1)
-                    {
-                        if (minimum_distance > distance - sensor_tolerance)
-                        {
-                            minimum_distance = distance;
-                        }
-                        else
-                        {
-                            if (EndOfObstacle != null)
-                            {
-                                EndOfObstacle(this, new EventArgs());
-                                System.Console.WriteLine("EndOfObstacle");
-                            }
-                            minimum_distance = 2.55;
-                        }
-                    }
-                }
+                running = true;
+                System.Console.WriteLine("Power On!");
+                thread_followObstacle = new Thread(followObstacle);
+                thread_followObstacle.Start();
             }
-        }
 
-        public void KollisionsKursHandler(Object o, EventArgs e)
-        {
-            System.Console.WriteLine("Collision Detect!");
-            //Drive.Stop();
-            Kollisionskurs -= KollisionsKursHandler;
-        }
-
-        public void EndOfObstacleHandler(Object o, EventArgs e)
-        {
-            DriveInfo old_info = Drive.Info;
-            DriveInfo actual_info = Drive.Info;
-            while (old_info.DistanceL > actual_info.DistanceL - runline_distance && running)
-            {
-                actual_info = Drive.Info;
-                Thread.Sleep(1);
+            if(switch_number == 0 && !state){
+                running = false;
+                System.Console.WriteLine("Power Off!");
+                thread_followObstacle.Abort();
+                drive.Stop();
             }
-            Drive.Stop();
-            EndOfObstacle -= this.EndOfObstacleHandler;
-        }
 
-        /**
-         * Methode setzt die zu fahrende Geschwindigkeit
-         */
-        public void runFast(bool p)
-        {
-            if (p)
-            {
+            if(switch_number == 3 && state){
+                System.Console.WriteLine("Run Fast!");
                 runline_speed = runline_speed_fast;
                 runline_acceleration = runline_acceleration_fast;
                 runline_distance = runline_distance_fast;
             }
-            else
+
+            if (switch_number == 3 && !state)
             {
+                System.Console.WriteLine("Run Slow!");
                 runline_speed = runline_speed_slow;
                 runline_acceleration = runline_acceleration_slow;
                 runline_distance = runline_distance_slow;
             }
         }
-
 
         /**
          * Methode veranlasst Robot, dem Hindernis entlang zu fahren, bist der Sensor
@@ -253,55 +166,110 @@ namespace RobotCtrl
          */
         public void followObstacle()
         {
-            EndOfObstacle += this.EndOfObstacleHandler;
-            sensor_tolerance = 1.5;
-            double actual_distance = getFreeSpace();
-            double old_distance = actual_distance;
-            for(int i = 0; i < 4; i++)
-            {
-                System.Console.WriteLine("Druchgang :" + i +" startet");
-                if (running)
-                {
-                    double linkerMotor = drive.Info.DistanceL;
-                    //System.Console.WriteLine("1: " + Drive.Position.X + " " + Drive.Position.Y + " " + Drive.Position.Angle); 
-                    drive.RunLine(10, runline_speed, runline_acceleration);
-                    drive.WaitDone();
-                    System.Console.WriteLine("Gefahrene Distanz: " + (drive.Info.DistanceL - linkerMotor));
-                }
-                distanz_zur_parkluecke = Math.Abs(getFreeSpace());
-                if (running)
-                {
-                    if (!Config.IsWinCE)
-                    {
-                        //System.Console.WriteLine("2: " + Drive.Position.X + " " + Drive.Position.Y + " " + Drive.Position.Angle); 
-                        drive.RunTurn(-90, 1, 0.08);
-                    }
-                    else
-                    {
-                        drive.RunTurn(-100, 1, 0.08);
-                    }
-
-                    drive.WaitDone();
-                    System.Console.WriteLine("Distanz zum Obstacle: " + Math.Abs(getFreeSpace()));
-                }
-                //System.Console.WriteLine("X: " + Drive.Position.X + " " + Drive.Position.Y + " " + Drive.Position.Angle); 
-                EndOfObstacle += this.EndOfObstacleHandler;
-                System.Console.WriteLine("Druchgang :" + i +" endet");
-                if (i == 2)
-                {
-                    System.Console.WriteLine("3 x Ecke umfahren!");
-                    sensor_tolerance = 0.3;
-                    System.Console.WriteLine("sensor_tolerance: " + sensor_tolerance);
-
-                }
-
-            }
+            fahreGeradeaus();
+            dreheNachRechts();
+            fahreGeradeaus();
+            dreheNachRechts();
+            fahreGeradeaus();
+            dreheNachRechts();
+            fahreBisParkingPlace();
             einparken();
         }
 
-        public void einparken()
+        private void fahreGeradeaus()
         {
-            System.Console.WriteLine("Einparken! Distanz zum Parken: " + Radar.Distance);
+            bool obstacle_found = false;
+            drive.RunLine(10, runline_speed, runline_acceleration);
+            while (running && !drive.Done)
+            {
+                if (!Config.IsWinCE)
+                {
+                    Thread.Sleep(10);
+                }
+                if (getFreeSpace() > 2)
+                {
+                    if (obstacle_found == true)
+                    {
+                        double distanceL = drive.Info.DistanceL;
+                        while (distanceL > drive.Info.DistanceL - runline_distance)
+                        {
+                            if (!Config.IsWinCE)
+                            {
+                                Thread.Sleep(10);
+                            }
+                        }
+                        drive.Stop();
+                    }
+                    obstacle_found = false;
+                }
+                else
+                {
+                    obstacle_found = true;
+                }
+                // messe Distanz zum Obstacle
+            }
+            drive.WaitDone();
+        }
+
+        private void dreheNachRechts()
+        {
+            if (running)
+            {
+                if (!Config.IsWinCE)
+                {
+                    //System.Console.WriteLine("2: " + Drive.Position.X + " " + Drive.Position.Y + " " + Drive.Position.Angle); 
+                    drive.RunTurn(-90, 1, 0.08);
+                }
+                else
+                {
+                    drive.RunTurn(-95, 1, 0.08);
+                }
+            }
+            drive.WaitDone();
+        }
+
+        private void fahreBisParkingPlace()
+        {
+            bool obstacle_found = false;
+            drive.RunLine(10, runline_speed, runline_acceleration);
+            while (running && !drive.Done)
+            {
+                if (!Config.IsWinCE)
+                {
+                    Thread.Sleep(10);
+                }
+                if (getFreeSpace() > 0.8)
+                {
+                    if (obstacle_found == true)
+                    {
+                        double distanceL = drive.Info.DistanceL;
+                        while (distanceL > drive.Info.DistanceL - runline_distance)
+                        {
+                            if (!Config.IsWinCE)
+                            {
+                                Thread.Sleep(10);
+                            }
+                        }
+                        drive.Stop();
+                    }
+                    obstacle_found = false;
+                }
+                else
+                {
+                    obstacle_found = true;
+                }
+                // messe Distanz zum Obstacle
+            }
+            drive.WaitDone();
+        }
+
+        void einparken()
+        {
+            System.Console.WriteLine("Einparken! Distanz zum Parken: " + radarSensor.Distance);
+            double distanz_zur_parkluecke = radarSensor.Distance;
+
+            dreheNachRechts();
+
             if (running)
             {
                 if (!Config.IsWinCE)
@@ -316,50 +284,17 @@ namespace RobotCtrl
             }
         }
 
-        /**
-         * Methode gibt an, wieviel Abstand zu einem Hindernis gemessen wurde
-         */
-        public double getFreeSpace()
-        {
-            return radar.Distance;
-        }
 
-        public void Stop()
-        {
-            Clear();
-        }
-
-        /**
-         * Methode sollte alle laufenden Threads dieses Robot Objekts beenden
-         */
-        public void Clear()
-        {
-            running = false;
-            drive.Stop();
-            drive.Power = false;
-            try
-            {
-                drive.Close();
-            }
-            catch (ThreadAbortException) { }
-            drive.WaitDone();
-            measureDistance_thread.Join();
-            initializeComponent();
-        }
-
-        double distanz_zur_parkluecke;
         RunMode runMode;
-        Console console;
+        bool running = true;
+		Console robotConsole;
         Drive drive;
-        Radar radar;
-        PositionInfo relRadarPosition;
-        Color color = Color.Azure;
-        Thread measureDistance_thread;
-        Thread checkSwitchState_thread;
-        bool running ;
-        bool[] switchState = { false, false, false, false };
+        RadarSensor radarSensor;
+        PositionInfo relativRadarPosition;
+        Color color;
+        Thread digitalIn;
+        Thread thread_followObstacle;
 
-        double sensor_tolerance = 0.3;
         double runline_speed_fast = 1;
         double runline_speed_slow = 0.3;
         double runline_speed = 0.3;
@@ -368,8 +303,25 @@ namespace RobotCtrl
         double runline_acceleration_slow = 0.005;
         double runline_acceleration = 0.005;
 
-        double runline_distance_fast = 0.2;
-        double runline_distance_slow = 0.3;
-        double runline_distance = 0.3;
+        double runline_distance_fast = 0.3;
+        double runline_distance_slow = 0.4;
+        double runline_distance = 0.4;
+
+	}
+
+    public class DigitalInEventArg : EventArgs
+    {
+        public int BitNumber
+        {
+            get { return bitNumber; }
+        }
+
+        int bitNumber;
+
+        public DigitalInEventArg(int bitNumber)
+        {
+            this.bitNumber = bitNumber;
+        }
     }
+
 }
