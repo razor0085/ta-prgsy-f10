@@ -1,4 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_digital_out.html" title="DigitalOut, damit der Roboter LED&#39;s setzen kann." alt="" coords="7,5,143,35"/>
-<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_digital_out___h_w.html" title="DigitalOut_HW, damit der Roboter LED&#39;s auf der Hardware setzen kann." alt="" coords="193,5,359,35"/>
+<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_digital_in_event_arg.html" title="RobotCtrl.DigitalInEventArg" alt="" coords="5,5,184,35"/>
 </map>

@@ -1,3 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_robot_view_1_1_console_view.html" title="RobotView.ConsoleView" alt="" coords="5,5,168,35"/>
+<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_track.html" title="Klasse Track, dient als Basis f&uuml;r eine Strecke." alt="" coords="5,139,117,168"/>
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_track_arc_left.html" title="TrackArcLeft wird verwendet um einen Bogen nach links zu fahren." alt="" coords="179,5,331,35"/>
+<area shape="rect" id="node5" href="$class_robot_ctrl_1_1_track_arc_right.html" title="TrackArcRight wird verwendet um einen Bogen nach rechts zu fahren." alt="" coords="173,59,336,88"/>
+<area shape="rect" id="node7" href="$class_robot_ctrl_1_1_track_contour_left.html" title="TrackContourLeft wird verwendet um eine Kontur linksherum abzufahren." alt="" coords="165,112,344,141"/>
+<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_track_line.html" title="TrackLine wird verwendet um eine gerade Strecke abzufahren." alt="" coords="187,165,323,195"/>
+<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_track_pause.html" title="TrackPause wird verwendet um einen eine vorgegebene Zeit zu warten." alt="" coords="180,219,329,248"/>
+<area shape="rect" id="node13" href="$class_robot_ctrl_1_1_track_turn.html" title="TrackTurn wird verwendet um sich um die eigene Achse zu drehen." alt="" coords="187,272,323,301"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_obstacle.html" title="RobotCtrl.Obstacle" alt="" coords="7,5,137,35"/>
+<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_motor_ctrl.html" title="MotorCtrl spricht die Motoren des Robot an." alt="" coords="5,5,139,35"/>
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_motor_ctrl___h_w.html" title="MotorCtrl_HW erbt von MotorCtrl und setzt die Kommandos auf die Robot Hardware ab..." alt="" coords="187,5,349,35"/>
 </map>
