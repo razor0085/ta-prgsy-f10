@@ -66,6 +66,10 @@
       <Project>{A92E8C46-1490-443D-9D25-1416B1CCE4FF}</Project>
       <Name>RobotView</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TA_Bluetooth\TA_Bluetooth.csproj">
+      <Project>{6C06AED0-6CEA-4857-9140-B85368496D06}</Project>
+      <Name>TA_Bluetooth</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>
