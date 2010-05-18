@@ -53,7 +53,12 @@ namespace RemoteController_XP
 				StreamReader sr = new StreamReader(bc.GetStream());
 				StreamWriter sw = new StreamWriter(bc.GetStream());
 				// request
-				sw.WriteLine();
+				sw.WriteLine("Hallo from Notebook");
+                sw.WriteLine("RunLine, 10;");
+                sw.WriteLine("RunArcLeft, 2, 90.3;");
+                sw.WriteLine("RunArcRight, 2, 90.3;");
+                sw.WriteLine("RunTurn, 90.3;");
+                sw.WriteLine("Go");
 				sw.Flush();
 				// print 
 				Console.WriteLine("Message received : ");
