@@ -14,14 +14,16 @@ namespace ServerPattern
 		private Boolean running = true;
 		private int port;
 		private string host;
-		public const int DEFAULTPORT = 4711;
-		public const string DEFAULTHOST = "localhost";
+		public const int DEFAULTPORT = 8080;
+		public const string DEFAULTHOST = "192.168.1.111";
 
 		protected void Run() {
+            System.Console.WriteLine("server erzeugt");
 			IExecutor executor = CreateExecutor();
 			Socket listen = CreateServerSocket();
 			while (running) {
 				AbstractHandler handler = CreateHandler(listen.Accept());
+                System.Console.WriteLine("Verbindung aufgebaut " + handler.ToString());
 				executor.Execute(handler.Run);
 			}
 		}
@@ -31,7 +33,9 @@ namespace ServerPattern
 		}
 
 		protected Socket CreateServerSocket() {
-			IPAddress ipAddress = Dns.GetHostEntry(host).AddressList[0];
+            IPAddress ipAddress = IPAddress.Parse(DEFAULTHOST);
+            System.Console.WriteLine(ipAddress.ToString());
+			//IPAddress ipAddress = Dns.GetHostEntry(host).AddressList[0];
 			TcpListener listener = new TcpListener(ipAddress, port);
 			listener.Start();
 			return listener.Server;

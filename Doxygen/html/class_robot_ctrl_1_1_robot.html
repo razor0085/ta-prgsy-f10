@@ -62,6 +62,10 @@ Zusammengehörigkeiten von RobotCtrl.Robot:</div>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Öffentliche Methoden</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#acdd921df41328916b058eaad84ed3078">Robot</a> (<a class="el" href="namespace_robot_ctrl.html#af6032e30c29de6e1a5cf76c70388602c">RunMode</a> runMode)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#a018c883102eb9d4ec6f68989d67ce44a">runLine</a> (double distance)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#a2d949a163bf1a3591e0d195eec919ac6">runArcRight</a> (double radius, double angle)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#a576ce582702174d243bb4f64da579db5">runArcLeft</a> (double radius, double angle)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#ac651b08842d1a2f5e49566b8b8e1c10b">runTurn</a> (double angle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#a5ac16c3dac9aab133dc4084278671b59">getFreeSpace</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_robot_ctrl_1_1_position_info.html">PositionInfo</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#a58addc62330188d7d9b0a703d844e5a1">getInitialPosition</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_ctrl_1_1_robot.html#a3b882dbfa7826c6cedcbe2d56fe36ecf">followObstacle</a> ()</td></tr>
@@ -146,6 +150,168 @@ Zusammengehörigkeiten von RobotCtrl.Robot:</div>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a576ce582702174d243bb4f64da579db5"></a><!-- doxytag: member="RobotCtrl::Robot::runArcLeft" ref="a576ce582702174d243bb4f64da579db5" args="(double radius, double angle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Robot.runArcLeft </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>angle</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:</div>
+<div class="dynsection">
+<div class="center"><img src="class_robot_ctrl_1_1_robot_a576ce582702174d243bb4f64da579db5_cgraph.png" border="0" usemap="#class_robot_ctrl_1_1_robot_a576ce582702174d243bb4f64da579db5_cgraph_map" alt=""></div>
+<map name="class_robot_ctrl_1_1_robot_a576ce582702174d243bb4f64da579db5_cgraph_map" id="class_robot_ctrl_1_1_robot_a576ce582702174d243bb4f64da579db5_cgraph">
+<area shape="rect" id="node3" href="class_robot_ctrl_1_1_drive.html#a5b1a280fceb771ccad2e19d96e5c4ef3" title="RobotCtrl.Drive.RunArcLeft" alt="" coords="232,5,408,35"/><area shape="rect" id="node5" href="class_robot_ctrl_1_1_drive.html#a16bd2f585366688a74f4ad550ffc2ec6" title="RobotCtrl.Drive.WaitDone" alt="" coords="236,59,404,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dynsection">
+<div class="center"><img src="class_robot_ctrl_1_1_robot_a576ce582702174d243bb4f64da579db5_icgraph.png" border="0" usemap="#class_robot_ctrl_1_1_robot_a576ce582702174d243bb4f64da579db5_icgraph_map" alt=""></div>
+<map name="class_robot_ctrl_1_1_robot_a576ce582702174d243bb4f64da579db5_icgraph_map" id="class_robot_ctrl_1_1_robot_a576ce582702174d243bb4f64da579db5_icgraph">
+<area shape="rect" id="node3" href="class_run_robot___simple_console_1_1_run_robot___simple_console.html#ae280279a4ae9ac788cac306be66858cc" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.BT_Server" alt="" coords="233,5,623,35"/><area shape="rect" id="node5" href="class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="672,5,1155,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d949a163bf1a3591e0d195eec919ac6"></a><!-- doxytag: member="RobotCtrl::Robot::runArcRight" ref="a2d949a163bf1a3591e0d195eec919ac6" args="(double radius, double angle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Robot.runArcRight </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>angle</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:</div>
+<div class="dynsection">
+<div class="center"><img src="class_robot_ctrl_1_1_robot_a2d949a163bf1a3591e0d195eec919ac6_cgraph.png" border="0" usemap="#class_robot_ctrl_1_1_robot_a2d949a163bf1a3591e0d195eec919ac6_cgraph_map" alt=""></div>
+<map name="class_robot_ctrl_1_1_robot_a2d949a163bf1a3591e0d195eec919ac6_cgraph_map" id="class_robot_ctrl_1_1_robot_a2d949a163bf1a3591e0d195eec919ac6_cgraph">
+<area shape="rect" id="node3" href="class_robot_ctrl_1_1_drive.html#a6ef57fad047014b11a60f76c74a4b74c" title="RobotCtrl.Drive.RunArcRight" alt="" coords="241,5,425,35"/><area shape="rect" id="node5" href="class_robot_ctrl_1_1_drive.html#a16bd2f585366688a74f4ad550ffc2ec6" title="RobotCtrl.Drive.WaitDone" alt="" coords="249,59,417,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dynsection">
+<div class="center"><img src="class_robot_ctrl_1_1_robot_a2d949a163bf1a3591e0d195eec919ac6_icgraph.png" border="0" usemap="#class_robot_ctrl_1_1_robot_a2d949a163bf1a3591e0d195eec919ac6_icgraph_map" alt=""></div>
+<map name="class_robot_ctrl_1_1_robot_a2d949a163bf1a3591e0d195eec919ac6_icgraph_map" id="class_robot_ctrl_1_1_robot_a2d949a163bf1a3591e0d195eec919ac6_icgraph">
+<area shape="rect" id="node3" href="class_run_robot___simple_console_1_1_run_robot___simple_console.html#ae280279a4ae9ac788cac306be66858cc" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.BT_Server" alt="" coords="241,5,631,35"/><area shape="rect" id="node5" href="class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="680,5,1163,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a018c883102eb9d4ec6f68989d67ce44a"></a><!-- doxytag: member="RobotCtrl::Robot::runLine" ref="a018c883102eb9d4ec6f68989d67ce44a" args="(double distance)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Robot.runLine </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>distance</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:</div>
+<div class="dynsection">
+<div class="center"><img src="class_robot_ctrl_1_1_robot_a018c883102eb9d4ec6f68989d67ce44a_cgraph.png" border="0" usemap="#class_robot_ctrl_1_1_robot_a018c883102eb9d4ec6f68989d67ce44a_cgraph_map" alt=""></div>
+<map name="class_robot_ctrl_1_1_robot_a018c883102eb9d4ec6f68989d67ce44a_cgraph_map" id="class_robot_ctrl_1_1_robot_a018c883102eb9d4ec6f68989d67ce44a_cgraph">
+<area shape="rect" id="node3" href="class_robot_ctrl_1_1_drive.html#a62eb0b9939a24046a6dd0372cae3758b" title="RobotCtrl.Drive.RunLine" alt="" coords="220,5,377,35"/><area shape="rect" id="node5" href="class_robot_ctrl_1_1_drive.html#a16bd2f585366688a74f4ad550ffc2ec6" title="RobotCtrl.Drive.WaitDone" alt="" coords="215,59,383,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dynsection">
+<div class="center"><img src="class_robot_ctrl_1_1_robot_a018c883102eb9d4ec6f68989d67ce44a_icgraph.png" border="0" usemap="#class_robot_ctrl_1_1_robot_a018c883102eb9d4ec6f68989d67ce44a_icgraph_map" alt=""></div>
+<map name="class_robot_ctrl_1_1_robot_a018c883102eb9d4ec6f68989d67ce44a_icgraph_map" id="class_robot_ctrl_1_1_robot_a018c883102eb9d4ec6f68989d67ce44a_icgraph">
+<area shape="rect" id="node3" href="class_run_robot___simple_console_1_1_run_robot___simple_console.html#ae280279a4ae9ac788cac306be66858cc" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.BT_Server" alt="" coords="215,5,604,35"/><area shape="rect" id="node5" href="class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="653,5,1136,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac651b08842d1a2f5e49566b8b8e1c10b"></a><!-- doxytag: member="RobotCtrl::Robot::runTurn" ref="ac651b08842d1a2f5e49566b8b8e1c10b" args="(double angle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotCtrl.Robot.runTurn </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>angle</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:</div>
+<div class="dynsection">
+<div class="center"><img src="class_robot_ctrl_1_1_robot_ac651b08842d1a2f5e49566b8b8e1c10b_cgraph.png" border="0" usemap="#class_robot_ctrl_1_1_robot_ac651b08842d1a2f5e49566b8b8e1c10b_cgraph_map" alt=""></div>
+<map name="class_robot_ctrl_1_1_robot_ac651b08842d1a2f5e49566b8b8e1c10b_cgraph_map" id="class_robot_ctrl_1_1_robot_ac651b08842d1a2f5e49566b8b8e1c10b_cgraph">
+<area shape="rect" id="node3" href="class_robot_ctrl_1_1_drive.html#a2c49e16e45f1db8c54160cd978d501ea" title="RobotCtrl.Drive.RunTurn" alt="" coords="221,5,381,35"/><area shape="rect" id="node5" href="class_robot_ctrl_1_1_drive.html#a16bd2f585366688a74f4ad550ffc2ec6" title="RobotCtrl.Drive.WaitDone" alt="" coords="217,59,385,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dynsection">
+<div class="center"><img src="class_robot_ctrl_1_1_robot_ac651b08842d1a2f5e49566b8b8e1c10b_icgraph.png" border="0" usemap="#class_robot_ctrl_1_1_robot_ac651b08842d1a2f5e49566b8b8e1c10b_icgraph_map" alt=""></div>
+<map name="class_robot_ctrl_1_1_robot_ac651b08842d1a2f5e49566b8b8e1c10b_icgraph_map" id="class_robot_ctrl_1_1_robot_ac651b08842d1a2f5e49566b8b8e1c10b_icgraph">
+<area shape="rect" id="node3" href="class_run_robot___simple_console_1_1_run_robot___simple_console.html#ae280279a4ae9ac788cac306be66858cc" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.BT_Server" alt="" coords="217,5,607,35"/><area shape="rect" id="node5" href="class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="656,5,1139,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -247,7 +413,7 @@ Zusammengehörigkeiten von RobotCtrl.Robot:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Sat Apr 17 11:23:24 2010 für PrgSY Robot von&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Tue May 18 19:35:29 2010 für PrgSY Robot von&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

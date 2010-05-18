@@ -51,20 +51,19 @@ namespace RemoteController_XP
 				BluetoothClient bc = device.Connect(service);
 				Console.WriteLine("Outgoing connection " + bc.GetSocket().LocalEndPoint + ".");
 				// read transmitted data
-				StreamReader sr = new StreamReader(bc.GetStream());
+                StreamReader sr = new StreamReader("Fahrbefehl.txt");
 				StreamWriter sw = new StreamWriter(bc.GetStream());
 				// request
-				sw.Write("Hallo from Notebook;");
-                sw.Write("RunLine, 2.2;");
-                sw.Write("RunArcLeft, 2, 90.3;");
-                sw.Write("RunArcRight, 2, 90.3;");
-                sw.Write("RunTurn, 90.3;");
-                sw.WriteLine("Go");
-				sw.Flush();
-				// print 
-				Console.WriteLine("Message received : ");
-				Console.WriteLine(sr.ReadLine());
-				bc.Close();
+                String line="";
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                    sw.WriteLine(line);
+                    sw.Flush();
+                }
+				// print
+                Console.ReadLine();  
+                    bc.Close();
 			}
 		}
     }

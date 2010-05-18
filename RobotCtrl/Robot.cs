@@ -333,7 +333,7 @@ namespace RobotCtrl
         double runline_speed_slow = 0.3;
         double runline_speed = 0.3;
 
-        double runline_acceleration_fast = 0.015;
+        double runline_acceleration_fast = 0.1;
         double runline_acceleration_slow = 0.005;
         double runline_acceleration = 0.005;
 

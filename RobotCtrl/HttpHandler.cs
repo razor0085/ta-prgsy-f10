@@ -5,11 +5,10 @@ using System.Text;
 using ServerPattern;
 using System.IO;
 using System.Net.Sockets;
-using TA.Bluetooth;
 
 namespace Http
 {
-	class HttpHandler : AbstractBTHandler
+	class HttpHandler : AbstractHandler
 	{
 		// Multipurpose Internet Mail Extensions (MIME)
 		// Internet Erweiterungen für die Einbindung von Daten.
@@ -28,11 +27,12 @@ namespace Http
 		private StreamWriter sw;
 		private string url;
 
-		public HttpHandler(BluetoothClient client, int id) : base(client) {
+		public HttpHandler(Socket client, int id) : base(client) {
 			this.id = id;
-			nws = client.GetStream();
+			nws = new NetworkStream(client, true);
 			sr = new StreamReader(nws);
 			sw = new StreamWriter(nws);
+            System.Console.WriteLine("Server erzeugt!");
 		}
 
 		override protected bool ReadRequest() {
@@ -52,7 +52,7 @@ namespace Http
 					url = tokens[1];
 				// Start URL setzen
 				if (url.EndsWith("/"))
-					url += HttpServer.startdoc;
+					url += "temp.txt";
 				return true;			
 			}
 			else {
@@ -63,8 +63,7 @@ namespace Http
 
 		override protected void CreateResponse() {
 			try {
-				string filename = HttpServer.htdocs + url;
-				filename = filename.Replace("..", "");
+                string filename = url.Substring(1);
 				FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
 				long len = fs.Length;
 				byte[] bytes = new byte[len];

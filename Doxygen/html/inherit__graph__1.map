@@ -1,3 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_motor_test_1_1_test___motor___c_e___form.html" title="MotorTest.Test_Motor_CE_Form" alt="" coords="5,5,216,35"/>
+<area shape="rect" id="node1" href="$interface_executor_1_1_i_executor.html" title="Executor.IExecutor" alt="" coords="5,32,139,61"/>
+<area shape="rect" id="node3" href="$class_executor_1_1_plain_thread_executor.html" title="Executor.PlainThreadExecutor" alt="" coords="188,5,385,35"/>
+<area shape="rect" id="node5" href="$class_executor_1_1_worker_pool.html" title="Executor.WorkerPool" alt="" coords="213,59,360,88"/>
 </map>
