@@ -6,7 +6,11 @@ using RobotCtrl;
 using System.Threading;
 using RobotView;
 using System.IO;
+using System.Collections;
 using TA.Bluetooth;
+using ServerPattern;
+using Executor;
+using Http;
 
 namespace RunRobot_SimpleConsole
 {
@@ -16,6 +20,7 @@ namespace RunRobot_SimpleConsole
         BluetoothService service;
         Guid serviceId;
         ArrayList bfList;
+        AbstractBTServer server;
 
         static void Main(string[] args)
         {
@@ -26,10 +31,11 @@ namespace RunRobot_SimpleConsole
         public RunRobot_SimpleConsole()
         {
             bfList = new ArrayList();
-            //robot = new Robot(RunMode.REAL);
-            //robot.PositionInfo = new PositionInfo(0, 0, 0);
+            robot = new Robot(RunMode.REAL);
+            robot.PositionInfo = new PositionInfo(0, 0, 0);
+            server = new HttpServer();
+            server.Start(BluetoothServiceList.Robot17);
             BT_Server(BluetoothServiceList.Robot17);
-
         }
 
         public void BT_Server(Guid serviceId)
@@ -86,13 +92,50 @@ namespace RunRobot_SimpleConsole
                 {
                     bf += sr.ReadLine();
                 }
+                // clear and close stream
+                sw.Flush();
+                client.Close();
+
+                //Save Commands to File
+                StreamWriter swNormal = new StreamWriter("temp.txt");
+                byte[] data = Encoding.ASCII.GetBytes(bf);
+                MemoryStream stream = new MemoryStream(data);
+                swNormal.WriteLine(stream);
+                swNormal.Close();
+
                 System.Console.WriteLine(bf);
                 if (bf.Contains("Go"))
                 {
-                    string[] tokens = bf.Split(new char[] { ',' });
+                    string[] tokens = bf.Split(new char[] { ';' });
                     for (int i = 0; i < tokens.Length; i++)
                     {
-                        System.Console.WriteLine(tokens[i]);
+                        string befehl = tokens[i].Split(new char[] { ',' })[0].ToString();
+                        if (befehl.Equals("RunLine"))
+                        {
+                            double distance = Convert.ToDouble(tokens[i].Split(new char[] { ',' })[1].ToString());
+                            System.Console.WriteLine(tokens[i]);
+                            robot.runLine(distance);
+                        }
+                        if (befehl.Equals("RunArcLeft"))
+                        {
+                            double radius = Convert.ToDouble(tokens[i].Split(new char[] { ',' })[1].ToString());
+                            double angle = Convert.ToDouble(tokens[i].Split(new char[] { ',' })[2].ToString());
+                            System.Console.WriteLine(tokens[i]);
+                            robot.runArcLeft(radius, angle);
+                        }
+                        if (befehl.Equals("RunArcRight"))
+                        {
+                            double radius = Convert.ToDouble(tokens[i].Split(new char[] { ',' })[1].ToString());
+                            double angle = Convert.ToDouble(tokens[i].Split(new char[] { ',' })[2].ToString());
+                            System.Console.WriteLine(tokens[i]);
+                            robot.runArcRight(radius, angle);
+                        }
+                        if (befehl.Equals("RunTurn"))
+                        {
+                            double angle = Convert.ToDouble(tokens[i].Split(new char[] { ',' })[1].ToString());
+                            System.Console.WriteLine(tokens[i]);
+                            robot.runTurn(angle);
+                        }
                     }
 
                 }

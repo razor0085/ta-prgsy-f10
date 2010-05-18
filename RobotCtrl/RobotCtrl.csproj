@@ -56,6 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractBTHandler.cs" />
+    <Compile Include="AbstractBTServer.cs" />
+    <Compile Include="AbstractHandler.cs" />
+    <Compile Include="AbstractServer.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Console.cs" />
     <Compile Include="DigitalIn.cs" />
@@ -66,11 +70,15 @@
     <Compile Include="DriveCtrl.cs" />
     <Compile Include="DriveCtrl_HW.cs" />
     <Compile Include="DriveInfo.cs" />
+    <Compile Include="HttpHandler.cs" />
+    <Compile Include="HttpServer.cs" />
+    <Compile Include="IExecutor.cs" />
     <Compile Include="IOPort.cs" />
     <Compile Include="MotorCtrl.cs" />
     <Compile Include="MotorCtrl_HW.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="ObstacleMap.cs" />
+    <Compile Include="PlainThreadExecutor.cs" />
     <Compile Include="PositionInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Radar.cs" />
@@ -79,7 +87,14 @@
     <Compile Include="Robot.cs" />
     <Compile Include="SwitchEvent.cs" />
     <Compile Include="Track.cs" />
+    <Compile Include="WorkerPool.cs" />
     <Compile Include="World.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TA_Bluetooth\TA_Bluetooth.csproj">
+      <Project>{6C06AED0-6CEA-4857-9140-B85368496D06}</Project>
+      <Name>TA_Bluetooth</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

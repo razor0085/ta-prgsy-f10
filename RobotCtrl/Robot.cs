@@ -88,6 +88,34 @@ namespace RobotCtrl
             
 		}
 
+        public void runLine(double distance)
+        {
+            drive.Power = true;
+            drive.RunLine(distance, runline_speed_fast, runline_acceleration_fast);
+            drive.WaitDone();
+        }
+
+        public void runArcRight(double radius, double angle)
+        {
+            drive.Power = true;
+            drive.RunArcRight(radius, angle, runline_speed_fast, runline_acceleration_fast);
+            drive.WaitDone();
+        }
+
+        public void runArcLeft(double radius, double angle)
+        {
+            drive.Power = true;
+            drive.RunArcLeft(radius, angle, runline_speed_fast, runline_acceleration_fast);
+            drive.WaitDone();
+        }
+
+        public void runTurn(double angle)
+        {
+            drive.Power = true;
+            drive.RunTurn(angle, runline_speed_fast, runline_acceleration_fast);
+            drive.WaitDone();
+        }
+
         public double getFreeSpace()
         {
             //System.Console.WriteLine("getFreeSpace: " + Math.Abs(radarSensor.Distance));
