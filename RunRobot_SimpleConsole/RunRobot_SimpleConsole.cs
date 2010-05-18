@@ -34,8 +34,8 @@ namespace RunRobot_SimpleConsole
             robot = new Robot(RunMode.REAL);
             robot.PositionInfo = new PositionInfo(0, 0, 0);
             server = new HttpServer();
-            server.Start(BluetoothServiceList.Robot17);
             BT_Server(BluetoothServiceList.Robot17);
+            server.Start(BluetoothServiceList.Robot17);
         }
 
         public void BT_Server(Guid serviceId)
@@ -92,6 +92,7 @@ namespace RunRobot_SimpleConsole
                 {
                     bf += sr.ReadLine();
                 }
+                bf += "\n";
                 // clear and close stream
                 sw.Flush();
                 client.Close();
@@ -139,9 +140,6 @@ namespace RunRobot_SimpleConsole
                     }
 
                 }
-                // clear and close stream
-                sw.Flush();
-                client.Close();
             }
         }
     }
