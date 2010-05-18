@@ -7,7 +7,7 @@ using TA.Bluetooth;
 
 namespace RemoteController_XP
 {
-    class Program
+    class RemoteController
     {
         public static BluetoothDevice DiscoverDev(Guid service)
 		{
@@ -44,6 +44,7 @@ namespace RemoteController_XP
 			Guid service = BluetoothServiceList.Robot17;
 			//Guid service = new Guid("{FB4B43E4-0328-4056-82A5-7E03BE347082}");
 			BluetoothDevice device = DiscoverDev(service);
+            //BluetoothDevice device = new BluetoothDevice();
 			if (device != null)
 			{
 				// connect to desired service
@@ -53,11 +54,11 @@ namespace RemoteController_XP
 				StreamReader sr = new StreamReader(bc.GetStream());
 				StreamWriter sw = new StreamWriter(bc.GetStream());
 				// request
-				sw.WriteLine("Hallo from Notebook\n");
-                sw.WriteLine("RunLine, 10;");
-                sw.WriteLine("RunArcLeft, 2, 90.3;");
-                sw.WriteLine("RunArcRight, 2, 90.3;");
-                sw.WriteLine("RunTurn, 90.3;");
+				sw.Write("Hallo from Notebook;");
+                sw.Write("RunLine, 2.2;");
+                sw.Write("RunArcLeft, 2, 90.3;");
+                sw.Write("RunArcRight, 2, 90.3;");
+                sw.Write("RunTurn, 90.3;");
                 sw.WriteLine("Go");
 				sw.Flush();
 				// print 
