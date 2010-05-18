@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_discovery.html#aedf6e0b0391beccb886cd1dfa014f03f" title="Discovers accessible Bluetooth devices and returns their names and addresses." alt="" coords="377,5,687,35"/>
+<area shape="rect" id="node5" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a9330b2a9bf7ed0bc996497c4d092c4c7" title="Check if desired service is available on this device." alt="" coords="401,59,663,88"/>
+</map>

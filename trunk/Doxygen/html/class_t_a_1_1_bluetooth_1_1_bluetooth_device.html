@@ -1,0 +1,473 @@
+<!-- This comment will put IE 6, 7 and 8 in quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>PrgSY Robot: TA.Bluetooth.BluetoothDevice Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Erzeugt von Doxygen 1.6.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Pakete</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <img id="MSearchSelect" src="search/search.png"
+             onmouseover="return searchBox.OnSearchSelectShow()"
+             onmouseout="return searchBox.OnSearchSelectHide()"
+             alt=""/>
+        <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)" 
+             onblur="searchBox.OnSearchFieldFocus(false)" 
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+        <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Auflistung&nbsp;der&nbsp;Klassen</span></a></li>
+      <li><a href="hierarchy.html"><span>Klassenhierarchie</span></a></li>
+      <li><a href="functions.html"><span>Klassen-Elemente</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespace_t_a.html">TA</a>.<a class="el" href="namespace_t_a_1_1_bluetooth.html">Bluetooth</a>.<a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html">BluetoothDevice</a>
+  </div>
+</div>
+<div class="contents">
+<h1>TA.Bluetooth.BluetoothDevice Klassenreferenz</h1><!-- doxytag: class="TA::Bluetooth::BluetoothDevice" -->
+<p>Provides information about an available device obtained by the client during device discovery.  
+<a href="#_details">Mehr ...</a></p>
+
+<p><a href="class_t_a_1_1_bluetooth_1_1_bluetooth_device-members.html">Aufstellung aller Elemente</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Öffentliche Methoden</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html">BluetoothClient</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a1b47b71dd53a3faebdae82f7d6bed44b">Connect</a> (Guid service)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Connect to specified service on this device.  <a href="#a1b47b71dd53a3faebdae82f7d6bed44b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a9330b2a9bf7ed0bc996497c4d092c4c7">HasService</a> (Guid service)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if desired service is available on this device.  <a href="#a9330b2a9bf7ed0bc996497c4d092c4c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a2928ca94ce35e2a59dd6b12dad3a8566">Close</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">terminates all open connections to this device  <a href="#a2928ca94ce35e2a59dd6b12dad3a8566"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html">BluetoothClient</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a9629b81fd58462a3bd38ee7aca14dc03">GetClient</a> (Guid service)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tries to find already opened connection to specified service.  <a href="#a9629b81fd58462a3bd38ee7aca14dc03"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a7fa4878234af0392350bac1e639e4a7a">Refresh</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Forces the system to refresh the device information.  <a href="#a7fa4878234af0392350bac1e639e4a7a"></a><br/></td></tr>
+<tr><td colspan="2"><h2>Öffentliche, statische Methoden</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html">BluetoothClient</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#aa93419c036013eb97810114a9999701d">Connect</a> (String mac, Guid service)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Connect to specified service on this device.  <a href="#aa93419c036013eb97810114a9999701d"></a><br/></td></tr>
+<tr><td colspan="2"><h2>Propertys</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">byte[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a86b4c6173d140ab76aadb30fbc61a640">Address</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Device address as byteArray.  <a href="#a86b4c6173d140ab76aadb30fbc61a640"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#ab7b5330cd21a9248a7bc90c3456f5c4c">DeviceAddress</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Device address as string  <a href="#ab7b5330cd21a9248a7bc90c3456f5c4c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a3dd09a5643db40d99c05916de6ed0944">Name</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Device Name as string  <a href="#a3dd09a5643db40d99c05916de6ed0944"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a6262471d9cd8ace1bc5ec38d6edacc8c">Authenticated</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Device authenticated.  <a href="#a6262471d9cd8ace1bc5ec38d6edacc8c"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p>Provides information about an available device obtained by the client during device discovery. </p>
+<hr/><h2>Dokumentation der Elementfunktionen</h2>
+<a class="anchor" id="a2928ca94ce35e2a59dd6b12dad3a8566"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::Close" ref="a2928ca94ce35e2a59dd6b12dad3a8566" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TA.Bluetooth.BluetoothDevice.Close </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>terminates all open connections to this device </p>
+
+</div>
+</div>
+<a class="anchor" id="aa93419c036013eb97810114a9999701d"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::Connect" ref="aa93419c036013eb97810114a9999701d" args="(String mac, Guid service)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html">BluetoothClient</a> TA.Bluetooth.BluetoothDevice.Connect </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>mac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&nbsp;</td>
+          <td class="paramname"> <em>service</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Connect to specified service on this device. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mac</em>&nbsp;</td><td>bluetooth mac address as "001122334455"</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>service</em>&nbsp;</td><td>service identification as Guid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>connection as <a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html" title="Represents connection to other Bluetooth network devices.">BluetoothClient</a></dd></dl>
+<p>This sample shows how to call the Connect method with a given mac address and s service. </p>
+<div class="fragment"><pre class="fragment">                        
+                        <span class="keyword">class </span>BTClient                  
+                        {                       
+                                <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> Main(String[] args)          
+                                {       
+                                        String mac = <span class="stringliteral">&quot;001122334455&quot;</span>;    
+                                        Console.WriteLine(<span class="stringliteral">&quot;Search for device &quot;</span>+mac+<span class="stringliteral">&quot;...&quot;</span>);      
+desired service 
+                                        Guid service = BluetoothServiceList.Robot11;    
+connect to desired service      
+                                        BluetoothClient bc = BluetoothDevice.Connect(mac, service);     
+                                        Console.WriteLine(<span class="stringliteral">&quot;Outgoing connection &quot;</span> + bc.GetSocket().LocalEndPoint + <span class="stringliteral">&quot;.&quot;</span>); 
+read transmitted data   
+                                        StreamReader sr = <span class="keyword">new</span> StreamReader(bc.GetStream());     
+                                        StreamWriter sw = <span class="keyword">new</span> StreamWriter(bc.GetStream());     
+request 
+                                        sw.WriteLine(); 
+                                        sw.Flush();     
+print   
+                                        Console.WriteLine(<span class="stringliteral">&quot;Message received : &quot;</span>);       
+                                        Console.WriteLine(sr.ReadLine());       
+                                        bc.Close();     
+                                }               
+                        }                       
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a1b47b71dd53a3faebdae82f7d6bed44b"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::Connect" ref="a1b47b71dd53a3faebdae82f7d6bed44b" args="(Guid service)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html">BluetoothClient</a> TA.Bluetooth.BluetoothDevice.Connect </td>
+          <td>(</td>
+          <td class="paramtype">Guid&nbsp;</td>
+          <td class="paramname"> <em>service</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Connect to specified service on this device. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>service</em>&nbsp;</td><td>service identification as Guid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>connection as <a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html" title="Represents connection to other Bluetooth network devices.">BluetoothClient</a></dd></dl>
+<p>This sample shows how to call the Connect method with a given service. </p>
+<div class="fragment"><pre class="fragment">                                
+                        <span class="keyword">class </span>BTClient                          
+                        {                               
+                                <span class="keyword">public</span> <span class="keyword">static</span> BluetoothDevice DiscoverDev(Guid service)                 
+                                {                       
+search <span class="keywordflow">for</span> reachable devices            
+                                        BluetoothDiscovery discovery = <span class="keyword">new</span> BluetoothDiscovery();                
+                                        BluetoothDeviceCollection bdc = discovery.DiscoverDevices();            
+
+                                        <span class="keywordflow">foreach</span> (BluetoothDevice device <span class="keywordflow">in</span> bdc)         
+                                        {               
+                                                <span class="keywordflow">if</span> (device.HasService(service)) 
+                                                {       
+                                                        Console.WriteLine(device.Name + <span class="stringliteral">&quot;;&quot;</span> + device.DeviceAddress);
+                                                        <span class="keywordflow">return</span> device;
+                                                }       
+                                                <span class="keywordflow">else</span>    
+                                                {       
+                                                        Console.WriteLine(device.Name + <span class="stringliteral">&quot;; no Service&quot;</span>);
+                                                }       
+                                        }               
+                                        Console.WriteLine(<span class="stringliteral">&quot;Required service does not exist on target&quot;</span>);         
+                                        <span class="keywordflow">return</span> null;            
+                                }                       
+
+                                <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> Main()                       
+                                {                       
+                                        Console.WriteLine(<span class="stringliteral">&quot;Search for reachable devices...&quot;</span>);           
+desired service         
+                                        Guid service = BluetoothServiceList.Robot11;            
+                                        BluetoothDevice device = DiscoverDev(service);          
+                                        <span class="keywordflow">if</span> (device != null)             
+                                        {               
+connect to desired service      
+                                                BluetoothClient bc = device.Connect(service);   
+                                                Console.WriteLine(<span class="stringliteral">&quot;Outgoing connection &quot;</span> + bc.GetSocket().LocalEndPoint + <span class="stringliteral">&quot;.&quot;</span>); 
+read transmitted data   
+                                                StreamReader sr = <span class="keyword">new</span> StreamReader(bc.GetStream());     
+                                                StreamWriter sw = <span class="keyword">new</span> StreamWriter(bc.GetStream());     
+request 
+                                                sw.WriteLine(); 
+                                                sw.Flush();     
+print   
+                                                Console.WriteLine(<span class="stringliteral">&quot;Message received : &quot;</span>);       
+                                                Console.WriteLine(sr.ReadLine());       
+                                                bc.Close();     
+                                        }               
+                                }                       
+                        }                               
+</pre></div> 
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dynsection">
+<div class="center"><img src="class_t_a_1_1_bluetooth_1_1_bluetooth_device_a1b47b71dd53a3faebdae82f7d6bed44b_icgraph.png" border="0" usemap="#class_t_a_1_1_bluetooth_1_1_bluetooth_device_a1b47b71dd53a3faebdae82f7d6bed44b_icgraph_map" alt=""></div>
+<map name="class_t_a_1_1_bluetooth_1_1_bluetooth_device_a1b47b71dd53a3faebdae82f7d6bed44b_icgraph_map" id="class_t_a_1_1_bluetooth_1_1_bluetooth_device_a1b47b71dd53a3faebdae82f7d6bed44b_icgraph">
+<area shape="rect" id="node3" href="class_remote_controller___x_p_1_1_remote_controller.html#a36fc54a9ec7e3b623ff2ce6b466d570a" title="RemoteController_XP.RemoteController.Main" alt="" coords="303,5,583,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9629b81fd58462a3bd38ee7aca14dc03"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::GetClient" ref="a9629b81fd58462a3bd38ee7aca14dc03" args="(Guid service)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html">BluetoothClient</a> TA.Bluetooth.BluetoothDevice.GetClient </td>
+          <td>(</td>
+          <td class="paramtype">Guid&nbsp;</td>
+          <td class="paramname"> <em>service</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Tries to find already opened connection to specified service. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>service</em>&nbsp;</td><td>service identification as Guid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>connection as <a class="el" href="class_t_a_1_1_bluetooth_1_1_bluetooth_client.html" title="Represents connection to other Bluetooth network devices.">BluetoothClient</a>, null if not available</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9330b2a9bf7ed0bc996497c4d092c4c7"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::HasService" ref="a9330b2a9bf7ed0bc996497c4d092c4c7" args="(Guid service)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boolean TA.Bluetooth.BluetoothDevice.HasService </td>
+          <td>(</td>
+          <td class="paramtype">Guid&nbsp;</td>
+          <td class="paramname"> <em>service</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if desired service is available on this device. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>service</em>&nbsp;</td><td>service identification as Guid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>true if service exists</dd></dl>
+<p>This sample shows how to call the HasService method. </p>
+<div class="fragment"><pre class="fragment">                                
+                        <span class="keyword">class </span>BTClient                          
+                        {                               
+                                <span class="keyword">public</span> <span class="keyword">static</span> BluetoothDevice DiscoverDev(Guid service)                 
+                                {                       
+search <span class="keywordflow">for</span> reachable devices            
+                                        BluetoothDiscovery discovery = <span class="keyword">new</span> BluetoothDiscovery();                
+                                        BluetoothDeviceCollection bdc = discovery.DiscoverDevices();            
+
+                                        <span class="keywordflow">foreach</span> (BluetoothDevice device <span class="keywordflow">in</span> bdc)         
+                                        {               
+                                                <span class="keywordflow">if</span> (device.HasService(service)) 
+                                                {       
+                                                        Console.WriteLine(device.Name + <span class="stringliteral">&quot;;&quot;</span> + device.DeviceAddress);
+                                                        <span class="keywordflow">return</span> device;
+                                                }       
+                                                <span class="keywordflow">else</span>    
+                                                {       
+                                                        Console.WriteLine(device.Name + <span class="stringliteral">&quot;; no Service&quot;</span>);
+                                                }       
+                                        }               
+                                        Console.WriteLine(<span class="stringliteral">&quot;Required service does not exist on target&quot;</span>);         
+                                        <span class="keywordflow">return</span> null;            
+                                }                       
+
+...use the DiscoverDev to discover devices whit the given service
+
+                        }                               
+</pre></div> 
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dynsection">
+<div class="center"><img src="class_t_a_1_1_bluetooth_1_1_bluetooth_device_a9330b2a9bf7ed0bc996497c4d092c4c7_icgraph.png" border="0" usemap="#class_t_a_1_1_bluetooth_1_1_bluetooth_device_a9330b2a9bf7ed0bc996497c4d092c4c7_icgraph_map" alt=""></div>
+<map name="class_t_a_1_1_bluetooth_1_1_bluetooth_device_a9330b2a9bf7ed0bc996497c4d092c4c7_icgraph_map" id="class_t_a_1_1_bluetooth_1_1_bluetooth_device_a9330b2a9bf7ed0bc996497c4d092c4c7_icgraph">
+<area shape="rect" id="node3" href="class_remote_controller___x_p_1_1_remote_controller.html#acc0e08e94a08ce814ca8bc851b9a1a61" title="RemoteController_XP.RemoteController.DiscoverDev" alt="" coords="317,5,640,35"/><area shape="rect" id="node5" href="class_remote_controller___x_p_1_1_remote_controller.html#a36fc54a9ec7e3b623ff2ce6b466d570a" title="RemoteController_XP.RemoteController.Main" alt="" coords="689,5,969,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7fa4878234af0392350bac1e639e4a7a"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::Refresh" ref="a7fa4878234af0392350bac1e639e4a7a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TA.Bluetooth.BluetoothDevice.Refresh </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Forces the system to refresh the device information. </p>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Propertys</h2>
+<a class="anchor" id="a86b4c6173d140ab76aadb30fbc61a640"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::Address" ref="a86b4c6173d140ab76aadb30fbc61a640" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] TA.Bluetooth.BluetoothDevice.Address<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Device address as byteArray. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6262471d9cd8ace1bc5ec38d6edacc8c"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::Authenticated" ref="a6262471d9cd8ace1bc5ec38d6edacc8c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boolean TA.Bluetooth.BluetoothDevice.Authenticated<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Device authenticated. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab7b5330cd21a9248a7bc90c3456f5c4c"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::DeviceAddress" ref="ab7b5330cd21a9248a7bc90c3456f5c4c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TA.Bluetooth.BluetoothDevice.DeviceAddress<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Device address as string </p>
+<p>This sample shows how to call the DeviceAddress method. </p>
+<div class="fragment"><pre class="fragment">                                
+                        <span class="keyword">class </span>BTClient                          
+                        {                               
+                                <span class="keyword">public</span> <span class="keyword">static</span> BluetoothDevice DiscoverDev(Guid service)                 
+                                {                       
+search <span class="keywordflow">for</span> reachable devices            
+                                        BluetoothDiscovery discovery = <span class="keyword">new</span> BluetoothDiscovery();                
+                                        BluetoothDeviceCollection bdc = discovery.DiscoverDevices();            
+
+                                        <span class="keywordflow">foreach</span> (BluetoothDevice device <span class="keywordflow">in</span> bdc)         
+                                        {               
+                                                <span class="keywordflow">if</span> (device.HasService(service)) 
+                                                {       
+                                                        Console.WriteLine(device.Name + <span class="stringliteral">&quot;;&quot;</span> + device.DeviceAddress);
+                                                        <span class="keywordflow">return</span> device;
+                                                }       
+                                                <span class="keywordflow">else</span>    
+                                                {       
+                                                        Console.WriteLine(device.Name + <span class="stringliteral">&quot;; no Service&quot;</span>);
+                                                }       
+                                        }               
+                                        Console.WriteLine(<span class="stringliteral">&quot;Required service does not exist on target&quot;</span>);         
+                                        <span class="keywordflow">return</span> null;            
+                                }                       
+
+...use the DiscoverDev to discover devices with a given service
+
+                        }                               
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a3dd09a5643db40d99c05916de6ed0944"></a><!-- doxytag: member="TA::Bluetooth::BluetoothDevice::Name" ref="a3dd09a5643db40d99c05916de6ed0944" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TA.Bluetooth.BluetoothDevice.Name<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Device Name as string </p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li><a class="el" href="_bluetooth_device_8cs.html">BluetoothDevice.cs</a></li>
+</ul>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Ereignisse</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address style="text-align: right;"><small>Erzeugt am Tue May 18 19:36:06 2010 für PrgSY Robot von&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

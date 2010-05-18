@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#ae280279a4ae9ac788cac306be66858cc" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.BT_Server" alt="" coords="311,5,700,35"/>
+<area shape="rect" id="node7" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_service_listener.html#afeb9686171525f50944842789eb5fdf5" title="TA.Bluetooth.BluetoothServiceListener.HandleConnection" alt="" coords="329,59,681,88"/>
+<area shape="rect" id="node9" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_connection_listener.html#aeb8153b478b809ce52bf242495aa30ff" title="TA.Bluetooth.BluetoothConnectionListener.HandleConnection" alt="" coords="317,112,693,141"/>
+<area shape="rect" id="node13" href="$class_remote_controller___x_p_1_1_remote_controller.html#a36fc54a9ec7e3b623ff2ce6b466d570a" title="RemoteController_XP.RemoteController.Main" alt="" coords="365,165,645,195"/>
+<area shape="rect" id="node5" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="749,5,1232,35"/>
+<area shape="rect" id="node11" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_connection_notifier.html#a5a5db218773e8afd8e976e0436805ee8" title="TA.Bluetooth.BluetoothConnectionNotifier.StartListening" alt="" coords="819,112,1163,141"/>
+</map>

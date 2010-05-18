@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_server_pattern_1_1_abstract_b_t_server.html#a59cd6ac8778ae86c17fb8c6329a2bb47" title="ServerPattern.AbstractBTServer.Run" alt="" coords="291,139,523,168"/>
+<area shape="rect" id="node5" href="$class_server_pattern_1_1_abstract_b_t_server.html#a4fc7e17f270c3ce32919cb2f28818a98" title="ServerPattern.AbstractBTServer.CreateExecutor" alt="" coords="584,5,883,35"/>
+<area shape="rect" id="node7" href="$class_server_pattern_1_1_abstract_b_t_server.html#a70c94386a670f0d1c3b08bfa5d8805d4" title="ServerPattern.AbstractBTServer.CreateHandler" alt="" coords="588,59,879,88"/>
+<area shape="rect" id="node9" href="$class_server_pattern_1_1_abstract_b_t_server.html#a7a8f2d622d918568bcc522aa53e3c113" title="ServerPattern.AbstractBTServer.CreateServerSocket" alt="" coords="572,112,895,141"/>
+<area shape="rect" id="node13" href="$interface_executor_1_1_i_executor.html#a7bcec03f7f1ebfa5fcf8935d784a3acd" title="Executor.IExecutor.Execute" alt="" coords="641,165,825,195"/>
+<area shape="rect" id="node15" href="$class_server_pattern_1_1_abstract_b_t_handler.html#a5f3911449dfbf820a2782a173a3c1016" title="ServerPattern.AbstractBTHandler.Run" alt="" coords="613,219,853,248"/>
+<area shape="rect" id="node23" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_service.html#a9f5240a90bfca8bb0edbdbba04cfff54" title="TA.Bluetooth.BluetoothService.WaitForConnection" alt="" coords="577,272,889,301"/>
+<area shape="rect" id="node11" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_service.html#a5d82c9579c666e04a28b0d28b92ee7d3" title="TA.Bluetooth.BluetoothService.CreateService" alt="" coords="960,112,1243,141"/>
+<area shape="rect" id="node17" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_client.html#a0fee6ad251a0ff97508dc2eb44500890" title="Disposes this BluetoothClient instance and closes the underlying connection." alt="" coords="988,165,1215,195"/>
+<area shape="rect" id="node19" href="$class_server_pattern_1_1_abstract_b_t_handler.html#aa0c9872b7971daa448ca660b00225cbb" title="ServerPattern.AbstractBTHandler.CreateResponse" alt="" coords="945,219,1257,248"/>
+<area shape="rect" id="node21" href="$class_server_pattern_1_1_abstract_b_t_handler.html#a3f10a5585fd894e4b0bc3b66ec633d38" title="ServerPattern.AbstractBTHandler.ReadRequest" alt="" coords="955,272,1248,301"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_client.html#a0fee6ad251a0ff97508dc2eb44500890" title="Disposes this BluetoothClient instance and closes the underlying connection." alt="" coords="489,5,716,35"/>
+<area shape="rect" id="node5" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_service.html#a5d82c9579c666e04a28b0d28b92ee7d3" title="TA.Bluetooth.BluetoothService.CreateService" alt="" coords="461,59,744,88"/>
+<area shape="rect" id="node7" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_client.html#adc014c894ae37e9323bc02e934ecc4d9" title="Gets the underlying Socket." alt="" coords="476,112,729,141"/>
+<area shape="rect" id="node9" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_client.html#affcd96e5128a1115ae98193d0360cbaa" title="Gets the underlying NetworkStream" alt="" coords="475,165,731,195"/>
+<area shape="rect" id="node11" href="$class_robot_ctrl_1_1_robot.html#a576ce582702174d243bb4f64da579db5" title="RobotCtrl.Robot.runArcLeft" alt="" coords="515,219,691,248"/>
+<area shape="rect" id="node17" href="$class_robot_ctrl_1_1_robot.html#a2d949a163bf1a3591e0d195eec919ac6" title="RobotCtrl.Robot.runArcRight" alt="" coords="509,272,696,301"/>
+<area shape="rect" id="node22" href="$class_robot_ctrl_1_1_robot.html#a018c883102eb9d4ec6f68989d67ce44a" title="RobotCtrl.Robot.runLine" alt="" coords="523,325,683,355"/>
+<area shape="rect" id="node27" href="$class_robot_ctrl_1_1_robot.html#ac651b08842d1a2f5e49566b8b8e1c10b" title="RobotCtrl.Robot.runTurn" alt="" coords="523,379,683,408"/>
+<area shape="rect" id="node32" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_service.html#a9f5240a90bfca8bb0edbdbba04cfff54" title="TA.Bluetooth.BluetoothService.WaitForConnection" alt="" coords="447,432,759,461"/>
+<area shape="rect" id="node13" href="$class_robot_ctrl_1_1_drive.html#a5b1a280fceb771ccad2e19d96e5c4ef3" title="RobotCtrl.Drive.RunArcLeft" alt="" coords="813,192,989,221"/>
+<area shape="rect" id="node15" href="$class_robot_ctrl_1_1_drive.html#a16bd2f585366688a74f4ad550ffc2ec6" title="RobotCtrl.Drive.WaitDone" alt="" coords="817,299,985,328"/>
+<area shape="rect" id="node19" href="$class_robot_ctrl_1_1_drive.html#a6ef57fad047014b11a60f76c74a4b74c" title="RobotCtrl.Drive.RunArcRight" alt="" coords="809,245,993,275"/>
+<area shape="rect" id="node24" href="$class_robot_ctrl_1_1_drive.html#a62eb0b9939a24046a6dd0372cae3758b" title="RobotCtrl.Drive.RunLine" alt="" coords="823,352,980,381"/>
+<area shape="rect" id="node29" href="$class_robot_ctrl_1_1_drive.html#a2c49e16e45f1db8c54160cd978d501ea" title="RobotCtrl.Drive.RunTurn" alt="" coords="821,405,981,435"/>
+</map>

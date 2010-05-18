@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_server_pattern_1_1_abstract_handler.html#a08c519cf07910c8df3ce94b36ce52c2e" title="ServerPattern.AbstractHandler.Run" alt="" coords="333,5,557,35"/>
+<area shape="rect" id="node5" href="$class_server_pattern_1_1_abstract_server.html#af6dbb6409181c230fcd950ec8906bd8c" title="ServerPattern.AbstractServer.Run" alt="" coords="605,5,821,35"/>
+<area shape="rect" id="node7" href="$class_server_pattern_1_1_abstract_server.html#a1316592c1303cb6c883cbd5c57e98b3d" title="ServerPattern.AbstractServer.Start" alt="" coords="869,5,1091,35"/>
+</map>
