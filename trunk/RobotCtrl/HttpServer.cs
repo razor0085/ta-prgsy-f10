@@ -3,30 +3,23 @@ using System.Collections.Generic;
 using System.Text;
 using ServerPattern;
 using Executor;
-using TA.Bluetooth;
+using System.Net.Sockets;
 
 namespace Http
 {
 	/**
-	 * Ein ganz einfacher Web-Server auf Bluetooth. 
+	 * Ein ganz einfacher Web-Server auf TCP und einem beliebigen Port. 
 	 * Der Server ist in der Lage, Seitenanforderungen zu dem Luafwerk 
 	 * und Verzeichnis zu bearbeiten, von dem er gestartet wurde. 
 	 * Wurde der Server z.B. im Laufwerk c: gestartet, so würde eine 
-	 * Seitenanforderung "http://localhost:8080/test/index.html" die Datei 
+	 * Seitenanforderung "http://localhost/test/index.html" die Datei 
 	 * c:\test\index.html laden.
 	*/
-	public class HttpServer : AbstractBTServer
+	public class HttpServer : AbstractServer
 	{
 		private int call = 0;
 
-		/**
-		 * html document base - Arbeitsverzeichnis für die html-Dokumente.<br>
-		 */
-		public static String htdocs = "";
-		public static String startdoc = "log.txt";
-
-		override protected AbstractBTHandler CreateHandler(BluetoothClient client)
-		{
+		override protected AbstractHandler CreateHandler(Socket client) {
 			return new HttpHandler(client, ++call);
 		}
 
@@ -35,17 +28,12 @@ namespace Http
 		}
 
 		public static void Main(String[] args) {
-			AbstractBTServer server = new HttpServer();
-			if (args.Length > 0)
-			{
-				Guid serviceId = new Guid(args[0]);
-				server.Start(serviceId);
+			int port = 8080;
+			if (args.Length > 0) {
+				port = Int32.Parse(args[0]);
 			}
-			else
-			{
-				server.Start();
-			}
-			Console.WriteLine("HTTP BTServer running on service "+server.GetServiceID().ToString());
+			new HttpServer().Start(port);
+			Console.WriteLine("HTTP server running on port: " + port);
 		}
 	}
 }

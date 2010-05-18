@@ -11,6 +11,7 @@ using TA.Bluetooth;
 using ServerPattern;
 using Executor;
 using Http;
+using System.Net.Sockets;
 
 namespace RunRobot_SimpleConsole
 {
@@ -20,8 +21,7 @@ namespace RunRobot_SimpleConsole
         BluetoothService service;
         Guid serviceId;
         ArrayList bfList;
-        AbstractBTServer server;
-
+        
         static void Main(string[] args)
         {
             RunRobot_SimpleConsole runRobot_SimpleConsole = new RunRobot_SimpleConsole();
@@ -30,12 +30,12 @@ namespace RunRobot_SimpleConsole
 
         public RunRobot_SimpleConsole()
         {
+            int port = 8080;
+            new HttpServer().Start(port, "192.168.1.111");
             bfList = new ArrayList();
             robot = new Robot(RunMode.REAL);
             robot.PositionInfo = new PositionInfo(0, 0, 0);
-            server = new HttpServer();
             BT_Server(BluetoothServiceList.Robot17);
-            server.Start(BluetoothServiceList.Robot17);
         }
 
         public void BT_Server(Guid serviceId)
@@ -83,7 +83,7 @@ namespace RunRobot_SimpleConsole
 
                 // Output data to stream
                 StreamWriter sw = new StreamWriter(ns);
-                sw.WriteLine("Hello from " + BluetoothRadio.PrimaryRadio.Name);
+                //sw.WriteLine("Hello from " + BluetoothRadio.PrimaryRadio.Name);
                 //wartet auf Befehl
                 StreamReader sr = new StreamReader(ns);
                 String bf = "";
@@ -94,14 +94,14 @@ namespace RunRobot_SimpleConsole
                 }
                 bf += "\n";
                 // clear and close stream
-                sw.Flush();
+                //sw.Flush();
                 client.Close();
 
                 //Save Commands to File
                 StreamWriter swNormal = new StreamWriter("temp.txt");
                 byte[] data = Encoding.ASCII.GetBytes(bf);
                 MemoryStream stream = new MemoryStream(data);
-                swNormal.WriteLine(stream);
+                swNormal.WriteLine(bf);
                 swNormal.Close();
 
                 System.Console.WriteLine(bf);

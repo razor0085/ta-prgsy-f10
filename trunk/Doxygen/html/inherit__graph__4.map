@@ -1,4 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_digital_in.html" title="DigitalIn, damit der Roboter Switches lesen kann." alt="" coords="7,5,132,35"/>
-<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_digital_in___h_w.html" title="DigitalIn_HW, damit der Roboter Switches von der Hardware lesen kann." alt="" coords="181,5,336,35"/>
+<area shape="rect" id="node1" href="$class_robot_ctrl_1_1_config.html" title="Diese Klasse beinhaltet alle Adressen f&uuml;r die Ansteuerung der Roboter Hardware..." alt="" coords="7,5,121,35"/>
 </map>

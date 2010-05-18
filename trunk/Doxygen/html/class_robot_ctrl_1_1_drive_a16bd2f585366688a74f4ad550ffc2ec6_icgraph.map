@@ -1,4 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_test___world_view_1_1_test___world___view___form.html#a822aa5aa97031b625ab089f46f37fbea" title="Test_WorldView.Test_World_View_Form.switchHandler" alt="" coords="225,5,567,35"/>
-<area shape="rect" id="node5" href="$class_test___world_view_1_1_test___world___view___form.html#abf8d86ad4ffff145b2cdadbf43767ac1" title="Test_WorldView.Test_World_View_Form.Test_World_View_Form" alt="" coords="616,5,1016,35"/>
+<area shape="rect" id="node3" href="$class_robot_ctrl_1_1_robot.html#a576ce582702174d243bb4f64da579db5" title="RobotCtrl.Robot.runArcLeft" alt="" coords="229,5,405,35"/>
+<area shape="rect" id="node9" href="$class_robot_ctrl_1_1_robot.html#a2d949a163bf1a3591e0d195eec919ac6" title="RobotCtrl.Robot.runArcRight" alt="" coords="224,59,411,88"/>
+<area shape="rect" id="node12" href="$class_robot_ctrl_1_1_robot.html#a018c883102eb9d4ec6f68989d67ce44a" title="RobotCtrl.Robot.runLine" alt="" coords="237,112,397,141"/>
+<area shape="rect" id="node15" href="$class_robot_ctrl_1_1_robot.html#ac651b08842d1a2f5e49566b8b8e1c10b" title="RobotCtrl.Robot.runTurn" alt="" coords="237,165,397,195"/>
+<area shape="rect" id="node5" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#ae280279a4ae9ac788cac306be66858cc" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.BT_Server" alt="" coords="460,85,849,115"/>
+<area shape="rect" id="node7" href="$class_run_robot___simple_console_1_1_run_robot___simple_console.html#af539284671eae7ba6dd7e14e275c3c09" title="RunRobot_SimpleConsole.RunRobot_SimpleConsole.RunRobot_SimpleConsole" alt="" coords="899,85,1381,115"/>
 </map>

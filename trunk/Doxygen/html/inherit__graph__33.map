@@ -1,3 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_test___console_1_1_properties_1_1_settings.html" title="Test_Console.Properties.Settings" alt="" coords="5,5,221,35"/>
+<area shape="rect" id="node1" href="$class_server_pattern_1_1_abstract_handler.html" title="ServerPattern.AbstractHandler" alt="" coords="5,5,203,35"/>
+<area shape="rect" id="node3" href="$class_http_1_1_http_handler.html" title="Http.HttpHandler" alt="" coords="252,5,369,35"/>
 </map>
