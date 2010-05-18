@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_client.html#a0fee6ad251a0ff97508dc2eb44500890" title="Disposes this BluetoothClient instance and closes the underlying connection." alt="" coords="384,5,611,35"/>
+<area shape="rect" id="node5" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a1b47b71dd53a3faebdae82f7d6bed44b" title="Connect to specified service on this device." alt="" coords="375,59,620,88"/>
+<area shape="rect" id="node7" href="$class_remote_controller___x_p_1_1_remote_controller.html#acc0e08e94a08ce814ca8bc851b9a1a61" title="RemoteController_XP.RemoteController.DiscoverDev" alt="" coords="336,112,659,141"/>
+<area shape="rect" id="node13" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_client.html#adc014c894ae37e9323bc02e934ecc4d9" title="Gets the underlying Socket." alt="" coords="371,165,624,195"/>
+<area shape="rect" id="node15" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_client.html#affcd96e5128a1115ae98193d0360cbaa" title="Gets the underlying NetworkStream" alt="" coords="369,219,625,248"/>
+<area shape="rect" id="node9" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_discovery.html#aedf6e0b0391beccb886cd1dfa014f03f" title="Discovers accessible Bluetooth devices and returns their names and addresses." alt="" coords="708,85,1017,115"/>
+<area shape="rect" id="node11" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_device.html#a9330b2a9bf7ed0bc996497c4d092c4c7" title="Check if desired service is available on this device." alt="" coords="732,139,993,168"/>
+</map>

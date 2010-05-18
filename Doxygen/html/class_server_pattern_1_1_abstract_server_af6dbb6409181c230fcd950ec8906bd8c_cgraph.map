@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_server_pattern_1_1_abstract_server.html#a9dd1852671ac5505ca97b77f18035717" title="ServerPattern.AbstractServer.CreateExecutor" alt="" coords="283,5,565,35"/>
+<area shape="rect" id="node5" href="$class_server_pattern_1_1_abstract_server.html#a388a01182d30593f90a2ce5ee64d3a24" title="ServerPattern.AbstractServer.CreateHandler" alt="" coords="287,59,561,88"/>
+<area shape="rect" id="node7" href="$class_server_pattern_1_1_abstract_server.html#a58ba5b2b44f71ff4fed8a9fd6594179f" title="ServerPattern.AbstractServer.CreateServerSocket" alt="" coords="271,112,577,141"/>
+<area shape="rect" id="node9" href="$interface_executor_1_1_i_executor.html#a7bcec03f7f1ebfa5fcf8935d784a3acd" title="Executor.IExecutor.Execute" alt="" coords="332,165,516,195"/>
+<area shape="rect" id="node11" href="$class_server_pattern_1_1_abstract_handler.html#a08c519cf07910c8df3ce94b36ce52c2e" title="ServerPattern.AbstractHandler.Run" alt="" coords="312,219,536,248"/>
+<area shape="rect" id="node13" href="$class_server_pattern_1_1_abstract_handler.html#a7b78e25c81bac477468715c00c72ba1d" title="ServerPattern.AbstractHandler.CreateResponse" alt="" coords="628,192,924,221"/>
+<area shape="rect" id="node15" href="$class_server_pattern_1_1_abstract_handler.html#adc3f1a65837326c79f850f047b1ea473" title="ServerPattern.AbstractHandler.ReadRequest" alt="" coords="637,245,915,275"/>
+</map>

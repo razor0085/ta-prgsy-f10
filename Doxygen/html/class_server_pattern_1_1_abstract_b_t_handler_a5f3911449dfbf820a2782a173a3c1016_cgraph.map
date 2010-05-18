@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_t_a_1_1_bluetooth_1_1_bluetooth_client.html#a0fee6ad251a0ff97508dc2eb44500890" title="Disposes this BluetoothClient instance and closes the underlying connection." alt="" coords="337,5,564,35"/>
+<area shape="rect" id="node5" href="$class_server_pattern_1_1_abstract_b_t_handler.html#aa0c9872b7971daa448ca660b00225cbb" title="ServerPattern.AbstractBTHandler.CreateResponse" alt="" coords="295,59,607,88"/>
+<area shape="rect" id="node7" href="$class_server_pattern_1_1_abstract_b_t_handler.html#a3f10a5585fd894e4b0bc3b66ec633d38" title="ServerPattern.AbstractBTHandler.ReadRequest" alt="" coords="304,112,597,141"/>
+</map>
